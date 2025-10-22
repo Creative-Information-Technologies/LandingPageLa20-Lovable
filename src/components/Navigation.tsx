@@ -4,31 +4,31 @@ import la20Logo from "@/assets/la20-logo-new.png";
 
 const Navigation = () => {
   return (
-    <nav className="w-full fixed top-0 left-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-transparent">
+      <div className="container mx-auto px-6 py-6 flex items-center justify-between">
         {/* Navigation Links - Left */}
-        <div className="flex items-center gap-8">
-          <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
+        <div className="flex items-center gap-6 bg-white/95 rounded-full px-8 py-3 shadow-lg">
+          <Link to="/" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Inicio
           </Link>
-          <Link to="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
+          <Link to="/blog" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Blog
           </Link>
-          <a href="#catalogo" className="text-foreground hover:text-primary transition-colors font-medium">
+          <a href="#catalogo" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Catálogo
           </a>
-          <a href="#servicios" className="text-foreground hover:text-primary transition-colors font-medium">
+          <a href="#servicios" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Servicios
           </a>
         </div>
 
         {/* Logo - Center */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <img src={la20Logo} alt="La 20 Cervecería" className="h-24 w-auto" />
+          <img src={la20Logo} alt="La 20 Cervecería" className="h-24 w-auto drop-shadow-lg" />
         </div>
 
         {/* Contact Button - Right */}
-        <Button className="bg-secondary/20 text-foreground hover:bg-secondary/30 font-medium rounded-full px-8 border-0">
+        <Button className="bg-black hover:bg-black/80 text-white font-bold rounded-full px-10 py-6 border-0 shadow-xl transition-all">
           CONTÁCTANOS
         </Button>
       </div>
