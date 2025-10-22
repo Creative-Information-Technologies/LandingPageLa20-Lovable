@@ -314,9 +314,9 @@ const BlogSection = () => {
             alt="La Metiche Belgian Witbier"
             className="hidden lg:block absolute"
             style={{ 
-              left: '-5%',
-              bottom: '-20%',
-              width: '70%',
+              left: '-50%',
+              bottom: '-30%',
+              width: '140%',
               height: 'auto',
               zIndex: 3,
               filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
@@ -344,9 +344,9 @@ const BlogSection = () => {
             alt="LA20 Beer Glass"
             className="hidden lg:block absolute"
             style={{ 
-              right: '2%',
-              bottom: '-45%',
-              width: '35%',
+              right: '-35%',
+              bottom: '-55%',
+              width: '70%',
               height: 'auto',
               zIndex: 4,
               filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
