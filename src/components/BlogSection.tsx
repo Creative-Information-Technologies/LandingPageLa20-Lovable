@@ -17,31 +17,36 @@ import {
 
 const BlogSection = () => {
   const mainArticle = {
-    title: "MARIDAJE PERFECTO: CURRYWURST",
-    description: "Descubrí cómo la Viena de La20 realza los sabores de este clásico alemán. Una combinación que tenés que probar.",
+    title: "Conocé esta receta de la casa: Currywurst",
+    description: "El currywurst es un plato alemán icónico que combina salchichas asadas con una salsa especial de curry y tomate. Esta delicia de la comida callejera alemana se disfruta mejor acompañada de nuestras cervezas artesanales de estilo alemán, especialmente la Vienna Lager o la Weiss.",
+    highlights: ["Conocé", "alemanas"],
     image: blogCurrywurstMain,
   };
 
   const secondaryArticles = [
     {
-      title: "Conocé la promo para miembros del club La20",
-      description: "Beneficios exclusivos para los verdaderos amantes de la cerveza artesanal.",
-      image: blogClubPromo,
+      title: "¿Qué es la cerveza artesanal?",
+      description: "Descubrí todo sobre el proceso de elaboración y los ingredientes que hacen única a la cerveza artesanal.",
+      highlights: ["proceso de elaboración", "ingredientes"],
+      image: blogCervezaArtesanal,
     },
     {
-      title: "Sabores con otra perspectiva",
-      description: "Explorá nuevas formas de disfrutar tu cerveza favorita con maridajes innovadores.",
+      title: "Sabores en perspectiva",
+      description: "Explorá los diferentes perfiles de sabor y aromas que caracterizan nuestras cervezas premium.",
+      highlights: ["perfiles de sabor", "aromas"],
       image: blogSaboresPerspectiva,
     },
     {
-      title: "Tour Cervecero: Qué, cómo y dónde",
-      description: "Conocé el proceso detrás de cada botella en nuestra cervecería artesanal.",
+      title: "Tour cervecero",
+      description: "Conocé nuestra fábrica y descubrí el fascinante proceso detrás de cada botella.",
+      highlights: ["fábrica", "proceso"],
       image: blogTourCervecero,
     },
     {
-      title: "La20 cumplió 10 años",
-      description: "Una década compartiendo momentos únicos con vos. ¡Celebramos juntos!",
-      image: blogCervezaArtesanal,
+      title: "Club de cerveceros",
+      description: "Formá parte de nuestro club exclusivo y disfrutá de beneficios especiales cada mes.",
+      highlights: ["club exclusivo", "beneficios especiales"],
+      image: blogClubPromo,
     },
   ];
 
@@ -129,74 +134,127 @@ const BlogSection = () => {
         </div>
       </div>
 
-      {/* Blog Content */}
-      <div className="w-full bg-[hsl(var(--blog-brown))] py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Main Article */}
-            <article className="bg-white/95 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-              <div className="aspect-video overflow-hidden bg-gray-200">
-                <img 
-                  src={mainArticle.image} 
-                  alt={mainArticle.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <h2 className="text-3xl font-bold text-[hsl(var(--blog-brown))] mb-4 font-deacon uppercase">
-                  {mainArticle.title}
-                </h2>
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  {mainArticle.description}
-                </p>
-                <Button 
-                  variant="default" 
-                  size="lg"
-                  className="bg-[hsl(var(--blog-orange))] hover:bg-[hsl(var(--blog-orange))]/90 text-white font-bold uppercase"
-                >
-                  Leer más
-                </Button>
-              </div>
-            </article>
+      {/* Blog Content - "Conocé esta receta de la casa" */}
+      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3B200B' }}>
+        <div className="max-w-7xl mx-auto" style={{ padding: '40px 20px' }}>
+          <h2 className="text-4xl md:text-5xl font-deacon text-center mb-12" style={{ color: '#F4E1C0' }}>
+            Conocé esta receta de la casa
+          </h2>
 
-            {/* Secondary Articles */}
-            <div className="space-y-6">
+          {/* Main and Secondary Articles Grid - 65-70% / 30-35% split */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Main Article - Left Column (65-70% width) */}
+            <div className="lg:col-span-8">
+              <div 
+                className="rounded-xl overflow-hidden" 
+                style={{ 
+                  border: '2px solid #F4E1C0',
+                  boxShadow: '0 4px 10px rgba(0,0,0,0.25)'
+                }}
+              >
+                {/* Image with 16:9 aspect ratio */}
+                <img
+                  src={mainArticle.image}
+                  alt={mainArticle.title}
+                  className="w-full object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                {/* Text Block */}
+                <div style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
+                  <h3 
+                    className="font-sans font-bold mb-3" 
+                    style={{ 
+                      color: '#3B200B',
+                      fontSize: '1.5rem',
+                      lineHeight: '1.3'
+                    }}
+                  >
+                    {mainArticle.title}
+                  </h3>
+                  <p 
+                    className="font-sans leading-relaxed" 
+                    style={{ 
+                      color: '#3B200B',
+                      fontSize: '1rem'
+                    }}
+                  >
+                    {mainArticle.description.split(' ').map((word, idx) => {
+                      const isHighlight = mainArticle.highlights?.some(h => 
+                        word.toLowerCase().includes(h.toLowerCase())
+                      );
+                      return (
+                        <span 
+                          key={idx} 
+                          style={{ color: isHighlight ? '#FFD200' : '#3B200B' }}
+                        >
+                          {word}{' '}
+                        </span>
+                      );
+                    })}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Secondary Articles - Right Column (30-35% width) */}
+            <div className="lg:col-span-4 space-y-4">
               {secondaryArticles.map((article, index) => (
-                <article 
-                  key={index}
-                  className="bg-white/95 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex"
+                <div 
+                  key={index} 
+                  className="flex rounded-xl overflow-hidden"
+                  style={{ 
+                    height: '130px',
+                    border: '2px solid #F4E1C0',
+                    boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
+                    backgroundColor: '#FFFFFF'
+                  }}
                 >
-                  <div className="w-1/3 overflow-hidden flex-shrink-0 bg-gray-200">
-                    <img 
-                      src={article.image} 
+                  {/* Image - 40% width, square aspect */}
+                  <div className="w-2/5 flex-shrink-0 overflow-hidden">
+                    <img
+                      src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover"
+                      style={{ borderRadius: '8px 0 0 8px' }}
                     />
                   </div>
-                  <div className="p-6 flex-1">
-                    <h3 className="text-xl font-bold text-[hsl(var(--blog-brown))] mb-2 font-deacon">
+                  
+                  {/* Text - 60% width */}
+                  <div className="w-3/5 p-3 flex flex-col justify-center">
+                    <h4 
+                      className="font-sans font-bold mb-1 leading-tight" 
+                      style={{ 
+                        color: '#3B200B',
+                        fontSize: '1rem'
+                      }}
+                    >
                       {article.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {article.description}
+                    </h4>
+                    <p 
+                      className="font-sans leading-snug" 
+                      style={{ 
+                        color: '#3B200B',
+                        fontSize: '0.9rem'
+                      }}
+                    >
+                      {article.description.split(' ').map((word, idx) => {
+                        const isHighlight = article.highlights?.some(h => 
+                          word.toLowerCase().includes(h.toLowerCase())
+                        );
+                        return (
+                          <span 
+                            key={idx} 
+                            style={{ color: isHighlight ? '#FFD200' : '#3B200B' }}
+                          >
+                            {word}{' '}
+                          </span>
+                        );
+                      })}
                     </p>
                   </div>
-                </article>
+                </div>
               ))}
             </div>
-          </div>
-
-          {/* Bottom Actions */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-            <button className="text-white hover:text-[hsl(var(--blog-yellow))] transition-colors text-lg font-semibold underline-offset-4 hover:underline">
-              Explorá todos los artículos
-            </button>
-            <Button 
-              size="lg"
-              className="bg-[hsl(var(--blog-yellow))] hover:bg-[hsl(var(--blog-yellow))]/90 text-[hsl(var(--blog-brown))] font-bold uppercase shadow-lg hover:shadow-xl transition-all"
-            >
-              Más recientes
-            </Button>
           </div>
         </div>
       </div>
