@@ -79,39 +79,39 @@ const BlogSection = () => {
             </div>
             
             {/* Assets - Bottle and Glass */}
-            <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '100%', zIndex: 3 }}>
-              {/* Beer Glass - Behind (140% width, 7 degrees rotation) */}
-              <img 
-                src={beerGlassBlog}
-                alt="LA20 Beer Glass"
-                className="absolute"
-                style={{
-                  right: '-30%',
-                  bottom: '-10px',
-                  width: '140%',
-                  height: 'auto',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25))',
-                  transform: 'rotate(7deg)',
-                  transformOrigin: 'bottom center',
-                  zIndex: 2,
-                }}
-              />
-              
-              {/* Beer Bottle - Front (210% width, -7 degrees rotation) */}
+            <div className="hidden lg:block absolute right-0 top-0 bottom-0 pointer-events-none" style={{ width: '50%', zIndex: 10 }}>
+              {/* Beer Bottle - Middle Layer (35% width) */}
               <img 
                 src={beerBottleBlog}
                 alt="La Flaka Gose Beer Bottle"
                 className="absolute"
                 style={{
-                  right: '-20%',
+                  right: '8%',
+                  top: '20px',
                   bottom: '0',
-                  width: '210%',
+                  width: '35%',
                   height: 'auto',
                   objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3))',
-                  transform: 'rotate(-7deg)',
-                  transformOrigin: 'bottom center',
+                  objectPosition: 'bottom',
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))',
+                  zIndex: 2,
+                }}
+              />
+              
+              {/* Beer Glass - Front Layer (40-45% width) */}
+              <img 
+                src={beerGlassBlog}
+                alt="LA20 Beer Glass"
+                className="absolute"
+                style={{
+                  right: '0%',
+                  top: '-15px',
+                  bottom: '-10px',
+                  width: '42%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom',
+                  filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))',
                   zIndex: 3,
                 }}
               />
