@@ -5,15 +5,15 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-visible" style={{ backgroundColor: '#974119' }}>
+    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-hidden" style={{ backgroundColor: '#974119' }}>
       {/* Left Bottle Image */}
       <img 
         src={beerBottleMetiche}
         alt="La Metiche Belgian Witbier"
         className="hidden lg:block absolute"
         style={{ 
-          left: '-50%',
-          top: '-30%',
+          left: '-30%',
+          top: '-50%',
           width: '140%',
           height: 'auto',
           zIndex: 1,
