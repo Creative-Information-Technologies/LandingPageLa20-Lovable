@@ -237,7 +237,7 @@ const BlogSection = () => {
       </div>
 
       {/* Carousel Section - Additional Articles */}
-      <div className="w-full bg-[hsl(var(--blog-brown))] py-16 px-6">
+      <div className="w-full py-16 px-6" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header with title and button */}
           <div className="flex justify-between items-center mb-8">
@@ -306,7 +306,7 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full bg-[hsl(var(--blog-brown))] py-20 px-6 relative overflow-hidden">
+      <div className="w-full py-20 px-6 relative overflow-hidden" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto relative">
           {/* Left Bottle Image */}
           <img 
