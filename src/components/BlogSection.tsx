@@ -80,25 +80,7 @@ const BlogSection = () => {
             
             {/* Assets - Bottle and Glass */}
             <div className="hidden lg:block absolute right-0 top-0 bottom-0 pointer-events-none" style={{ width: '50%', zIndex: 10 }}>
-              {/* Beer Bottle - Middle Layer (35% width) */}
-              <img 
-                src={beerBottleBlog}
-                alt="La Flaka Gose Beer Bottle"
-                className="absolute"
-                style={{
-                  right: '8%',
-                  top: '20px',
-                  bottom: '0',
-                  width: '35%',
-                  height: 'auto',
-                  objectFit: 'contain',
-                  objectPosition: 'bottom',
-                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))',
-                  zIndex: 2,
-                }}
-              />
-              
-              {/* Beer Glass - Front Layer (40-45% width) */}
+              {/* Beer Glass - Back Layer (40-45% width, 7 degrees rotation) */}
               <img 
                 src={beerGlassBlog}
                 alt="LA20 Beer Glass"
@@ -112,6 +94,26 @@ const BlogSection = () => {
                   objectFit: 'contain',
                   objectPosition: 'bottom',
                   filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))',
+                  transform: 'rotate(7deg)',
+                  transformOrigin: 'bottom center',
+                  zIndex: 2,
+                }}
+              />
+              
+              {/* Beer Bottle - Front Layer (35% width) */}
+              <img 
+                src={beerBottleBlog}
+                alt="La Flaka Gose Beer Bottle"
+                className="absolute"
+                style={{
+                  right: '8%',
+                  top: '20px',
+                  bottom: '0',
+                  width: '35%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom',
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))',
                   zIndex: 3,
                 }}
               />
