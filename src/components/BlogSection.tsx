@@ -80,7 +80,7 @@ const BlogSection = () => {
             
             {/* Assets - Bottle and Glass */}
             <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '60%', zIndex: 3 }}>
-              {/* Beer Glass - Behind (252% width, 7 degrees rotation) */}
+              {/* Beer Glass - Behind (140% width, 7 degrees rotation) */}
               <img 
                 src={beerGlassBlog}
                 alt="LA20 Beer Glass"
@@ -88,7 +88,7 @@ const BlogSection = () => {
                 style={{
                   right: '-30%',
                   bottom: '-10px',
-                  width: '252%',
+                  width: '140%',
                   height: 'auto',
                   maxHeight: 'calc(100% + 15px)',
                   objectFit: 'contain',
