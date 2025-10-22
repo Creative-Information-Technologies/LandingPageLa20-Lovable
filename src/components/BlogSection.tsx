@@ -311,17 +311,17 @@ const BlogSection = () => {
           <div className="relative bg-gradient-to-br from-[hsl(var(--blog-brown))] to-[hsl(25_40%_15%)] rounded-3xl overflow-hidden shadow-2xl py-16 px-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left Bottle Image */}
-              <div className="hidden lg:block w-48 h-80 flex-shrink-0">
-                <img 
-                  src={beerBottleMetiche}
-                  alt="La Metiche Belgian Witbier"
-                  className="w-full h-full object-contain"
-                  style={{ 
-                    transform: 'rotate(-7deg)',
-                    filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
-                  }}
-                />
-              </div>
+              <img 
+                src={beerBottleMetiche}
+                alt="La Metiche Belgian Witbier"
+                className="hidden lg:block object-contain flex-shrink-0"
+                style={{ 
+                  width: '576px',
+                  height: '960px',
+                  transform: 'rotate(-7deg)',
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
+                }}
+              />
 
               {/* Center Content */}
               <div className="flex-1 text-center">
@@ -337,17 +337,17 @@ const BlogSection = () => {
               </div>
 
               {/* Right Glass Image */}
-              <div className="hidden lg:block w-48 h-80 flex-shrink-0">
-                <img 
-                  src={beerGlassClub}
-                  alt="LA20 Beer Glass"
-                  className="w-full h-full object-contain"
-                  style={{ 
-                    transform: 'rotate(7deg)',
-                    filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
-                  }}
-                />
-              </div>
+              <img 
+                src={beerGlassClub}
+                alt="LA20 Beer Glass"
+                className="hidden lg:block object-contain flex-shrink-0"
+                style={{ 
+                  width: '576px',
+                  height: '960px',
+                  transform: 'rotate(7deg)',
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
+                }}
+              />
             </div>
           </div>
         </div>
