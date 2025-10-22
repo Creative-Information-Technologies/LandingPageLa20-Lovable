@@ -4,98 +4,159 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black py-12 px-6 relative z-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
-          {/* Logo, Description and Social - Left Column */}
-          <div className="lg:col-span-4">
-            <img src={la20Logo} alt="La 20" className="h-16 w-auto mb-4" />
-            <Button 
-              className="bg-[hsl(var(--blog-yellow))] hover:bg-[hsl(var(--blog-yellow))]/90 text-black font-bold uppercase mb-6 w-full"
+    <footer className="w-full py-12 px-6 lg:px-12 relative z-20" style={{ backgroundColor: '#6B2E0D' }}>
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
+        
+        {/* Left Block - Logo and Contact */}
+        <div className="w-full lg:w-[30%] bg-black rounded-[25px] p-8 flex flex-col items-center text-center">
+          <img src={la20Logo} alt="La 20" className="h-20 w-auto mb-6" />
+          
+          <p className="text-white text-sm leading-relaxed mb-6 font-['Montserrat']">
+            Estaremos locos, pero amamos una buena cerveza artesanal, por lo que dedicamos nuestras vidas para servirte bebidas de clase mundial.
+          </p>
+          
+          <button 
+            className="bg-[#111] hover:bg-[#222] text-white font-bold uppercase tracking-wider rounded-full px-8 py-3 mb-6 transition-all duration-300 hover:shadow-lg"
+          >
+            Contáctanos
+          </button>
+          
+          <div className="flex gap-4">
+            <a 
+              href="#" 
+              className="w-9 h-9 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center transition-colors"
+              aria-label="Instagram"
             >
-              Contacto
-            </Button>
-            <p className="text-gray-400 leading-relaxed mb-6">
-              Estaremos locos, pero amamos una buena cerveza artesanal, por lo que dedicamos nuestras vidas para servirte bebidas de clase mundial.
-            </p>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-            </div>
+              <Instagram className="w-5 h-5 text-black" />
+            </a>
+            <a 
+              href="#" 
+              className="w-9 h-9 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5 text-black" />
+            </a>
           </div>
+        </div>
 
-          {/* Two Rounded Blocks - Right Column */}
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Servicios Block */}
-            <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <h3 className="text-white font-bold uppercase mb-4 text-lg">Servicios</h3>
-              <ul className="space-y-3">
+        {/* Right Block - Navigation Links */}
+        <div className="w-full lg:w-[65%] bg-black rounded-[25px] p-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            
+            {/* SERVICIOS Column */}
+            <div>
+              <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                Servicios
+              </h4>
+              <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-[hsl(var(--blog-yellow))] transition-colors">
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
                     Cervecería
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-[hsl(var(--blog-yellow))] transition-colors">
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
                     Tours
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-[hsl(var(--blog-yellow))] transition-colors">
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
                     Eventos
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-[hsl(var(--blog-yellow))] transition-colors">
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
                     Distribución
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Contacto Block */}
-            <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <h3 className="text-white font-bold uppercase mb-4 text-lg">Contacto</h3>
-              <ul className="space-y-3">
-                <li className="text-gray-400">
-                  +504 1441-5579
+            {/* CERVEZAS Column */}
+            <div>
+              <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                Cervezas
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    La Jefa
+                  </a>
                 </li>
-                <li className="text-gray-400">
-                  info@la20.hn
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    La Metiche
+                  </a>
                 </li>
-                <li className="text-gray-400">
-                  Tegucigalpa, Honduras
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Vienna Lager
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Weissbier
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* PRODUCTOS Column */}
+            <div>
+              <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                Productos
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Merchandising
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Gift Cards
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Club La 20
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* LEGAL Column */}
+            <div>
+              <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                Legal
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Términos y Condiciones
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Política de Privacidad
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                    Aviso Legal
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
+
+          {/* Legal Text */}
+          <div className="text-center text-gray-400 text-xs leading-relaxed pt-6 border-t border-white/10 font-['Montserrat']">
+            <p>© 2025 Copyright EMSULA – Desarrollado por CloudPixels.</p>
+            <p className="mt-1">ADVERTENCIA: EL ABUSO DE LA BEBIDA PERJUDICA LA SALUD. I.H.A.D.F.A.</p>
+          </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
-          <p className="text-center text-gray-400 text-sm">
-            © 2025 La 20 Cervecería Artesanal. Todos los derechos reservados.
-          </p>
-        </div>
       </div>
     </footer>
   );
