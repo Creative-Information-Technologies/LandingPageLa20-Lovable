@@ -306,7 +306,7 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full py-20 px-6 relative" style={{ backgroundColor: '#974119', overflow: 'visible', zIndex: 5 }}>
+      <div className="w-full py-20 px-6 relative overflow-x-hidden" style={{ backgroundColor: '#974119', zIndex: 5 }}>
         <div className="max-w-7xl mx-auto relative">
           {/* Center Content */}
           <div className="relative text-center py-12" style={{ zIndex: 20 }}>
@@ -354,9 +354,9 @@ const BlogSection = () => {
             alt="LA20 Beer Glass"
             className="hidden lg:block absolute"
             style={{ 
-              right: '-9.5%',
+              right: '-5%',
               bottom: '-600px',
-              width: '42%',
+              width: '38%',
               height: 'auto',
               zIndex: 10,
               filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
