@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import la20Logo from "@/assets/la20-logo-new.png";
 
 const Navigation = () => {
@@ -7,12 +8,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Navigation Links - Left */}
         <div className="flex items-center gap-8">
-          <a href="#inicio" className="text-foreground hover:text-primary transition-colors font-medium">
+          <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
             Inicio
-          </a>
-          <a href="#blog" className="text-foreground hover:text-primary transition-colors font-medium">
+          </Link>
+          <Link to="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
             Blog
-          </a>
+          </Link>
           <a href="#catalogo" className="text-foreground hover:text-primary transition-colors font-medium">
             Catálogo
           </a>
