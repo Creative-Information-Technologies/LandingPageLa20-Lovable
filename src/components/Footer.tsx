@@ -5,30 +5,13 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <section className="w-full relative overflow-hidden">
+    <section className="w-full relative overflow-x-hidden overflow-y-visible">
       {/* Footer Background - Absolute, behind everything */}
       <div 
         className="absolute inset-0" 
         style={{ 
           backgroundColor: '#974119',
           zIndex: 0 
-        }}
-      />
-
-      {/* Right Glass Image - Positioned absolutely */}
-      <img 
-        src={beerGlassClub}
-        alt="LA20 Beer Glass"
-        className="hidden lg:block absolute"
-        style={{ 
-          right: '-5%',
-          top: '-600px',
-          width: '38%',
-          height: 'auto',
-          zIndex: 10,
-          filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
-          transform: 'rotate(7deg)',
-          transformOrigin: 'bottom center'
         }}
       />
 
