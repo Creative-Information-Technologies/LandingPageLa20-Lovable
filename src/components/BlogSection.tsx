@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerBottleBlog from "@/assets/beer-bottle-blog.png";
 import beerGlassBlog from "@/assets/beer-glass-blog.png";
+import blogCurrywurstMain from "@/assets/blog-currywurst-main.png";
+import blogClubPromo from "@/assets/blog-club-promo.png";
+import blogSaboresPerspectiva from "@/assets/blog-sabores-perspectiva.png";
+import blogTourCervecero from "@/assets/blog-tour-cervecero.png";
+import blogCervezaArtesanal from "@/assets/blog-cerveza-artesanal.png";
 import {
   Carousel,
   CarouselContent,
@@ -14,29 +19,29 @@ const BlogSection = () => {
   const mainArticle = {
     title: "MARIDAJE PERFECTO: CURRYWURST",
     description: "Descubrí cómo la Viena de La20 realza los sabores de este clásico alemán. Una combinación que tenés que probar.",
-    image: null,
+    image: blogCurrywurstMain,
   };
 
   const secondaryArticles = [
     {
       title: "Conocé la promo para miembros del club La20",
       description: "Beneficios exclusivos para los verdaderos amantes de la cerveza artesanal.",
-      image: null,
+      image: blogClubPromo,
     },
     {
       title: "Sabores con otra perspectiva",
       description: "Explorá nuevas formas de disfrutar tu cerveza favorita con maridajes innovadores.",
-      image: null,
+      image: blogSaboresPerspectiva,
     },
     {
       title: "Tour Cervecero: Qué, cómo y dónde",
       description: "Conocé el proceso detrás de cada botella en nuestra cervecería artesanal.",
-      image: null,
+      image: blogTourCervecero,
     },
     {
       title: "La20 cumplió 10 años",
       description: "Una década compartiendo momentos únicos con vos. ¡Celebramos juntos!",
-      image: null,
+      image: blogCervezaArtesanal,
     },
   ];
 
@@ -100,7 +105,7 @@ const BlogSection = () => {
                 }}
               />
               
-              {/* Beer Bottle - Front Layer (35% width) */}
+              {/* Beer Bottle - Front Layer (70% width - 2x larger, -7 degrees rotation) */}
               <img 
                 src={beerBottleBlog}
                 alt="La Flaka Gose Beer Bottle"
@@ -109,11 +114,13 @@ const BlogSection = () => {
                   right: '8%',
                   top: '20px',
                   bottom: '0',
-                  width: '35%',
+                  width: '70%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
                   filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))',
+                  transform: 'rotate(-7deg)',
+                  transformOrigin: 'bottom center',
                   zIndex: 3,
                 }}
               />
@@ -129,7 +136,11 @@ const BlogSection = () => {
             {/* Main Article */}
             <article className="bg-white/95 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
               <div className="aspect-video overflow-hidden bg-gray-200">
-                {/* Espacio para imagen principal */}
+                <img 
+                  src={mainArticle.image} 
+                  alt={mainArticle.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-8">
                 <h2 className="text-3xl font-bold text-[hsl(var(--blog-brown))] mb-4 font-deacon uppercase">
@@ -156,7 +167,11 @@ const BlogSection = () => {
                   className="bg-white/95 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex"
                 >
                   <div className="w-1/3 overflow-hidden flex-shrink-0 bg-gray-200">
-                    {/* Espacio para imagen */}
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="p-6 flex-1">
                     <h3 className="text-xl font-bold text-[hsl(var(--blog-brown))] mb-2 font-deacon">
@@ -200,25 +215,29 @@ const BlogSection = () => {
               {[
                 {
                   title: "Celebramos la maestra, con esta cerveza de edición especial",
-                  image: null,
+                  image: blogClubPromo,
                 },
                 {
                   title: "La 20 cumple hoy 6 años",
-                  image: null,
+                  image: blogCervezaArtesanal,
                 },
                 {
                   title: "¿Cerveza artesanal o industrial?",
-                  image: null,
+                  image: blogSaboresPerspectiva,
                 },
                 {
                   title: "Receta del día: Aguachile de camarón",
-                  image: null,
+                  image: blogTourCervecero,
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="bg-gradient-to-br from-[hsl(var(--blog-orange))] to-[hsl(var(--blog-yellow))] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
                     <div className="aspect-[4/3] overflow-hidden bg-white/10">
-                      {/* Espacio para imagen */}
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
