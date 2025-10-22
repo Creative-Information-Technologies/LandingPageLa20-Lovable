@@ -79,7 +79,7 @@ const BlogSection = () => {
             </div>
             
             {/* Assets - Bottle and Glass */}
-            <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '60%', zIndex: 3 }}>
+            <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '100%', zIndex: 3 }}>
               {/* Beer Glass - Behind (140% width, 7 degrees rotation) */}
               <img 
                 src={beerGlassBlog}
@@ -90,7 +90,6 @@ const BlogSection = () => {
                   bottom: '-10px',
                   width: '140%',
                   height: 'auto',
-                  maxHeight: 'calc(100% + 15px)',
                   objectFit: 'contain',
                   filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25))',
                   transform: 'rotate(7deg)',
@@ -109,7 +108,6 @@ const BlogSection = () => {
                   bottom: '0',
                   width: '210%',
                   height: 'auto',
-                  maxHeight: 'calc(100% - 20px)',
                   objectFit: 'contain',
                   filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3))',
                   transform: 'rotate(-7deg)',
