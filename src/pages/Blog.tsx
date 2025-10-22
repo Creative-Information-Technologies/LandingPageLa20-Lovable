@@ -1,11 +1,13 @@
 import Navigation from "@/components/Navigation";
 import BlogSection from "@/components/BlogSection";
+import Footer from "@/components/Footer";
 
 const Blog = () => {
   return (
     <div className="min-h-screen w-full">
       <Navigation />
       <BlogSection />
+      <Footer />
     </div>
   );
 };
