@@ -42,20 +42,16 @@ const BlogSection = () => {
     <section className="w-full">
       {/* Hero Header */}
       <div 
-        className="relative w-full overflow-hidden"
+        className="relative w-full py-20 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
         style={{
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight: '500px',
-          paddingTop: '80px',
-          paddingBottom: '80px',
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 h-full flex items-center">
-          <div className="flex items-center justify-between w-full">
-            {/* Text Content - Left */}
-            <div className="flex-1 max-w-3xl">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
               <h1 
                 className="font-oswald font-bold text-white uppercase tracking-[0%]"
                 style={{
@@ -79,28 +75,11 @@ const BlogSection = () => {
                 </span>
               </h1>
             </div>
-            
-            {/* Image Space - Right */}
-            <div className="hidden lg:flex items-end gap-6 flex-shrink-0">
-              {/* Placeholder for beer bottle and glass */}
-              <div 
-                className="relative"
-                style={{
-                  width: '250px',
-                  height: '400px',
-                }}
-              >
-                {/* Space reserved for bottle */}
-              </div>
-              <div 
-                className="relative"
-                style={{
-                  width: '300px',
-                  height: '400px',
-                }}
-              >
-                {/* Space reserved for glass */}
-              </div>
+            {/* Espacio para imágenes futuras */}
+            <div className="hidden lg:flex items-end gap-4 flex-shrink-0">
+              <div className="h-72 w-32 bg-white/10 rounded-lg"></div>
+              <div className="h-80 w-32 bg-white/10 rounded-lg"></div>
+              <div className="h-72 w-32 bg-white/10 rounded-lg"></div>
             </div>
           </div>
         </div>
