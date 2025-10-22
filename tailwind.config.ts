@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         deacon: ['"Deacon Condensed Test"', 'sans-serif'],
+        oswald: ['Oswald', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
