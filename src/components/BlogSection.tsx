@@ -342,9 +342,9 @@ const BlogSection = () => {
             alt="LA20 Beer Glass"
             className="hidden lg:block absolute"
             style={{ 
-              right: '-4%',
+              right: '2%',
               bottom: '-25%',
-              width: '40%',
+              width: '35%',
               height: 'auto',
               zIndex: 4,
               filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))'
