@@ -316,10 +316,12 @@ const BlogSection = () => {
             style={{ 
               left: '-5%',
               bottom: '0',
-              width: '35%',
+              width: '70%',
               height: 'auto',
               zIndex: 3,
-              filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))'
+              filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
+              transform: 'rotate(-7deg)',
+              transformOrigin: 'bottom center'
             }}
           />
 
@@ -343,11 +345,13 @@ const BlogSection = () => {
             className="hidden lg:block absolute"
             style={{ 
               right: '2%',
-              bottom: '-25%',
+              bottom: '-35%',
               width: '35%',
               height: 'auto',
               zIndex: 4,
-              filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))'
+              filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
+              transform: 'rotate(7deg)',
+              transformOrigin: 'bottom center'
             }}
           />
         </div>

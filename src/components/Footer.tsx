@@ -10,6 +10,11 @@ const Footer = () => {
           {/* Logo, Description and Social - Left Column */}
           <div className="lg:col-span-4">
             <img src={la20Logo} alt="La 20" className="h-16 w-auto mb-4" />
+            <Button 
+              className="bg-[hsl(var(--blog-yellow))] hover:bg-[hsl(var(--blog-yellow))]/90 text-black font-bold uppercase mb-6 w-full"
+            >
+              Contacto
+            </Button>
             <p className="text-gray-400 leading-relaxed mb-6">
               Estaremos locos, pero amamos una buena cerveza artesanal, por lo que dedicamos nuestras vidas para servirte bebidas de clase mundial.
             </p>
@@ -69,11 +74,7 @@ const Footer = () => {
 
             {/* Contacto Block */}
             <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <Button 
-                className="bg-[hsl(var(--blog-yellow))] hover:bg-[hsl(var(--blog-yellow))]/90 text-black font-bold uppercase mb-4 w-full"
-              >
-                Contacto
-              </Button>
+              <h3 className="text-white font-bold uppercase mb-4 text-lg">Contacto</h3>
               <ul className="space-y-3">
                 <li className="text-gray-400">
                   +504 1441-5579
