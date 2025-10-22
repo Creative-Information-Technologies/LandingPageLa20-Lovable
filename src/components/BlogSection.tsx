@@ -12,6 +12,8 @@ import blogCervezaArtesanal from "@/assets/blog-cerveza-artesanal.png";
 import blogCarousel1 from "@/assets/blog-carousel-1.png";
 import blogCarousel2 from "@/assets/blog-carousel-2.png";
 import blogCarousel3 from "@/assets/blog-carousel-3.png";
+import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
+import beerGlassClub from "@/assets/beer-glass-club.png";
 import {
   Carousel,
   CarouselContent,
@@ -308,9 +310,17 @@ const BlogSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="relative bg-gradient-to-br from-[hsl(var(--blog-brown))] to-[hsl(25_40%_15%)] rounded-3xl overflow-hidden shadow-2xl py-16 px-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-              {/* Left Bottle Image Placeholder */}
-              <div className="hidden lg:block w-48 h-80 bg-white/10 rounded-lg flex-shrink-0">
-                {/* Espacio para botella */}
+              {/* Left Bottle Image */}
+              <div className="hidden lg:block w-48 h-80 flex-shrink-0">
+                <img 
+                  src={beerBottleMetiche}
+                  alt="La Metiche Belgian Witbier"
+                  className="w-full h-full object-contain"
+                  style={{ 
+                    transform: 'rotate(-7deg)',
+                    filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
+                  }}
+                />
               </div>
 
               {/* Center Content */}
@@ -326,9 +336,17 @@ const BlogSection = () => {
                 </Button>
               </div>
 
-              {/* Right Glass Image Placeholder */}
-              <div className="hidden lg:block w-48 h-80 bg-white/10 rounded-lg flex-shrink-0">
-                {/* Espacio para vaso */}
+              {/* Right Glass Image */}
+              <div className="hidden lg:block w-48 h-80 flex-shrink-0">
+                <img 
+                  src={beerGlassClub}
+                  alt="LA20 Beer Glass"
+                  className="w-full h-full object-contain"
+                  style={{ 
+                    transform: 'rotate(7deg)',
+                    filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
+                  }}
+                />
               </div>
             </div>
           </div>
