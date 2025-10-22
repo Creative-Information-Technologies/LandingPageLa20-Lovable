@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerBottleBlog from "@/assets/beer-bottle-blog.png";
 import beerGlassBlog from "@/assets/beer-glass-blog.png";
-import blogCurrywurstMain from "@/assets/blog-currywurst-main.png";
+import blogCurrywurstMain from "@/assets/blog-currywurst-new.png";
 import blogClubPromo from "@/assets/blog-club-promo.png";
 import blogSaboresPerspectiva from "@/assets/blog-sabores-perspectiva.png";
 import blogTourCervecero from "@/assets/blog-tour-cervecero.png";
@@ -245,10 +246,10 @@ const BlogSection = () => {
               Explorar todos los artículos
             </h2>
             <Button 
-              variant="secondary"
-              className="bg-white hover:bg-white/90 text-[#3B200B] font-bold uppercase px-6 py-3 rounded-lg"
+              className="bg-[#FFD200] hover:bg-[#FFD200]/90 text-[#3B200B] font-bold uppercase px-6 py-3 rounded-lg flex items-center gap-2"
             >
               Más recientes
+              <ChevronDown className="w-5 h-5" />
             </Button>
           </div>
           
@@ -273,8 +274,12 @@ const BlogSection = () => {
                   title: "Celebramos el sabor y calidad de lo nuestro",
                   image: blogCarousel3,
                 },
+                {
+                  title: "Tour cervecero - Descubrí el proceso",
+                  image: blogTourCervecero,
+                },
               ].map((item, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
                   <div className="bg-gradient-to-br from-[hsl(var(--blog-orange))] to-[hsl(var(--blog-yellow))] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
                     <div className="aspect-[4/3] overflow-hidden bg-white/10">
                       <img 
