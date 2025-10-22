@@ -52,7 +52,16 @@ const BlogSection = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between">
             <div className="flex-1">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-tight font-deacon">
+              <h1 
+                className="font-oswald font-bold text-white uppercase"
+                style={{
+                  fontSize: '120px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  width: '1115px',
+                  height: '178px',
+                }}
+              >
                 CONOCÉ LAS<br />ÚLTIMAS<br />NOTICIAS
               </h1>
             </div>
