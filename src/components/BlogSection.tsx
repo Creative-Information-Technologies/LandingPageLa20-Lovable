@@ -55,7 +55,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full overflow-x-hidden">
       {/* Hero Header */}
       <div 
         className="relative w-full py-20 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
