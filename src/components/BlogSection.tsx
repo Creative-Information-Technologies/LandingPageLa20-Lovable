@@ -4,6 +4,8 @@ import { ChevronDown } from "lucide-react";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerBottleBlog from "@/assets/beer-bottle-blog.png";
 import beerGlassBlog from "@/assets/beer-glass-blog.png";
+import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
+import beerGlassClub from "@/assets/beer-glass-club.png";
 import blogCurrywurstMain from "@/assets/blog-currywurst-new.png";
 import blogClubPromo from "@/assets/blog-club-promo.png";
 import blogSaboresPerspectiva from "@/assets/blog-sabores-perspectiva.png";
@@ -304,7 +306,7 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full py-20 px-6 relative overflow-visible" style={{ backgroundColor: '#974119' }}>
+      <div className="w-full py-20 px-6 relative" style={{ backgroundColor: '#974119', overflow: 'visible', zIndex: 5 }}>
         <div className="max-w-7xl mx-auto relative">
           {/* Center Content */}
           <div className="relative z-10 text-center py-12">
@@ -318,6 +320,40 @@ const BlogSection = () => {
               UNIRME AL CLUB
             </Button>
           </div>
+
+          {/* Left Bottle Image - Extending into Footer */}
+          <img 
+            src={beerBottleMetiche}
+            alt="La Metiche Belgian Witbier"
+            className="hidden lg:block absolute"
+            style={{ 
+              left: '-5%',
+              bottom: '-280px',
+              width: '35%',
+              height: 'auto',
+              zIndex: 10,
+              filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
+              transform: 'rotate(-7deg)',
+              transformOrigin: 'bottom center'
+            }}
+          />
+
+          {/* Right Glass Image - Extending into Footer */}
+          <img 
+            src={beerGlassClub}
+            alt="LA20 Beer Glass"
+            className="hidden lg:block absolute"
+            style={{ 
+              right: '0%',
+              bottom: '-300px',
+              width: '28%',
+              height: 'auto',
+              zIndex: 10,
+              filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
+              transform: 'rotate(7deg)',
+              transformOrigin: 'bottom center'
+            }}
+          />
         </div>
       </div>
     </section>

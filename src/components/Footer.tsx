@@ -5,40 +5,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-x-hidden overflow-y-visible" style={{ backgroundColor: '#974119' }}>
-      {/* Left Bottle Image */}
-      <img 
-        src={beerBottleMetiche}
-        alt="La Metiche Belgian Witbier"
-        className="hidden lg:block absolute"
-        style={{ 
-          left: '-50%',
-          top: '-150%',
-          width: '140%',
-          height: 'auto',
-          zIndex: 1,
-          filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
-          transform: 'rotate(-7deg)',
-          transformOrigin: 'bottom center'
-        }}
-      />
-
-      {/* Right Glass Image */}
-      <img 
-        src={beerGlassClub}
-        alt="LA20 Beer Glass"
-        className="hidden lg:block absolute"
-        style={{ 
-          right: '-10%',
-          top: '-155%',
-          width: '70%',
-          height: 'auto',
-          zIndex: 1,
-          filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
-          transform: 'rotate(7deg)',
-          transformOrigin: 'bottom center'
-        }}
-      />
+    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-x-hidden overflow-y-visible" style={{ backgroundColor: '#974119', zIndex: 1 }}>
 
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start relative z-20">
         
