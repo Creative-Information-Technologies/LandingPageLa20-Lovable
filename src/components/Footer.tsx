@@ -1,9 +1,45 @@
 import la20Logo from "@/assets/la20-logo-new.png";
+import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
+import beerGlassClub from "@/assets/beer-glass-club.png";
 import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-6 lg:px-12 relative z-20" style={{ backgroundColor: '#974119' }}>
+    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-visible z-20" style={{ backgroundColor: '#974119' }}>
+      {/* Left Bottle Image */}
+      <img 
+        src={beerBottleMetiche}
+        alt="La Metiche Belgian Witbier"
+        className="hidden lg:block absolute"
+        style={{ 
+          left: '-50%',
+          top: '-30%',
+          width: '140%',
+          height: 'auto',
+          zIndex: 1,
+          filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
+          transform: 'rotate(-7deg)',
+          transformOrigin: 'top center'
+        }}
+      />
+
+      {/* Right Glass Image */}
+      <img 
+        src={beerGlassClub}
+        alt="LA20 Beer Glass"
+        className="hidden lg:block absolute"
+        style={{ 
+          right: '-35%',
+          top: '-55%',
+          width: '70%',
+          height: 'auto',
+          zIndex: 1,
+          filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
+          transform: 'rotate(7deg)',
+          transformOrigin: 'top center'
+        }}
+      />
+
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start relative z-20">
         
         {/* Left Block - Logo and Contact */}
