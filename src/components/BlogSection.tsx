@@ -63,53 +63,53 @@ const BlogSection = () => {
                 }}
               >
                 CONOCÉ<br />
-                <span style={{ textAlign: 'justify', display: 'block', textAlignLast: 'justify' }}>
-                  LAS ÚLTIMAS{' '}
-                  <span 
-                    className="inline-block"
-                    style={{
-                      backgroundColor: '#FFE135',
-                      color: '#000000',
-                      padding: '4px 12px',
-                      borderRadius: '12px',
-                    }}
-                  >
-                    NOTICIAS
-                  </span>
+                LAS ÚLTIMAS{' '}
+                <span 
+                  className="inline-block"
+                  style={{
+                    backgroundColor: '#FFE135',
+                    color: '#000000',
+                    padding: '4px 12px',
+                    borderRadius: '12px',
+                  }}
+                >
+                  NOTICIAS
                 </span>
               </h1>
             </div>
             
             {/* Assets - Bottle and Glass */}
-            <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '50%', zIndex: 3 }}>
-              {/* Beer Glass - Behind */}
+            <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '60%', zIndex: 3 }}>
+              {/* Beer Bottle - Front (35% width, partially covering NOTICIAS) */}
               <img 
-                src={beerGlassBlog}
-                alt="Beer Glass"
+                src={beerBottleBlog}
+                alt="La Flaka Gose Beer Bottle"
                 className="absolute"
                 style={{
-                  left: '75%',
+                  right: '10%',
                   bottom: '0',
-                  height: '75%',
-                  width: 'auto',
+                  width: '35%',
+                  height: 'auto',
+                  maxHeight: 'calc(100% - 20px)',
                   objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 20px rgba(0, 0, 0, 0.2))',
+                  filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3))',
                   zIndex: 2,
                 }}
               />
               
-              {/* Beer Bottle - Front */}
+              {/* Beer Glass - Behind but on top (40-45% width, slightly behind and taller) */}
               <img 
-                src={beerBottleBlog}
-                alt="Beer Bottle"
+                src={beerGlassBlog}
+                alt="LA20 Beer Glass"
                 className="absolute"
                 style={{
-                  left: '35%',
-                  bottom: '0',
-                  height: '68%',
-                  width: 'auto',
+                  right: '0',
+                  bottom: '-10px',
+                  width: '42%',
+                  height: 'auto',
+                  maxHeight: 'calc(100% + 15px)',
                   objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 20px rgba(0, 0, 0, 0.2))',
+                  filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25))',
                   zIndex: 3,
                 }}
               />
