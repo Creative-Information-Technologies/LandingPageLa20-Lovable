@@ -12,7 +12,7 @@ const Footer = () => {
         alt="La Metiche Belgian Witbier"
         className="hidden lg:block absolute"
         style={{ 
-          left: '-15%',
+          left: '-50%',
           top: '-150%',
           width: '140%',
           height: 'auto',
@@ -29,7 +29,7 @@ const Footer = () => {
         alt="LA20 Beer Glass"
         className="hidden lg:block absolute"
         style={{ 
-          right: '-35%',
+          right: '-10%',
           top: '-155%',
           width: '70%',
           height: 'auto',
