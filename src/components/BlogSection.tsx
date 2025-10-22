@@ -309,7 +309,7 @@ const BlogSection = () => {
       <div className="w-full py-20 px-6 relative" style={{ backgroundColor: '#974119', overflow: 'visible', zIndex: 5 }}>
         <div className="max-w-7xl mx-auto relative">
           {/* Center Content */}
-          <div className="relative z-10 text-center py-12">
+          <div className="relative text-center py-12" style={{ zIndex: 20 }}>
             <h2 
               className="text-white uppercase mb-8 font-barlow-condensed"
               style={{
@@ -337,7 +337,7 @@ const BlogSection = () => {
             alt="La Metiche Belgian Witbier"
             className="hidden lg:block absolute"
             style={{ 
-              left: '-35%',
+              left: '-40%',
               bottom: '-480px',
               width: '105%',
               height: 'auto',
