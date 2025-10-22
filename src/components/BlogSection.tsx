@@ -306,114 +306,47 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div 
-        className="w-full relative py-24 px-6 overflow-hidden"
-        style={{
-          backgroundColor: 'hsl(var(--blog-orange))',
-          backgroundImage: `url(${wavyPatternBrown})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Black Wave Top with Curved Text */}
-        <div className="absolute top-0 left-0 right-0 w-full h-32 z-20">
-          <svg
-            viewBox="0 0 1440 160"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-            preserveAspectRatio="none"
-          >
-            <defs>
-              <path id="clubWavePath" d="M0,80 Q360,20 720,80 T1440,80" />
-            </defs>
-            
-            <path d="M0,0 L1440,0 L1440,80 Q1080,20 720,80 Q360,140 0,80 Z" fill="hsl(0, 0%, 0%)" />
-            
-            <text
-              dy="45"
-              className="font-black tracking-wider"
-              style={{
-                fontSize: '32px',
-                fill: 'hsl(0, 0%, 100%)',
-                fontFamily: 'Deacon Condensed Test, sans-serif',
-                fontWeight: 900,
+      <div className="w-full bg-[hsl(var(--blog-brown))] py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Left Bottle Image */}
+            <img 
+              src={beerBottleMetiche}
+              alt="La Metiche Belgian Witbier"
+              className="hidden lg:block object-contain flex-shrink-0"
+              style={{ 
+                width: '576px',
+                height: '960px',
+                transform: 'rotate(-7deg)',
+                filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
               }}
-            >
-              <textPath href="#clubWavePath" startOffset="10%">
-                BENEFICIOS EXCLUSIVOS • EVENTOS ESPECIALES • BENEFICIOS EXCLUSIVOS
-              </textPath>
-            </text>
-          </svg>
-        </div>
+            />
 
-        {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto relative" style={{ minHeight: '500px' }}>
-          {/* Left Bottle Image */}
-          <img 
-            src={beerBottleMetiche}
-            alt="La Metiche Belgian Witbier"
-            className="hidden lg:block absolute pointer-events-none"
-            style={{ 
-              left: '-5%',
-              bottom: '0',
-              width: '35%',
-              height: 'auto',
-              zIndex: 3,
-              filter: 'drop-shadow(0 15px 30px rgba(0, 0, 0, 0.35))',
-            }}
-          />
+            {/* Center Content */}
+            <div className="flex-1 text-center">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight mb-8 font-deacon leading-tight">
+                UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
+              </h2>
+              <Button 
+                size="lg"
+                className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
+              >
+                UNIRME AL CLUB
+              </Button>
+            </div>
 
-          {/* Center Text Content */}
-          <div className="relative z-10 text-center py-16">
-            <h2 
-              className="font-deacon font-bold text-white uppercase tracking-tight mb-8 leading-tight"
-              style={{
-                fontSize: '72px',
-                textShadow: '4px 4px 8px rgba(82, 28, 3, 0.6)',
+            {/* Right Glass Image */}
+            <img 
+              src={beerGlassClub}
+              alt="LA20 Beer Glass"
+              className="hidden lg:block object-contain flex-shrink-0"
+              style={{ 
+                width: '576px',
+                height: '960px',
+                transform: 'rotate(7deg)',
+                filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
               }}
-            >
-              UNITE AL CLUB LA20 Y<br />
-              OBTENÉ BENEFICIOS<br />
-              ESPECIALES
-            </h2>
-            <Button 
-              size="lg"
-              className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
-            >
-              UNIRME AL CLUB
-            </Button>
-          </div>
-
-          {/* Right Glass Image */}
-          <img 
-            src={beerGlassClub}
-            alt="LA20 Beer Glass"
-            className="hidden lg:block absolute pointer-events-none"
-            style={{ 
-              right: '-4%',
-              bottom: '0',
-              width: '40%',
-              height: 'auto',
-              zIndex: 4,
-              filter: 'drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35))',
-            }}
-          />
-        </div>
-
-        {/* Footer-like blocks at the bottom */}
-        <div className="max-w-7xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 px-4 relative z-10">
-          <div className="bg-black rounded-3xl p-8 text-center">
-            <h3 className="text-white font-bold text-xl mb-2 font-deacon">DESCUENTOS</h3>
-            <p className="text-white/80">Ofertas exclusivas en todas nuestras cervezas</p>
-          </div>
-          <div className="bg-black rounded-3xl p-8 text-center">
-            <h3 className="text-white font-bold text-xl mb-2 font-deacon">EVENTOS</h3>
-            <p className="text-white/80">Acceso prioritario a tours y degustaciones</p>
-          </div>
-          <div className="bg-black rounded-3xl p-8 text-center">
-            <h3 className="text-white font-bold text-xl mb-2 font-deacon">PREMIOS</h3>
-            <p className="text-white/80">Acumulá puntos y ganá merchandising</p>
+            />
           </div>
         </div>
       </div>
