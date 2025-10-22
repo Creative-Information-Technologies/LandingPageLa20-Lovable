@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const BlogSection = () => {
   const mainArticle = {
@@ -119,6 +126,87 @@ const BlogSection = () => {
             >
               Más recientes
             </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Carousel Section - Additional Articles */}
+      <div className="w-full bg-[hsl(var(--blog-brown))] py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {[
+                {
+                  title: "Celebramos la maestra, con esta cerveza de edición especial",
+                  image: null,
+                },
+                {
+                  title: "La 20 cumple hoy 6 años",
+                  image: null,
+                },
+                {
+                  title: "¿Cerveza artesanal o industrial?",
+                  image: null,
+                },
+                {
+                  title: "Receta del día: Aguachile de camarón",
+                  image: null,
+                },
+              ].map((item, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-gradient-to-br from-[hsl(var(--blog-orange))] to-[hsl(var(--blog-yellow))] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                    <div className="aspect-[4/3] overflow-hidden bg-white/10">
+                      {/* Espacio para imagen */}
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-2 bg-white/20 hover:bg-white/30 text-white border-0" />
+            <CarouselNext className="right-2 bg-white/20 hover:bg-white/30 text-white border-0" />
+          </Carousel>
+        </div>
+      </div>
+
+      {/* Club Membership Section */}
+      <div className="w-full bg-[hsl(var(--blog-brown))] py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative bg-gradient-to-br from-[hsl(var(--blog-brown))] to-[hsl(25_40%_15%)] rounded-3xl overflow-hidden shadow-2xl py-16 px-8">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              {/* Left Bottle Image Placeholder */}
+              <div className="hidden lg:block w-48 h-80 bg-white/10 rounded-lg flex-shrink-0">
+                {/* Espacio para botella */}
+              </div>
+
+              {/* Center Content */}
+              <div className="flex-1 text-center">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight mb-8 font-deacon leading-tight">
+                  UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
+                </h2>
+                <Button 
+                  size="lg"
+                  className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
+                >
+                  UNIRME AL CLUB
+                </Button>
+              </div>
+
+              {/* Right Glass Image Placeholder */}
+              <div className="hidden lg:block w-48 h-80 bg-white/10 rounded-lg flex-shrink-0">
+                {/* Espacio para vaso */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
