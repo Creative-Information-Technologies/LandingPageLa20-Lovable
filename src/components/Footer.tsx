@@ -1,27 +1,9 @@
 import la20Logo from "@/assets/la20-logo-new.png";
-import beerBottle from "@/assets/beer-bottle-la-jefa-bottle.png";
-import beerGlass from "@/assets/beer-glass-club.png";
 import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-6 lg:px-12 relative z-20 overflow-hidden" style={{ backgroundColor: '#974119' }}>
-      {/* Beer Bottle - Bottom Left Corner */}
-      <img 
-        src={beerBottle} 
-        alt="" 
-        className="absolute bottom-0 left-4 w-32 h-auto z-10 hidden lg:block"
-        style={{ transform: 'translateY(20%)' }}
-      />
-      
-      {/* Beer Glass - Bottom Right Corner */}
-      <img 
-        src={beerGlass} 
-        alt="" 
-        className="absolute bottom-0 right-4 w-28 h-auto z-10 hidden lg:block"
-        style={{ transform: 'translateY(25%)' }}
-      />
-      
+    <footer className="w-full py-12 px-6 lg:px-12 relative z-20" style={{ backgroundColor: '#974119' }}>
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start relative z-20">
         
         {/* Left Block - Logo and Contact */}
