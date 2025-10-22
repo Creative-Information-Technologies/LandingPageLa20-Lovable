@@ -5,7 +5,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-x-hidden overflow-y-visible" style={{ backgroundColor: '#000000', zIndex: 10 }}>
+    <footer className="w-full py-12 px-6 lg:px-12 relative overflow-x-hidden overflow-y-visible" style={{ backgroundColor: '#974119', zIndex: 1 }}>
 
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start relative z-20">
         
