@@ -306,34 +306,22 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full py-20 px-6 relative overflow-visible z-[1]" style={{ backgroundColor: '#6B2E0D' }}>
+      <div className="w-full py-20 px-6 relative overflow-visible z-[1]" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto relative">
-          {/* Left Bottle Image - Desktop */}
+          {/* Left Bottle Image */}
           <img 
             src={beerBottleMetiche}
             alt="La Metiche Belgian Witbier"
-            className="hidden lg:block absolute asset-bottle"
+            className="hidden lg:block absolute"
             style={{ 
-              left: '0',
-              bottom: '-45px',
-              height: '520px',
-              width: 'auto',
-              zIndex: 2,
+              left: '-15%',
+              bottom: '-220px',
+              width: '70%',
+              height: 'auto',
+              zIndex: 1,
               filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
-              transform: 'rotate(-2deg)',
+              transform: 'rotate(-7deg)',
               transformOrigin: 'bottom center'
-            }}
-          />
-
-          {/* Mobile Bottle - Top */}
-          <img 
-            src={beerBottleMetiche}
-            alt="La Metiche Belgian Witbier"
-            className="lg:hidden mx-auto mb-8"
-            style={{ 
-              height: '280px',
-              width: 'auto',
-              filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
             }}
           />
 
@@ -350,31 +338,19 @@ const BlogSection = () => {
             </Button>
           </div>
 
-          {/* Mobile Glass - Bottom */}
+          {/* Right Glass Image */}
           <img 
             src={beerGlassClub}
             alt="LA20 Beer Glass"
-            className="lg:hidden mx-auto mt-8"
+            className="hidden lg:block absolute"
             style={{ 
-              height: '300px',
-              width: 'auto',
-              filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
-            }}
-          />
-
-          {/* Right Glass Image - Desktop */}
-          <img 
-            src={beerGlassClub}
-            alt="LA20 Beer Glass"
-            className="hidden lg:block absolute asset-glass"
-            style={{ 
-              right: '0',
-              bottom: '-65px',
-              height: '600px',
-              width: 'auto',
+              right: '2%',
+              bottom: '-250px',
+              width: '35%',
+              height: 'auto',
               zIndex: 1,
               filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
-              transform: 'rotate(2deg)',
+              transform: 'rotate(7deg)',
               transformOrigin: 'bottom center'
             }}
           />
