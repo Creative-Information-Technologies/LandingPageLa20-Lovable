@@ -306,7 +306,7 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full py-20 px-6 relative overflow-hidden" style={{ backgroundColor: '#974119' }}>
+      <div className="w-full py-20 px-6 relative overflow-visible" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto relative">
           {/* Left Bottle Image */}
           <img 
