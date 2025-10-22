@@ -154,8 +154,8 @@ const BlogSection = () => {
                 <img
                   src={mainArticle.image}
                   alt={mainArticle.title}
-                  className="w-full object-contain"
-                  style={{ aspectRatio: '16/9', backgroundColor: '#f5f5f5' }}
+                  className="w-full object-cover"
+                  style={{ aspectRatio: '16/9' }}
                 />
                 {/* Text Block */}
                 <div style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
@@ -236,6 +236,22 @@ const BlogSection = () => {
       {/* Carousel Section - Additional Articles */}
       <div className="w-full bg-[hsl(var(--blog-brown))] py-16 px-6">
         <div className="max-w-7xl mx-auto">
+          {/* Header with title and button */}
+          <div className="flex justify-between items-center mb-8">
+            <h2 
+              className="text-3xl md:text-4xl font-bold text-white uppercase"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Explorar todos los artículos
+            </h2>
+            <Button 
+              variant="secondary"
+              className="bg-white hover:bg-white/90 text-[#3B200B] font-bold uppercase px-6 py-3 rounded-lg"
+            >
+              Más recientes
+            </Button>
+          </div>
+          
           <Carousel
             opts={{
               align: "start",
