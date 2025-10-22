@@ -134,13 +134,9 @@ const BlogSection = () => {
         </div>
       </div>
 
-      {/* Blog Content - "Conocé esta receta de la casa" */}
+      {/* Blog Content - Articles Section */}
       <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3B200B' }}>
         <div className="max-w-7xl mx-auto" style={{ padding: '40px 20px' }}>
-          <h2 className="text-4xl md:text-5xl font-deacon text-center mb-12" style={{ color: '#F4E1C0' }}>
-            Conocé esta receta de la casa
-          </h2>
-
           {/* Main and Secondary Articles Grid - 65-70% / 30-35% split */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Main Article - Left Column (65-70% width) */}
