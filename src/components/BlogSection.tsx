@@ -7,6 +7,9 @@ import blogClubPromo from "@/assets/blog-club-promo.png";
 import blogSaboresPerspectiva from "@/assets/blog-sabores-perspectiva.png";
 import blogTourCervecero from "@/assets/blog-tour-cervecero.png";
 import blogCervezaArtesanal from "@/assets/blog-cerveza-artesanal.png";
+import blogCarousel1 from "@/assets/blog-carousel-1.png";
+import blogCarousel2 from "@/assets/blog-carousel-2.png";
+import blogCarousel3 from "@/assets/blog-carousel-3.png";
 import {
   Carousel,
   CarouselContent,
@@ -152,8 +155,8 @@ const BlogSection = () => {
                 <img
                   src={mainArticle.image}
                   alt={mainArticle.title}
-                  className="w-full object-cover"
-                  style={{ aspectRatio: '16/9' }}
+                  className="w-full object-contain"
+                  style={{ aspectRatio: '16/9', backgroundColor: '#f5f5f5' }}
                 />
                 {/* Text Block */}
                 <div style={{ backgroundColor: '#FFFFFF', padding: '24px' }}>
@@ -268,20 +271,16 @@ const BlogSection = () => {
             <CarouselContent className="-ml-4">
               {[
                 {
-                  title: "Celebramos la maestra, con esta cerveza de edición especial",
-                  image: blogClubPromo,
+                  title: "El Chele Helles - Cerveza de tradición alemana",
+                  image: blogCarousel1,
                 },
                 {
-                  title: "La 20 cumple hoy 6 años",
-                  image: blogCervezaArtesanal,
+                  title: "La Jefa IPA - Con ingredientes naturales",
+                  image: blogCarousel2,
                 },
                 {
-                  title: "¿Cerveza artesanal o industrial?",
-                  image: blogSaboresPerspectiva,
-                },
-                {
-                  title: "Receta del día: Aguachile de camarón",
-                  image: blogTourCervecero,
+                  title: "Celebramos el sabor y calidad de lo nuestro",
+                  image: blogCarousel3,
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
