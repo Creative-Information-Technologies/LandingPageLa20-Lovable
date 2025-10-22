@@ -165,7 +165,7 @@ const BlogSection = () => {
                   <h3 
                     className="font-sans font-bold mb-3" 
                     style={{ 
-                      color: '#974119',
+                      color: '#000000',
                       fontSize: '1.5rem',
                       lineHeight: '1.3'
                     }}
@@ -175,7 +175,7 @@ const BlogSection = () => {
                   <p 
                     className="font-sans leading-relaxed line-clamp-3" 
                     style={{ 
-                      color: '#974119',
+                      color: '#000000',
                       fontSize: '1rem'
                     }}
                   >
@@ -213,7 +213,7 @@ const BlogSection = () => {
                     <h4 
                       className="font-sans font-bold mb-1 leading-tight line-clamp-2" 
                       style={{ 
-                        color: '#974119',
+                        color: '#000000',
                         fontSize: '1rem'
                       }}
                     >
@@ -222,7 +222,7 @@ const BlogSection = () => {
                     <p 
                       className="font-sans leading-snug line-clamp-2" 
                       style={{ 
-                        color: '#974119',
+                        color: '#000000',
                         fontSize: '0.9rem'
                       }}
                     >
