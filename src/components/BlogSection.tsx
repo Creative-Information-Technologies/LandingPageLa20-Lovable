@@ -69,11 +69,11 @@ const BlogSection = () => {
           <div className="flex items-center justify-between">
             <div className="flex-1 max-w-2xl" style={{ paddingLeft: '10%' }}>
             <h1 
-              className="font-oswald font-bold text-white uppercase tracking-[0%] inline-block"
+              className="font-oswald font-bold text-white uppercase tracking-[0%]"
               style={{
                 fontSize: '96px',
                 lineHeight: '100%',
-                boxShadow: '18px 14px 0px 0px #521C03',
+                textShadow: '4px 4px 8px #521C03',
               }}
             >
               CONOCÉ<br />
@@ -311,14 +311,14 @@ const BlogSection = () => {
           {/* Center Content */}
           <div className="relative z-10 text-center py-12">
             <h2 
-              className="text-white uppercase mb-8 font-barlow-condensed inline-block"
+              className="text-white uppercase mb-8 font-barlow-condensed"
               style={{
                 fontWeight: 900,
                 fontSize: '141.75px',
                 lineHeight: '102%',
                 letterSpacing: '0%',
                 textAlign: 'center',
-                boxShadow: '18px 14px 0px 0px #521C03',
+                textShadow: '4px 4px 8px #521C03',
               }}
             >
               UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
