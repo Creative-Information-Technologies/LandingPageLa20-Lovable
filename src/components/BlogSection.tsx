@@ -311,14 +311,14 @@ const BlogSection = () => {
           {/* Center Content */}
           <div className="relative z-10 text-center py-12">
             <h2 
-              className="text-white uppercase mb-8 font-barlow-condensed"
+              className="text-white uppercase mb-8 font-barlow-condensed inline-block"
               style={{
                 fontWeight: 900,
                 fontSize: '141.75px',
                 lineHeight: '102%',
                 letterSpacing: '0%',
                 textAlign: 'center',
-                textShadow: '4px 4px 8px #521C03',
+                boxShadow: '18px 14px 0px 0px #521C03',
               }}
             >
               UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
