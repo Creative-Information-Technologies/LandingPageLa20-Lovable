@@ -5,7 +5,6 @@ import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerBottleBlog from "@/assets/beer-bottle-blog.png";
 import beerGlassBlog from "@/assets/beer-glass-blog.png";
 import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
-import beerGlassClub from "@/assets/beer-glass-club.png";
 import blogCurrywurstMain from "@/assets/blog-currywurst-new.png";
 import blogClubPromo from "@/assets/blog-club-promo.png";
 import blogSaboresPerspectiva from "@/assets/blog-sabores-perspectiva.png";
@@ -344,23 +343,6 @@ const BlogSection = () => {
               zIndex: 10,
               filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
               transform: 'rotate(-11deg)',
-              transformOrigin: 'bottom center'
-            }}
-          />
-
-          {/* Right Glass Image - Extending into Footer */}
-          <img 
-            src={beerGlassClub}
-            alt="LA20 Beer Glass"
-            className="hidden lg:block absolute"
-            style={{ 
-              right: '-9.5%',
-              bottom: '-600px',
-              width: '42%',
-              height: 'auto',
-              zIndex: 10,
-              filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
-              transform: 'rotate(7deg)',
               transformOrigin: 'bottom center'
             }}
           />
