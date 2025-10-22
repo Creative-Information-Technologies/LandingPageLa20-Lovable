@@ -343,7 +343,7 @@ const BlogSection = () => {
               height: 'auto',
               zIndex: 10,
               filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
-              transform: 'rotate(-7deg)',
+              transform: 'rotate(-11deg)',
               transformOrigin: 'bottom center'
             }}
           />
@@ -354,7 +354,7 @@ const BlogSection = () => {
             alt="LA20 Beer Glass"
             className="hidden lg:block absolute"
             style={{ 
-              right: '0%',
+              right: '-9.5%',
               bottom: '-600px',
               width: '38%',
               height: 'auto',
