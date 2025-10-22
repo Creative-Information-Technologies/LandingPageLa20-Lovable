@@ -29,6 +29,10 @@ All colors MUST be HSL.
     --accent: 45 100% 50%;
     --accent-foreground: 25 45% 20%;
 
+    --blog-orange: 28 93% 55%;
+    --blog-brown: 25 50% 18%;
+    --blog-yellow: 45 100% 65%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
@@ -63,6 +67,10 @@ All colors MUST be HSL.
 
     --accent: 45 100% 50%;
     --accent-foreground: 25 45% 20%;
+
+    --blog-orange: 28 93% 55%;
+    --blog-brown: 25 50% 18%;
+    --blog-yellow: 45 100% 65%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
