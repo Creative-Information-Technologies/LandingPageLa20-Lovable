@@ -73,7 +73,7 @@ const BlogSection = () => {
               style={{
                 fontSize: '96px',
                 lineHeight: '100%',
-                textShadow: '4px 4px 8px #521C03',
+                textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
               }}
             >
               CONOCÉ<br />
@@ -318,7 +318,7 @@ const BlogSection = () => {
                 lineHeight: '102%',
                 letterSpacing: '0%',
                 textAlign: 'center',
-                textShadow: '4px 4px 8px #521C03',
+                textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
               }}
             >
               UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
