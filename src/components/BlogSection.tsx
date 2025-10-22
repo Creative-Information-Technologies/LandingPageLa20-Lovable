@@ -80,24 +80,7 @@ const BlogSection = () => {
             
             {/* Assets - Bottle and Glass */}
             <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '60%', zIndex: 3 }}>
-              {/* Beer Bottle - Front (35% width, partially covering NOTICIAS) */}
-              <img 
-                src={beerBottleBlog}
-                alt="La Flaka Gose Beer Bottle"
-                className="absolute"
-                style={{
-                  right: '10%',
-                  bottom: '0',
-                  width: '35%',
-                  height: 'auto',
-                  maxHeight: 'calc(100% - 20px)',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3))',
-                  zIndex: 2,
-                }}
-              />
-              
-              {/* Beer Glass - Behind but on top (40-45% width, slightly behind and taller) */}
+              {/* Beer Glass - Behind (84% width, 7 degrees rotation) */}
               <img 
                 src={beerGlassBlog}
                 alt="LA20 Beer Glass"
@@ -105,11 +88,32 @@ const BlogSection = () => {
                 style={{
                   right: '0',
                   bottom: '-10px',
-                  width: '42%',
+                  width: '84%',
                   height: 'auto',
                   maxHeight: 'calc(100% + 15px)',
                   objectFit: 'contain',
                   filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25))',
+                  transform: 'rotate(7deg)',
+                  transformOrigin: 'bottom center',
+                  zIndex: 2,
+                }}
+              />
+              
+              {/* Beer Bottle - Front (70% width, -7 degrees rotation) */}
+              <img 
+                src={beerBottleBlog}
+                alt="La Flaka Gose Beer Bottle"
+                className="absolute"
+                style={{
+                  right: '10%',
+                  bottom: '0',
+                  width: '70%',
+                  height: 'auto',
+                  maxHeight: 'calc(100% - 20px)',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3))',
+                  transform: 'rotate(-7deg)',
+                  transformOrigin: 'bottom center',
                   zIndex: 3,
                 }}
               />
