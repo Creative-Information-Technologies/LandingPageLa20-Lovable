@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerBottleBlog from "@/assets/beer-bottle-blog.png";
 import beerGlassBlog from "@/assets/beer-glass-blog.png";
@@ -19,10 +20,11 @@ import {
 } from "@/components/ui/carousel";
 
 const BlogSection = () => {
+  const navigate = useNavigate();
+  
   const mainArticle = {
     title: "Conocé esta receta de la casa: Currywurst",
     description: "Esta receta, Currywurst, es perfecta para compartir entre amigos y marida muy bien con cervezas alemanas. Estate pendiente para conocer la receta del Chef Coto.",
-    highlights: ["compartir", "cervezas alemanas", "Chef Coto"],
     image: blogCurrywurstMain,
   };
 
@@ -30,25 +32,21 @@ const BlogSection = () => {
     {
       title: "¿Qué es la cerveza artesanal?",
       description: "Mira todo lo que tenemos planificado para la celebración.",
-      highlights: ["planificado", "celebración"],
       image: blogCervezaArtesanal,
     },
     {
       title: "Sabores en perspectiva",
       description: "Conocé nuestra nueva línea de sabores de temporada.",
-      highlights: ["nueva línea", "sabores de temporada"],
       image: blogSaboresPerspectiva,
     },
     {
       title: "Tour cervecero",
       description: "Pensabas que la cerveza solo se abría y se tomaba? En el Tour Cervecero te contamos todo lo que hay antes del ¡salud! Spoiler: vas a terminar amando aún más tu pinta.",
-      highlights: ["Tour Cervecero", "¡salud!", "tu pinta"],
       image: blogTourCervecero,
     },
     {
       title: "Club de cerveceros",
       description: "Destapa grandes oferta, ven y conoce lo que el club La20 trae para ti.",
-      highlights: ["grandes oferta", "club La20"],
       image: blogClubPromo,
     },
   ];
@@ -145,11 +143,12 @@ const BlogSection = () => {
             {/* Main Article - Left Column (65-70% width) */}
             <div className="lg:col-span-8">
               <div 
-                className="rounded-xl overflow-hidden" 
+                className="rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-2xl hover:brightness-105" 
                 style={{ 
                   border: '2px solid #F4E1C0',
                   boxShadow: '0 4px 10px rgba(0,0,0,0.25)'
                 }}
+                onClick={() => navigate('/blog/currywurst')}
               >
                 {/* Image with 16:9 aspect ratio */}
                 <img
@@ -171,25 +170,13 @@ const BlogSection = () => {
                     {mainArticle.title}
                   </h3>
                   <p 
-                    className="font-sans leading-relaxed" 
+                    className="font-sans leading-relaxed line-clamp-3" 
                     style={{ 
                       color: '#3B200B',
                       fontSize: '1rem'
                     }}
                   >
-                    {mainArticle.description.split(' ').map((word, idx) => {
-                      const isHighlight = mainArticle.highlights?.some(h => 
-                        word.toLowerCase().includes(h.toLowerCase())
-                      );
-                      return (
-                        <span 
-                          key={idx} 
-                          style={{ color: isHighlight ? '#FFD200' : '#3B200B' }}
-                        >
-                          {word}{' '}
-                        </span>
-                      );
-                    })}
+                    {mainArticle.description}
                   </p>
                 </div>
               </div>
@@ -221,7 +208,7 @@ const BlogSection = () => {
                   {/* Text - 60% width */}
                   <div className="w-3/5 p-3 flex flex-col justify-center">
                     <h4 
-                      className="font-sans font-bold mb-1 leading-tight" 
+                      className="font-sans font-bold mb-1 leading-tight line-clamp-2" 
                       style={{ 
                         color: '#3B200B',
                         fontSize: '1rem'
@@ -230,25 +217,13 @@ const BlogSection = () => {
                       {article.title}
                     </h4>
                     <p 
-                      className="font-sans leading-snug" 
+                      className="font-sans leading-snug line-clamp-2" 
                       style={{ 
                         color: '#3B200B',
                         fontSize: '0.9rem'
                       }}
                     >
-                      {article.description.split(' ').map((word, idx) => {
-                        const isHighlight = article.highlights?.some(h => 
-                          word.toLowerCase().includes(h.toLowerCase())
-                        );
-                        return (
-                          <span 
-                            key={idx} 
-                            style={{ color: isHighlight ? '#FFD200' : '#3B200B' }}
-                          >
-                            {word}{' '}
-                          </span>
-                        );
-                      })}
+                      {article.description}
                     </p>
                   </div>
                 </div>
