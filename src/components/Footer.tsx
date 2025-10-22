@@ -3,7 +3,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 px-6 lg:px-12 relative z-[10] mt-[-80px] pt-[120px]" style={{ backgroundColor: '#974119' }}>
+    <footer className="w-full py-12 px-6 lg:px-12 relative z-[10] mt-[-150px] pt-[180px]" style={{ backgroundColor: '#974119' }}>
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start relative z-20">
         
         {/* Left Block - Logo and Contact */}

@@ -315,7 +315,7 @@ const BlogSection = () => {
             className="hidden lg:block absolute"
             style={{ 
               left: '-5%',
-              bottom: '-120px',
+              bottom: '-250px',
               width: '70%',
               height: 'auto',
               zIndex: 1,
@@ -345,7 +345,7 @@ const BlogSection = () => {
             className="hidden lg:block absolute"
             style={{ 
               right: '2%',
-              bottom: '-150px',
+              bottom: '-280px',
               width: '35%',
               height: 'auto',
               zIndex: 1,
