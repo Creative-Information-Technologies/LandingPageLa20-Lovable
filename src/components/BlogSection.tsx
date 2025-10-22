@@ -139,7 +139,7 @@ const BlogSection = () => {
       </div>
 
       {/* Blog Content - Articles Section */}
-      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3B200B' }}>
+      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto" style={{ padding: '40px 20px' }}>
           {/* Main and Secondary Articles Grid - 65-70% / 30-35% split */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -165,7 +165,7 @@ const BlogSection = () => {
                   <h3 
                     className="font-sans font-bold mb-3" 
                     style={{ 
-                      color: '#3B200B',
+                      color: '#974119',
                       fontSize: '1.5rem',
                       lineHeight: '1.3'
                     }}
@@ -175,7 +175,7 @@ const BlogSection = () => {
                   <p 
                     className="font-sans leading-relaxed line-clamp-3" 
                     style={{ 
-                      color: '#3B200B',
+                      color: '#974119',
                       fontSize: '1rem'
                     }}
                   >
@@ -213,7 +213,7 @@ const BlogSection = () => {
                     <h4 
                       className="font-sans font-bold mb-1 leading-tight line-clamp-2" 
                       style={{ 
-                        color: '#3B200B',
+                        color: '#974119',
                         fontSize: '1rem'
                       }}
                     >
@@ -222,7 +222,7 @@ const BlogSection = () => {
                     <p 
                       className="font-sans leading-snug line-clamp-2" 
                       style={{ 
-                        color: '#3B200B',
+                        color: '#974119',
                         fontSize: '0.9rem'
                       }}
                     >
@@ -248,7 +248,7 @@ const BlogSection = () => {
               Explorar todos los artículos
             </h2>
             <Button 
-              className="bg-[#FFD200] hover:bg-[#FFD200]/90 text-[#3B200B] font-bold uppercase px-6 py-3 rounded-lg flex items-center gap-2"
+              className="bg-[#FFD200] hover:bg-[#FFD200]/90 text-[#974119] font-bold uppercase px-6 py-3 rounded-lg flex items-center gap-2"
             >
               Más recientes
               <ChevronDown className="w-5 h-5" />
@@ -315,7 +315,7 @@ const BlogSection = () => {
             className="hidden lg:block absolute"
             style={{ 
               left: '-5%',
-              bottom: '0',
+              bottom: '-20%',
               width: '70%',
               height: 'auto',
               zIndex: 3,
@@ -345,7 +345,7 @@ const BlogSection = () => {
             className="hidden lg:block absolute"
             style={{ 
               right: '2%',
-              bottom: '-35%',
+              bottom: '-45%',
               width: '35%',
               height: 'auto',
               zIndex: 4,
