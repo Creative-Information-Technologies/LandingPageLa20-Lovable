@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         deacon: ['"Deacon Condensed Test"', 'sans-serif'],
         oswald: ['Oswald', 'sans-serif'],
+        'barlow-condensed': ['"Barlow Condensed"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
