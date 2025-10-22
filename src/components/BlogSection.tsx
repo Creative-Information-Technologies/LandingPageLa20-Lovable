@@ -306,49 +306,55 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full bg-[hsl(var(--blog-brown))] py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            {/* Left Bottle Image */}
-            <img 
-              src={beerBottleMetiche}
-              alt="La Metiche Belgian Witbier"
-              className="hidden lg:block object-contain flex-shrink-0"
-              style={{ 
-                width: '576px',
-                height: '960px',
-                transform: 'rotate(-7deg)',
-                filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
-              }}
-            />
+      <div className="w-full bg-[hsl(var(--blog-brown))] py-20 px-6 relative overflow-visible">
+        <div className="max-w-7xl mx-auto relative">
+          {/* Left Bottle Image - Sobresaliendo */}
+          <img 
+            src={beerBottleMetiche}
+            alt="La Metiche Belgian Witbier"
+            className="hidden lg:block object-contain absolute"
+            style={{ 
+              width: '1152px',
+              height: '1920px',
+              left: '-400px',
+              top: '50%',
+              transform: 'translateY(-50%) rotate(-7deg)',
+              filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))',
+              zIndex: 10
+            }}
+          />
 
-            {/* Center Content */}
-            <div className="flex-1 text-center">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight mb-8 font-deacon leading-tight">
-                UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
-              </h2>
-              <Button 
-                size="lg"
-                className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
-              >
-                UNIRME AL CLUB
-              </Button>
-            </div>
-
-            {/* Right Glass Image */}
-            <img 
-              src={beerGlassClub}
-              alt="LA20 Beer Glass"
-              className="hidden lg:block object-contain flex-shrink-0"
-              style={{ 
-                width: '576px',
-                height: '960px',
-                transform: 'rotate(7deg)',
-                filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))'
-              }}
-            />
+          {/* Center Content */}
+          <div className="text-center relative z-20">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight mb-8 font-deacon leading-tight">
+              UNITE AL CLUB LA20 Y<br />OBTENÉ BENEFICIOS<br />ESPECIALES
+            </h2>
+            <Button 
+              size="lg"
+              className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
+            >
+              UNIRME AL CLUB
+            </Button>
           </div>
         </div>
+      </div>
+
+      {/* Right Glass Image - Positioned lower to be covered by footer */}
+      <div className="relative w-full" style={{ marginBottom: '-400px' }}>
+        <img 
+          src={beerGlassClub}
+          alt="LA20 Beer Glass"
+          className="hidden lg:block object-contain absolute"
+          style={{ 
+            width: '576px',
+            height: '960px',
+            right: '10%',
+            bottom: '0',
+            transform: 'rotate(7deg)',
+            filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3))',
+            zIndex: 1
+          }}
+        />
       </div>
     </section>
   );
