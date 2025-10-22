@@ -21,34 +21,34 @@ import {
 const BlogSection = () => {
   const mainArticle = {
     title: "Conocé esta receta de la casa: Currywurst",
-    description: "El currywurst es un plato alemán icónico que combina salchichas asadas con una salsa especial de curry y tomate. Esta delicia de la comida callejera alemana se disfruta mejor acompañada de nuestras cervezas artesanales de estilo alemán, especialmente la Vienna Lager o la Weiss.",
-    highlights: ["Conocé", "alemanas"],
+    description: "Esta receta, Currywurst, es perfecta para compartir entre amigos y marida muy bien con cervezas alemanas. Estate pendiente para conocer la receta del Chef Coto.",
+    highlights: ["compartir", "cervezas alemanas", "Chef Coto"],
     image: blogCurrywurstMain,
   };
 
   const secondaryArticles = [
     {
       title: "¿Qué es la cerveza artesanal?",
-      description: "Descubrí todo sobre el proceso de elaboración y los ingredientes que hacen única a la cerveza artesanal.",
-      highlights: ["proceso de elaboración", "ingredientes"],
+      description: "Mira todo lo que tenemos planificado para la celebración.",
+      highlights: ["planificado", "celebración"],
       image: blogCervezaArtesanal,
     },
     {
       title: "Sabores en perspectiva",
-      description: "Explorá los diferentes perfiles de sabor y aromas que caracterizan nuestras cervezas premium.",
-      highlights: ["perfiles de sabor", "aromas"],
+      description: "Conocé nuestra nueva línea de sabores de temporada.",
+      highlights: ["nueva línea", "sabores de temporada"],
       image: blogSaboresPerspectiva,
     },
     {
       title: "Tour cervecero",
-      description: "Conocé nuestra fábrica y descubrí el fascinante proceso detrás de cada botella.",
-      highlights: ["fábrica", "proceso"],
+      description: "Pensabas que la cerveza solo se abría y se tomaba? En el Tour Cervecero te contamos todo lo que hay antes del ¡salud! Spoiler: vas a terminar amando aún más tu pinta.",
+      highlights: ["Tour Cervecero", "¡salud!", "tu pinta"],
       image: blogTourCervecero,
     },
     {
       title: "Club de cerveceros",
-      description: "Formá parte de nuestro club exclusivo y disfrutá de beneficios especiales cada mes.",
-      highlights: ["club exclusivo", "beneficios especiales"],
+      description: "Destapa grandes oferta, ven y conoce lo que el club La20 trae para ti.",
+      highlights: ["grandes oferta", "club La20"],
       image: blogClubPromo,
     },
   ];
