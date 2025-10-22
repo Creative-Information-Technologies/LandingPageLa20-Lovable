@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
+import beerBottleBlog from "@/assets/beer-bottle-blog.png";
+import beerGlassBlog from "@/assets/beer-glass-blog.png";
 import {
   Carousel,
   CarouselContent,
@@ -51,7 +53,7 @@ const BlogSection = () => {
       >
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between">
-            <div className="flex-1">
+            <div className="flex-1 max-w-2xl" style={{ paddingLeft: '10%' }}>
               <h1 
                 className="font-oswald font-bold text-white uppercase tracking-[0%]"
                 style={{
@@ -61,25 +63,56 @@ const BlogSection = () => {
                 }}
               >
                 CONOCÉ<br />
-                LAS ÚLTIMAS{' '}
-                <span 
-                  className="inline-block"
-                  style={{
-                    backgroundColor: '#FFE135',
-                    color: '#000000',
-                    padding: '4px 12px',
-                    borderRadius: '12px',
-                  }}
-                >
-                  NOTICIAS
+                <span style={{ textAlign: 'justify', display: 'block', textAlignLast: 'justify' }}>
+                  LAS ÚLTIMAS{' '}
+                  <span 
+                    className="inline-block"
+                    style={{
+                      backgroundColor: '#FFE135',
+                      color: '#000000',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                    }}
+                  >
+                    NOTICIAS
+                  </span>
                 </span>
               </h1>
             </div>
-            {/* Espacio para imágenes futuras */}
-            <div className="hidden lg:flex items-end gap-4 flex-shrink-0">
-              <div className="h-72 w-32 bg-white/10 rounded-lg"></div>
-              <div className="h-80 w-32 bg-white/10 rounded-lg"></div>
-              <div className="h-72 w-32 bg-white/10 rounded-lg"></div>
+            
+            {/* Assets - Bottle and Glass */}
+            <div className="hidden lg:block absolute right-0 bottom-0 h-full" style={{ width: '50%', zIndex: 3 }}>
+              {/* Beer Glass - Behind */}
+              <img 
+                src={beerGlassBlog}
+                alt="Beer Glass"
+                className="absolute"
+                style={{
+                  left: '75%',
+                  bottom: '0',
+                  height: '75%',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 15px 20px rgba(0, 0, 0, 0.2))',
+                  zIndex: 2,
+                }}
+              />
+              
+              {/* Beer Bottle - Front */}
+              <img 
+                src={beerBottleBlog}
+                alt="Beer Bottle"
+                className="absolute"
+                style={{
+                  left: '35%',
+                  bottom: '0',
+                  height: '68%',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 15px 20px rgba(0, 0, 0, 0.2))',
+                  zIndex: 3,
+                }}
+              />
             </div>
           </div>
         </div>
