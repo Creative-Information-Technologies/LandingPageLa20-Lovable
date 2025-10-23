@@ -179,40 +179,43 @@ const BlogPost = () => {
 
       {/* Wave Divider Section */}
       <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
-        {/* Black Wave SVG */}
+        {/* Black Wave SVG with waves on both top and bottom */}
         <svg 
           className="block w-full"
           style={{ 
-            height: '320px',
+            height: '200px',
             display: 'block'
           }}
-          viewBox="0 0 1440 320" 
+          viewBox="0 0 1440 200" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="waveTextPath"
-              d="M0,125 Q180,60 360,125 T720,125 T1080,125 T1440,125"
+              d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60"
               fill="none"
             />
           </defs>
           
-          {/* Black wave band shape - matches text curve exactly */}
-          <path d="M0,125 Q180,60 360,125 T720,125 T1080,125 T1440,125 L1440,320 L0,320 Z" fill="hsl(0, 0%, 0%)" />
+          {/* Black wave band with curves on top and bottom */}
+          <path 
+            d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60 L1440,160 Q1260,120 1080,160 T720,160 T360,160 T0,160 Z" 
+            fill="hsl(0, 0%, 0%)" 
+          />
           
           {/* White text following the wave curve */}
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '52px',
+              fontSize: '48px',
               fontWeight: 900,
               letterSpacing: '4px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
           >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle">
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dominantBaseline="middle">
               COMPARTE, DISFRUTA, RELÁJATE, COMPARTE
             </textPath>
           </text>
