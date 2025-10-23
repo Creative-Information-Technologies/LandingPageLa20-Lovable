@@ -76,19 +76,8 @@ const BlogSection = () => {
                 textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
               }}
             >
-              CONOCÉ<br />
-              LAS ÚLTIMAS{' '}
-              <span 
-                className="inline-block"
-                style={{
-                  backgroundColor: '#FFE135',
-                  color: '#000000',
-                  padding: '4px 12px',
-                  borderRadius: '12px',
-                }}
-              >
-                NOTICIAS
-              </span>
+              CONOCÉ LAS ÚLTIMAS<br />
+              NOTICIAS
             </h1>
             </div>
             
