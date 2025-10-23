@@ -105,21 +105,23 @@ const BlogPost = () => {
               className="space-y-2"
               style={{ 
                 color: '#3B200B',
-                fontSize: '1rem',
-                lineHeight: '1.5em',
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '16px',
+                lineHeight: '180%',
+                letterSpacing: '0%',
+                textAlign: 'justify',
                 listStyleType: 'disc',
                 paddingLeft: '1.5rem'
               }}
             >
-              <li>1 kg de salchicha alemana (bratwurst)</li>
-              <li>2 cucharadas de aceite vegetal</li>
-              <li>1 cebolla grande picada finamente</li>
-              <li>2 dientes de ajo picados</li>
-              <li>1 taza de salsa de tomate (ketchup)</li>
-              <li>1/4 taza de agua</li>
-              <li>2 cucharadas de curry en polvo</li>
+              <li>4 salchichas bratwurst</li>
+              <li>2 cucharadas de ketchup</li>
+              <li>1 cucharada de curry en polvo</li>
               <li>1 cucharadita de pimentón dulce</li>
+              <li>1 cucharadita de salsa Worcestershire</li>
               <li>Sal y pimienta al gusto</li>
+              <li>Pan para acompañar</li>
             </ul>
           </div>
 
@@ -139,8 +141,12 @@ const BlogPost = () => {
               className="space-y-4"
               style={{ 
                 color: '#3B200B',
-                fontSize: '1rem',
-                lineHeight: '1.8em'
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '16px',
+                lineHeight: '180%',
+                letterSpacing: '0%',
+                textAlign: 'justify'
               }}
             >
               <p>
@@ -173,8 +179,12 @@ const BlogPost = () => {
               className="italic"
               style={{ 
                 color: '#3B200B',
-                fontSize: '1rem',
-                lineHeight: '1.6em'
+                fontFamily: 'Poppins, sans-serif',
+                fontWeight: 400,
+                fontSize: '16px',
+                lineHeight: '180%',
+                letterSpacing: '0%',
+                textAlign: 'justify'
               }}
             >
               <strong>Consejo del Chef Coto:</strong> Esta receta marida perfectamente con nuestras cervezas de estilo alemán. Te recomendamos acompañarla con una Vienna Lager o una Weiss bien fría para realzar los sabores especiados del curry.
