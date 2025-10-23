@@ -73,13 +73,15 @@ const BlogPost = () => {
 
       {/* Main Image Section */}
       <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingTop: '5rem', paddingBottom: '3rem' }}>
-        <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '960px', margin: '0 auto', overflow: 'hidden', borderRadius: '1rem' }}>
           <img
             src={blogCurrywurstMain}
             alt="Currywurst con papas y cerveza"
             style={{ 
               width: '100%',
-              borderRadius: '1rem',
+              height: '400px',
+              objectFit: 'cover',
+              objectPosition: 'center bottom',
               display: 'block',
             }}
           />
