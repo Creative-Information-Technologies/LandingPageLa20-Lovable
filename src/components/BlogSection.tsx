@@ -330,7 +330,7 @@ const BlogSection = () => {
           <defs>
             <path
               id="waveTextPath"
-              d="M0,150 Q360,100 720,150 T1440,150 T2160,150 T2880,150"
+              d="M0,150 Q360,80 720,150 T1440,150 T2160,150 T2880,150"
               fill="none"
             />
           </defs>
@@ -343,7 +343,7 @@ const BlogSection = () => {
           
           {/* Black wave band with curves on top and bottom */}
           <path 
-            d="M0,100 Q360,50 720,100 T1440,100 L1440,200 Q1080,250 720,200 T0,200 Z" 
+            d="M0,100 Q360,30 720,100 T1440,100 L1440,200 Q1080,270 720,200 T0,200 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
