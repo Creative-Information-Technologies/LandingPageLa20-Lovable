@@ -15,8 +15,25 @@ const Footer = () => {
         }}
       />
 
+      {/* Bottle continuation from benefits section */}
+      <img
+        src={beerBottleMetiche}
+        alt="La Metiche Belgian Witbier"
+        className="hidden lg:block absolute pointer-events-none"
+        style={{
+          left: "0%",
+          top: "-320px",
+          width: "105%",
+          height: "auto",
+          zIndex: 2,
+          filter: "drop-shadow(0 15px 30px rgba(0,0,0,0.35))",
+          transform: "rotate(-11deg)",
+          transformOrigin: "bottom center",
+        }}
+      />
+
       {/* Footer Content - Relative, above background */}
-      <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
+      <footer className="relative py-12 px-6 lg:px-12 overflow-hidden" style={{ zIndex: 5 }}>
         <div className="max-w-[1400px] h-[25rem] mx-auto flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Block - Logo and Contact */}
           <div

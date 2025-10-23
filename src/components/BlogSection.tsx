@@ -317,7 +317,7 @@ const BlogSection = () => {
 
       {/* Club Membership Section */}
       <div
-        className="w-full py-20 px-6 relative overflow-y-visible overflow-x-hidden"
+        className="w-full py-20 px-6 relative overflow-hidden"
         style={{ backgroundColor: "#974119", zIndex: 5 }}
       >
         <div className="max-w-7xl mx-auto relative" style={{ overflow: "visible" }}>
@@ -353,13 +353,13 @@ const BlogSection = () => {
             alt="La Metiche Belgian Witbier"
             className="hidden lg:block absolute pointer-events-none"
             style={{
-              left: "0%",
-              bottom: "0",
-              width: "105%",
+              left: "50%",
+              bottom: "-240px",
+              width: "100%",
               height: "auto",
               zIndex: 10,
               filter: "drop-shadow(0 15px 30px rgba(0,0,0,0.35))",
-              transform: "rotate(-11deg) translate(-40%, 380px)",
+              transform: "translateX(-50%) rotate(-11deg)",
               transformOrigin: "bottom center",
             }}
           />
