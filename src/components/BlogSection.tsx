@@ -90,9 +90,9 @@ const BlogSection = () => {
                 className="absolute"
                 style={{
                   right: '0%',
-                  top: '-15px',
+                  top: '285px',
                   bottom: '-10px',
-                  width: '42%',
+                  width: '52%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
@@ -110,9 +110,9 @@ const BlogSection = () => {
                 className="absolute"
                 style={{
                   right: '8%',
-                  top: '20px',
+                  top: '320px',
                   bottom: '0',
-                  width: '70%',
+                  width: '80%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
