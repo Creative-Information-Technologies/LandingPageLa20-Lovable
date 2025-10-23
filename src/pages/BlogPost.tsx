@@ -199,7 +199,7 @@ const BlogPost = () => {
           
           {/* Black wave band with curves on top and bottom - much bigger */}
           <path 
-            d="M0,100 Q360,50 720,100 T1440,100 L1440,200 Q1080,250 720,200 T0,200 Z" 
+            d="M0,100 Q360,50 720,100 T1440,100 L1440,200 Q1080,150 720,200 T0,200 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
