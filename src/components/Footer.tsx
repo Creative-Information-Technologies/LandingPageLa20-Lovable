@@ -1,6 +1,4 @@
 import la20Logo from "@/assets/la20-logo-new.png";
-import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
-import beerGlassClub from "@/assets/beer-glass-club.png";
 import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
@@ -11,39 +9,10 @@ const Footer = () => {
         backgroundColor: "transparent",
       }}
     >
-      {/* --- FIX: Contenedor invisible que evita scroll lateral --- */}
+      {/* --- Fondo invisible para prevenir scroll lateral --- */}
       <div className="absolute inset-0 overflow-x-hidden pointer-events-none" />
 
-      {/* --- Imágenes del fondo --- */}
-      <img
-        src={beerBottleMetiche}
-        alt="Botella La Metiche"
-        className="absolute left-0 bottom-0 object-contain select-none pointer-events-none"
-        style={{
-          width: "auto",
-          height: "100%",
-          maxHeight: "450px",
-          zIndex: 1,
-          overflow: "hidden",
-          clipPath: "inset(0 0 0 0)",
-        }}
-      />
-
-      <img
-        src={beerGlassClub}
-        alt="Vaso de cerveza"
-        className="absolute right-0 bottom-0 object-contain select-none pointer-events-none"
-        style={{
-          width: "auto",
-          height: "100%",
-          maxHeight: "480px",
-          zIndex: 1,
-          overflow: "hidden",
-          clipPath: "inset(0 0 0 0)",
-        }}
-      />
-
-      {/* --- Contenido del Footer --- */}
+      {/* --- Contenido principal del Footer --- */}
       <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Block */}
