@@ -118,7 +118,7 @@ const BlogSection = () => {
                   objectFit: "contain",
                   objectPosition: "bottom",
                   filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))",
-                  transform: "rotate(-7deg)",
+                  transform: "rotate(-7deg) scale(1.25)",
                   transformOrigin: "bottom center",
                   zIndex: 3,
                 }}
