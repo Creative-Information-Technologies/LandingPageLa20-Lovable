@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
-import wavyPatternOrange from "@/assets/wavy-pattern-orange.png";
+import wavyPatternOrange from "@/assets/wavy-pattern-orange-new.png";
 import blogCurrywurstMain from "@/assets/blog-currywurst-new.png";
 import { Twitter, Linkedin, Facebook } from "lucide-react";
 
