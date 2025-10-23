@@ -179,7 +179,7 @@ const BlogPost = () => {
       </div>
 
       {/* Wave Divider Section with 2 peaks on both sides */}
-      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px', zIndex: 10 }}>
+      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px', zIndex: 1 }}>
         <svg 
           className="block w-full"
           style={{ 
