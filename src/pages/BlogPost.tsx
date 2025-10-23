@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import blogCurrywurstMain from "@/assets/blog-currywurst-main.png";
+import { Twitter, Linkedin, Facebook } from "lucide-react";
 
 const BlogPost = () => {
   return (
@@ -10,8 +11,9 @@ const BlogPost = () => {
       
       {/* Header with wavy pattern */}
       <div 
-        className="relative w-full py-16 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
+        className="relative w-full py-16 px-6 overflow-hidden"
         style={{
+          backgroundColor: '#974119',
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -19,19 +21,42 @@ const BlogPost = () => {
       >
         <div className="max-w-7xl mx-auto relative z-10">
           <h1 
-            className="font-extrabold text-white uppercase text-center tracking-wide"
+            className="text-white uppercase text-center"
             style={{
-              fontSize: '48px',
-              lineHeight: '1.2',
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: 'Oswald',
+              fontWeight: 700,
+              fontSize: '96px',
+              lineHeight: '115%',
+              letterSpacing: '0%',
             }}
           >
             CONOCÉ ESTA RECETA DE<br />LA CASA: CURRYWURST
           </h1>
-          <div className="flex justify-center gap-4 mt-4">
-            <span className="text-white text-sm">Fecha: Marzo 2024</span>
-            <span className="text-white text-sm">|</span>
-            <span className="text-white text-sm">Categoría: Recetas</span>
+          
+          {/* Social Media Icons */}
+          <div className="flex justify-center items-center gap-4 mt-6">
+            <span className="text-white font-semibold">Compartir</span>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="Twitter"
+            >
+              <Twitter className="w-5 h-5 text-white" />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5 text-white" />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5 text-white" />
+            </a>
           </div>
         </div>
       </div>
