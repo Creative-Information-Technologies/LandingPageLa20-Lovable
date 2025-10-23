@@ -178,42 +178,39 @@ const BlogPost = () => {
       </div>
 
       {/* Wave Divider Section */}
-      <section className="relative w-full" style={{ backgroundColor: '#000000', overflow: 'hidden', height: '200px' }}>
-        {/* Black Wave SVG with text path */}
+      <section className="relative w-full" style={{ overflow: 'visible' }}>
+        {/* Black Wave SVG with text path - double wave (top and bottom) */}
         <svg 
-          className="absolute block"
+          className="block w-full"
           style={{ 
-            top: '-40px',
-            left: 0,
-            width: '100%',
-            height: '240px',
-            zIndex: 1
+            height: '200px',
+            display: 'block'
           }}
-          viewBox="0 0 1440 240" 
+          viewBox="0 0 1440 200" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="wavePath"
-              d="M0,80 C360,130 1080,30 1440,90"
+              d="M0,60 C360,100 1080,20 1440,70"
               fill="none"
             />
           </defs>
           
-          {/* Black wave background */}
+          {/* Black wave background with curves on both sides */}
           <path
             fill="#000000"
-            d="M0,50 C360,110 1080,10 1440,70 L1440,240 L0,240 Z"
+            d="M0,40 C360,90 1080,0 1440,60 L1440,140 C1080,180 360,100 0,150 Z"
           />
           
           {/* Text following the wave path */}
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '64px',
+              fontSize: '56px',
               fontWeight: 900,
-              letterSpacing: '8px',
+              letterSpacing: '6px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
