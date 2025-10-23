@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Right Block - Navigation Links */}
           <div className="w-full h-full lg:w-[65%] bg-black rounded-[25px] p-10" style={{ zIndex: 5 }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div className="grid grid-cols-4 gap-6 mb-8">
               {/* SERVICIOS Column */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
