@@ -275,9 +275,9 @@ const BlogSection = () => {
                   image: blogAguachile,
                 },
               ].map((item, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4" style={{ minHeight: '400px' }}>
-                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] h-full">
-                    <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4" style={{ minHeight: '280px' }}>
+                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] h-full rounded-2xl overflow-hidden">
+                    <div className="aspect-[4/3] overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title}
