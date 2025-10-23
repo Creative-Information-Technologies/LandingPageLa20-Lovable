@@ -10,7 +10,7 @@ const Footer = () => {
       <div 
         className="absolute inset-0" 
         style={{ 
-          backgroundColor: 'transparent',
+          backgroundColor: '#974119',
           zIndex: 0 
         }}
       />
