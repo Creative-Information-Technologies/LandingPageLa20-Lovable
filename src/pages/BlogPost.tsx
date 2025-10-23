@@ -204,3 +204,8 @@ const BlogPost = () => {
   {/* Footer debajo */}
   <Footer />
 </div>
+    </div>
+  );
+};
+
+export default BlogPost;
