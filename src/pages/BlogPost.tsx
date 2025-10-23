@@ -207,13 +207,13 @@ const BlogPost = () => {
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '42px',
+              fontSize: '48px',
               fontWeight: 900,
               letterSpacing: '6px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
-            dy="60"
+            dy="55"
           >
             <textPath href="#waveTextPath" startOffset="0">
               COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE •
