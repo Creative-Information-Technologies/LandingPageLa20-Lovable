@@ -178,12 +178,13 @@ const BlogPost = () => {
       </div>
 
       {/* Wave Divider Section with 2 peaks on both sides */}
-      <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px' }}>
+      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
         <svg 
           className="block w-full"
           style={{ 
             height: '300px',
-            display: 'block'
+            display: 'block',
+            overflow: 'visible'
           }}
           viewBox="0 0 1440 300" 
           xmlns="http://www.w3.org/2000/svg"
@@ -195,17 +196,17 @@ const BlogPost = () => {
               d="M0,150 Q360,100 720,150 T1440,150 T2160,150 T2880,150"
               fill="none"
             />
-            <pattern id="wavyPattern" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
-              <image href={wavyPatternBrown} x="0" y="0" width="1440" height="300" preserveAspectRatio="xMidYMid slice" />
+            <pattern id="wavyPattern" x="0" y="0" width="1440" height="600" patternUnits="userSpaceOnUse">
+              <image href={wavyPatternBrown} x="0" y="0" width="1440" height="600" preserveAspectRatio="xMidYMid slice" />
             </pattern>
           </defs>
           
           {/* White background covering from top to middle of black band */}
           <rect x="0" y="0" width="1440" height="150" fill="hsl(0, 0%, 100%)" />
           
-          {/* Orange background with wavy pattern from middle of black band to bottom */}
-          <rect x="0" y="150" width="1440" height="150" fill="hsl(36, 100%, 50%)" />
-          <rect x="0" y="150" width="1440" height="150" fill="url(#wavyPattern)" opacity="1" />
+          {/* Orange background with wavy pattern from middle of black band continuing down */}
+          <rect x="0" y="150" width="1440" height="1000" fill="hsl(36, 100%, 50%)" />
+          <rect x="0" y="150" width="1440" height="1000" fill="url(#wavyPattern)" opacity="1" />
           
           {/* Black wave band with curves on top and bottom - much bigger */}
           <path 
