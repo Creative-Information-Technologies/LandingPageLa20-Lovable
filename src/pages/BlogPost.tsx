@@ -192,7 +192,7 @@ const BlogPost = () => {
           <defs>
             <path
               id="waveTextPath"
-              d="M-200,150 Q160,110 520,150 T1240,150 T1960,150 T2680,150"
+              d="M0,150 Q360,125 720,150 T1440,150 T2160,150 T2880,150"
               fill="none"
             />
           </defs>
