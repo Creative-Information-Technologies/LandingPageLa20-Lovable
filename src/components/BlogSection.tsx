@@ -76,8 +76,8 @@ const BlogSection = () => {
                 textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
               }}
             >
-              CONOCÉ LAS ÚLTIMAS<br />
-              NOTICIAS
+              CONOCÉ<br />
+              LAS ÚLTIMAS NOTICIAS
             </h1>
             </div>
             
