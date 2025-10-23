@@ -70,7 +70,7 @@ const BlogSection = () => {
                 style={{
                   fontSize: "84px",
                   lineHeight: "110%",
-                  textShadow: "5px 5px 0px #3d1505",
+                  textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
                 }}
               >
                 CONOCÉ
@@ -331,7 +331,7 @@ const BlogSection = () => {
                 lineHeight: "102%",
                 letterSpacing: "0%",
                 textAlign: "center",
-                textShadow: "5px 5px 0px #3d1505",
+                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
               }}
             >
               UNITE AL CLUB LA20 Y<br />
@@ -343,7 +343,7 @@ const BlogSection = () => {
               size="lg"
               className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full transition-all"
               style={{
-                boxShadow: "0 8px 0 0 #5c2a13, 0 12px 20px rgba(0,0,0,0.4)",
+                boxShadow: "inset 0 -8px 15px rgba(0,0,0,0.6), 0 4px 15px rgba(0,0,0,0.3)",
               }}
             >
               UNIRME AL CLUB
