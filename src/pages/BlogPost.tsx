@@ -177,6 +177,50 @@ const BlogPost = () => {
         </div>
       </div>
 
+      {/* Wave Divider Section with 2 peaks */}
+      <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px' }}>
+        <svg 
+          className="block w-full"
+          style={{ 
+            height: '150px',
+            display: 'block'
+          }}
+          viewBox="0 0 1440 150" 
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <path
+              id="waveTextPath"
+              d="M0,75 Q360,25 720,75 T1440,75"
+              fill="none"
+            />
+          </defs>
+          
+          {/* Black wave band with 2 peaks */}
+          <path 
+            d="M0,75 Q360,25 720,75 T1440,75 L1440,150 L0,150 Z" 
+            fill="hsl(0, 0%, 0%)" 
+          />
+          
+          {/* White text following the wave curve */}
+          <text
+            style={{
+              fontFamily: 'Oswald',
+              fontSize: '56px',
+              fontWeight: 900,
+              letterSpacing: '6px',
+              fill: '#FFFFFF',
+              textTransform: 'uppercase',
+            }}
+          >
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="15">
+              COMPARTE, DISFRUTA, RELÁJATE
+            </textPath>
+          </text>
+        </svg>
+      </section>
+
       <Footer />
     </div>
   );
