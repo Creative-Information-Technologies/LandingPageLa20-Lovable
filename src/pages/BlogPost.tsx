@@ -9,17 +9,14 @@ const BlogPost = () => {
     <div className="min-h-screen w-full">
       <Navigation />
       
-      {/* Header Section with wavy pattern */}
-      <section 
-        className="relative w-full px-6 overflow-hidden"
+      {/* Header with wavy pattern */}
+      <div 
+        className="relative w-full py-16 px-6 overflow-hidden"
         style={{
-          backgroundColor: '#94421D',
+          backgroundColor: '#974119',
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          paddingTop: '8rem',
-          paddingBottom: '3rem',
         }}
       >
         <div className="max-w-7xl mx-auto relative z-10">
@@ -27,80 +24,68 @@ const BlogPost = () => {
             className="text-white uppercase text-center"
             style={{
               fontFamily: 'Oswald',
-              fontWeight: 900,
-              fontSize: 'clamp(3rem, 8vw, 5rem)',
-              lineHeight: '1',
-              letterSpacing: '0',
-              textShadow: '5px 5px 0 #3b0d00',
-              marginBottom: '2rem',
+              fontWeight: 700,
+              fontSize: '96px',
+              lineHeight: '115%',
+              letterSpacing: '0%',
             }}
           >
-            CONOCÉ ESTA RECETA DE LA CASA: CURRYWURST
+            CONOCÉ ESTA RECETA DE<br />LA CASA: CURRYWURST
           </h1>
           
-          {/* Metadata row: Date on left, Social on right */}
-          <div className="flex items-center justify-between">
-            <span className="text-white font-normal">Publicado: 20 Ago, 25</span>
-            
-            <div className="flex items-center gap-4">
-              <span className="text-white font-semibold">Compartir</span>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5 text-white" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-            </div>
+          {/* Social Media Icons */}
+          <div className="flex justify-center items-center gap-4 mt-6">
+            <span className="text-white font-semibold">Compartir</span>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="Twitter"
+            >
+              <Twitter className="w-5 h-5 text-white" />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5 text-white" />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5 text-white" />
+            </a>
           </div>
-        </div>
-      </section>
-
-      {/* Main Image Section */}
-      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingTop: '5rem', paddingBottom: '3rem' }}>
-        <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-          <img
-            src={blogCurrywurstMain}
-            alt="Currywurst con papas y cerveza"
-            style={{ 
-              width: '100%',
-              borderRadius: '1rem',
-              display: 'block',
-            }}
-          />
         </div>
       </div>
 
-      {/* Content Section with padding bottom */}
-      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingBottom: '4rem' }}>
+      {/* Main Content */}
+      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
+          {/* Main Image */}
+          <div className="mb-12">
+            <img
+              src={blogCurrywurstMain}
+              alt="Currywurst con papas y cerveza"
+              className="w-full rounded-xl shadow-lg"
+              style={{ 
+                maxWidth: '900px',
+                margin: '0 auto',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)'
+              }}
+            />
+          </div>
 
           {/* Ingredients Section */}
           <div className="mb-12">
             <h2 
               className="font-bold uppercase mb-6"
               style={{ 
-                color: '#000000',
-                fontFamily: 'Oswald',
-                fontWeight: 700,
-                fontSize: '24px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                textTransform: 'uppercase'
+                color: '#3B200B',
+                fontSize: '1.75rem',
+                fontFamily: 'Montserrat, sans-serif'
               }}
             >
               INGREDIENTES:
@@ -108,24 +93,22 @@ const BlogPost = () => {
             <ul 
               className="space-y-2"
               style={{ 
-                color: '#000000',
-                fontFamily: 'Poppins, sans-serif',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '180%',
-                letterSpacing: '0%',
-                textAlign: 'justify',
+                color: '#3B200B',
+                fontSize: '1rem',
+                lineHeight: '1.5em',
                 listStyleType: 'disc',
                 paddingLeft: '1.5rem'
               }}
             >
-              <li>4 salchichas bratwurst</li>
-              <li>2 cucharadas de ketchup</li>
-              <li>1 cucharada de curry en polvo</li>
+              <li>1 kg de salchicha alemana (bratwurst)</li>
+              <li>2 cucharadas de aceite vegetal</li>
+              <li>1 cebolla grande picada finamente</li>
+              <li>2 dientes de ajo picados</li>
+              <li>1 taza de salsa de tomate (ketchup)</li>
+              <li>1/4 taza de agua</li>
+              <li>2 cucharadas de curry en polvo</li>
               <li>1 cucharadita de pimentón dulce</li>
-              <li>1 cucharadita de salsa Worcestershire</li>
               <li>Sal y pimienta al gusto</li>
-              <li>Pan para acompañar</li>
             </ul>
           </div>
 
@@ -134,13 +117,9 @@ const BlogPost = () => {
             <h2 
               className="font-bold uppercase mb-6"
               style={{ 
-                color: '#000000',
-                fontFamily: 'Oswald',
-                fontWeight: 700,
-                fontSize: '24px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                textTransform: 'uppercase'
+                color: '#3B200B',
+                fontSize: '1.75rem',
+                fontFamily: 'Montserrat, sans-serif'
               }}
             >
               INSTRUCCIONES:
@@ -148,79 +127,99 @@ const BlogPost = () => {
             <div 
               className="space-y-4"
               style={{ 
-                color: '#000000',
-                fontFamily: 'Poppins, sans-serif',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '180%',
-                letterSpacing: '0%',
-                textAlign: 'justify'
+                color: '#3B200B',
+                fontSize: '1rem',
+                lineHeight: '1.8em'
               }}
             >
               <p>
-                <strong>1.</strong> Comienza cocinando las salchichas en agua hirviendo durante aproximadamente 10 minutos. Después, escúrrelas y sécalas bien.
+                <strong>1.</strong> En una sartén grande, calienta el aceite a fuego medio. Cocina las salchichas durante 8-10 minutos, volteándolas ocasionalmente hasta que estén doradas por todos lados. Retira y reserva.
               </p>
               <p>
-                <strong>2.</strong> Calienta una sartén y asa las salchichas hasta que estén doradas y crujientes por fuera.
+                <strong>2.</strong> En la misma sartén, agrega la cebolla picada y cocina hasta que esté translúcida, aproximadamente 5 minutos. Añade el ajo y cocina por 1 minuto más.
               </p>
               <p>
-                <strong>3.</strong> En un tazón, combina el ketchup, el curry en polvo, el pimentón y la salsa Worcestershire. Mezcla bien y ajusta la sal y pimienta según tu preferencia.
+                <strong>3.</strong> Incorpora el ketchup, el agua, el curry en polvo y el pimentón. Mezcla bien y deja cocinar a fuego lento durante 10 minutos, revolviendo ocasionalmente.
               </p>
               <p>
-                <strong>4.</strong> Corta las salchichas en rodajas y colócalas en un plato. Vierte la mezcla de salsa de curry por encima generosamente.
+                <strong>4.</strong> Corta las salchichas en rodajas de 2-3 cm y agrégalas a la salsa. Cocina por 5 minutos más para que se integren los sabores.
               </p>
               <p>
-                <strong>5.</strong> Sirve con pan al lado y disfruta de este sabroso plato típico alemán.
+                <strong>5.</strong> Prueba y ajusta la sazón con sal y pimienta al gusto. Sirve caliente acompañado de papas fritas y tu cerveza LA20 favorita.
               </p>
             </div>
+          </div>
+
+          {/* Chef's Note */}
+          <div 
+            className="p-6 rounded-lg mb-12"
+            style={{ 
+              backgroundColor: '#FFF8E7',
+              border: '2px solid #FFD200'
+            }}
+          >
+            <p 
+              className="italic"
+              style={{ 
+                color: '#3B200B',
+                fontSize: '1rem',
+                lineHeight: '1.6em'
+              }}
+            >
+              <strong>Consejo del Chef Coto:</strong> Esta receta marida perfectamente con nuestras cervezas de estilo alemán. Te recomendamos acompañarla con una Vienna Lager o una Weiss bien fría para realzar los sabores especiados del curry.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Wave Divider Section */}
-      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
-        {/* Black Wave SVG with parallel waves on top and bottom */}
-        <svg 
-          className="block w-full"
-          style={{ 
-            height: '200px',
-            display: 'block'
-          }}
-          viewBox="0 0 1440 200" 
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <path
-              id="waveTextPath"
-              d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60"
-              fill="none"
-            />
-          </defs>
-          
-          {/* Black wave band with parallel curves on top and bottom */}
-          <path 
-            d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60 L1440,140 Q1260,100 1080,140 T720,140 T360,140 T0,140 Z" 
-            fill="hsl(0, 0%, 0%)" 
-          />
-          
-          {/* White text following the wave curve */}
-          <text
-            style={{
-              fontFamily: 'Oswald',
-              fontSize: '48px',
-              fontWeight: 900,
-              letterSpacing: '4px',
-              fill: '#FFFFFF',
-              textTransform: 'uppercase',
-            }}
-          >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="40">
-              COMPARTE, DISFRUTA, RELÁJATE, COMPARTE
-            </textPath>
-          </text>
-        </svg>
-      </section>
+      {/* Black Banner Section */}
+      {/* Black Wavy Banner */}
+<div className="relative w-full overflow-hidden">
+  <svg
+    viewBox="0 0 1440 320"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-full h-[160px]"
+    preserveAspectRatio="none"
+  >
+    {/* Forma ondulada negra */}
+    <path
+      d="M0,160 C300,240 1140,80 1440,160 L1440,320 L0,320 Z"
+      fill="#000000"
+    />
+  </svg>
+
+  {/* Texto centrado sobre la ola */}
+  <div
+    className="absolute top-0 left-0 w-full h-full flex items-center justify-center overflow-hidden"
+  >
+    <div className="animate-marquee whitespace-nowrap">
+      <span
+        className="inline-block font-extrabold text-white uppercase mx-8"
+        style={{
+          fontFamily: "Montserrat, sans-serif",
+          fontSize: "36px",
+          letterSpacing: "2px",
+          transform: "rotate(-4deg)",
+        }}
+      >
+        COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
+      </span>
+      <span
+        className="inline-block font-extrabold text-white uppercase mx-8"
+        style={{
+          fontFamily: "Montserrat, sans-serif",
+          fontSize: "36px",
+          letterSpacing: "2px",
+          transform: "rotate(-4deg)",
+        }}
+      >
+        COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
+      </span>
+    </div>
+  </div>
+</div>
+
+      </div>
 
       <Footer />
     </div>
