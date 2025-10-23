@@ -246,22 +246,24 @@ const BlogSection = () => {
             />
           </div>
 
-          <img
-            src={beerGlassClub}
-            alt="LA20 Beer Glass"
-            className="absolute overflow-hidden"
-            style={{
-              right: "-9.5%",
-              bottom: "-600px",
-              width: "42%",
-              height: "auto",
-              zIndex: 10,
-              filter: "drop-shadow(0 20px 35px rgba(0,0,0,0.35))",
-              transform: "rotate(7deg)",
-              transformOrigin: "bottom center",
-              pointerEvents: "none",
-            }}
-          />
+          <div className="overflow-hidden">
+            <img
+              src={beerGlassClub}
+              alt="LA20 Beer Glass"
+              className="absolute overflow-hidden"
+              style={{
+                right: "-9.5%",
+                bottom: "-600px",
+                width: "42%",
+                height: "auto",
+                zIndex: 10,
+                filter: "drop-shadow(0 20px 35px rgba(0,0,0,0.35))",
+                transform: "rotate(7deg)",
+                transformOrigin: "bottom center",
+                pointerEvents: "none",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
