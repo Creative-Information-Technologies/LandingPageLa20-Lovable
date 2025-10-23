@@ -225,7 +225,19 @@ const BlogPost = () => {
         </svg>
       </section>
 
-      <Footer />
+      {/* Orange section with wavy pattern behind footer */}
+      <section 
+        className="relative w-full"
+        style={{
+          backgroundColor: 'hsl(var(--blog-orange))',
+          backgroundImage: `url(${wavyPatternBrown})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Footer />
+      </section>
     </div>
   );
 };
