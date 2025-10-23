@@ -6,7 +6,7 @@ import { Facebook, Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <section className="w-full relative overflow-x-hidden overflow-y-visible">
-      {/* Footer Background - transparente */}
+      {/* Footer Background - Transparent */}
       <div 
         className="absolute inset-0" 
         style={{ 
@@ -14,6 +14,7 @@ const Footer = () => {
           zIndex: 0 
         }}
       />
+
 
       {/* Footer Content - Relative, above background */}
       <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
