@@ -192,7 +192,7 @@ const BlogPost = () => {
           <defs>
             <path
               id="waveTextPath"
-              d="M0,100 Q360,50 720,100 T1440,100"
+              d="M0,150 Q360,110 720,150 T1440,150"
               fill="none"
             />
           </defs>
@@ -203,7 +203,7 @@ const BlogPost = () => {
             fill="hsl(0, 0%, 0%)" 
           />
           
-          {/* White text following the wave curve */}
+          {/* White text following the wave curve - repeated multiple times */}
           <text
             style={{
               fontFamily: 'Oswald',
@@ -213,10 +213,37 @@ const BlogPost = () => {
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
-            dy="70"
           >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="60">
-              COMPARTE, DISFRUTA, RELÁJATE
+            <textPath href="#waveTextPath" startOffset="0%" textAnchor="start">
+              COMPARTE, DISFRUTA, RELÁJATE • 
+            </textPath>
+          </text>
+          <text
+            style={{
+              fontFamily: 'Oswald',
+              fontSize: '56px',
+              fontWeight: 900,
+              letterSpacing: '6px',
+              fill: '#FFFFFF',
+              textTransform: 'uppercase',
+            }}
+          >
+            <textPath href="#waveTextPath" startOffset="33%" textAnchor="start">
+              COMPARTE, DISFRUTA, RELÁJATE • 
+            </textPath>
+          </text>
+          <text
+            style={{
+              fontFamily: 'Oswald',
+              fontSize: '56px',
+              fontWeight: 900,
+              letterSpacing: '6px',
+              fill: '#FFFFFF',
+              textTransform: 'uppercase',
+            }}
+          >
+            <textPath href="#waveTextPath" startOffset="66%" textAnchor="start">
+              COMPARTE, DISFRUTA, RELÁJATE • 
             </textPath>
           </text>
         </svg>
