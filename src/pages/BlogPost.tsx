@@ -166,36 +166,52 @@ const BlogPost = () => {
                 lineHeight: '1.6em'
               }}
             >
-              
+              <strong>Consejo del Chef Coto:</strong> Esta receta marida perfectamente con nuestras cervezas de estilo alemán. Te recomendamos acompañarla con una Vienna Lager o una Weiss bien fría para realzar los sabores especiados del curry.
             </p>
           </div>
         </div>
       </div>
 
       {/* Black Banner Section */}
-      <div 
-        className="w-full py-8 overflow-hidden"
-        style={{ backgroundColor: '#000000' }}
-      >
-        <div className="animate-marquee whitespace-nowrap">
-          <span 
-            className="inline-block font-bold text-white uppercase mx-8"
-            style={{ fontSize: '24px', fontFamily: 'Montserrat, sans-serif' }}
-          >
-            COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
-          </span>
-          <span 
-            className="inline-block font-bold text-white uppercase mx-8"
-            style={{ fontSize: '24px', fontFamily: 'Montserrat, sans-serif' }}
-          >
-            COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
-          </span>
-        </div>
+<div className="relative w-full overflow-hidden">
+  {/* Sección negra con borde ondulado */}
+  <div className="relative w-full overflow-hidden">
+    {/* Capa negra con el texto */}
+    <div 
+      className="w-full py-8 overflow-hidden relative"
+      style={{ backgroundColor: '#000000', clipPath: 'path("M0,80 C300,140 900,20 1440,80 L1440,0 L0,0 Z")' }}
+    >
+      <div className="animate-marquee whitespace-nowrap">
+        <span 
+          className="inline-block font-extrabold text-white uppercase mx-8"
+          style={{ fontSize: '36px', fontFamily: 'Montserrat, sans-serif', letterSpacing: '2px' }}
+        >
+          COMPARTE,DISFRUTA,RELÁJATE 
+        </span>
+        <span 
+          className="inline-block font-extrabold text-white uppercase mx-8"
+          style={{ fontSize: '36px', fontFamily: 'Montserrat, sans-serif', letterSpacing: '2px' }}
+        >
+          COMPARTE,DISFRUTA,RELÁJATE
+        </span>
       </div>
-
-      <Footer />
     </div>
-  );
-};
 
-export default BlogPost;
+    {/* SVG opcional para compatibilidad total */}
+    <svg
+      className="absolute bottom-[-1px] left-0 w-full"
+      viewBox="0 0 1440 120"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#000000"
+        d="M0,80 C300,140 900,20 1440,80 L1440,0 L0,0 Z"
+      ></path>
+    </svg>
+  </div>
+
+  {/* Footer debajo */}
+  <Footer />
+</div>
+
