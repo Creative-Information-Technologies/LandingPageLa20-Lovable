@@ -132,6 +132,30 @@ const Footer = () => {
                       La Flaka
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                    >
+                      La Metiche
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                    >
+                      La Morenaza
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                    >
+                      Ediciones Especiales
+                    </a>
+                  </li>
                 </ul>
               </div>
 
