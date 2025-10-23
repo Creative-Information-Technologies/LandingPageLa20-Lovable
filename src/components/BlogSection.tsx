@@ -254,19 +254,19 @@ const BlogSection = () => {
             <CarouselContent className="-ml-4">
               {[
                 {
-                  title: "El Chele Helles - Cerveza de tradición alemana",
+                  title: "¿Cerveza artesanal o industria? Te lo contamos...",
                   image: blogCarousel1,
                 },
                 {
-                  title: "La Jefa IPA - Con ingredientes naturales",
+                  title: "La jefa cumple hoy 5 años",
                   image: blogCarousel2,
                 },
                 {
-                  title: "Celebramos el sabor y calidad de lo nuestro",
+                  title: "Celebremos lo nuestro, ven este 15 de septiembre.",
                   image: blogCarousel3,
                 },
                 {
-                  title: "Tour cervecero - Descubrí el proceso",
+                  title: "Receta del día: Aguachile de camarón",
                   image: blogTourCervecero,
                 },
               ].map((item, index) => (
