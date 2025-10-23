@@ -316,7 +316,7 @@ const BlogSection = () => {
       </div>
 
       {/* Club Membership Section */}
-      <div className="w-full py-20 px-6 relative" style={{ backgroundColor: "#974119", overflow: "hidden", zIndex: 5 }}>
+      <div className="w-full py-20 px-6 relative overflow-x-hidden overflow-y-visible" style={{ backgroundColor: "#974119", zIndex: 5 }}>
         <div className="max-w-7xl mx-auto relative">
           {/* Center Content */}
           <div className="relative text-center py-12" style={{ zIndex: 20 }}>
