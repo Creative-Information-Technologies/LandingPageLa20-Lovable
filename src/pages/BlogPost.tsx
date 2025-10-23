@@ -206,9 +206,6 @@ const BlogPost = () => {
             fill="hsl(0, 0%, 0%)" 
           />
           
-          {/* White background below the black band */}
-          <rect x="0" y="200" width="1440" height="100" fill="hsl(0, 0%, 100%)" />
-          
           {/* White text following the wave curve - repeated multiple times */}
           <text
             style={{
