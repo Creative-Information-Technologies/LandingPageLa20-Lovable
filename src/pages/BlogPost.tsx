@@ -150,19 +150,19 @@ const BlogPost = () => {
               }}
             >
               <p>
-                <strong>1.</strong> En una sartén grande, calienta el aceite a fuego medio. Cocina las salchichas durante 8-10 minutos, volteándolas ocasionalmente hasta que estén doradas por todos lados. Retira y reserva.
+                <strong>1.</strong> Comienza cocinando las salchichas en agua hirviendo durante aproximadamente 10 minutos. Después, escúrrelas y sécalas bien.
               </p>
               <p>
-                <strong>2.</strong> En la misma sartén, agrega la cebolla picada y cocina hasta que esté translúcida, aproximadamente 5 minutos. Añade el ajo y cocina por 1 minuto más.
+                <strong>2.</strong> Calienta una sartén y asa las salchichas hasta que estén doradas y crujientes por fuera.
               </p>
               <p>
-                <strong>3.</strong> Incorpora el ketchup, el agua, el curry en polvo y el pimentón. Mezcla bien y deja cocinar a fuego lento durante 10 minutos, revolviendo ocasionalmente.
+                <strong>3.</strong> En un tazón, combina el ketchup, el curry en polvo, el pimentón y la salsa Worcestershire. Mezcla bien y ajusta la sal y pimienta según tu preferencia.
               </p>
               <p>
-                <strong>4.</strong> Corta las salchichas en rodajas de 2-3 cm y agrégalas a la salsa. Cocina por 5 minutos más para que se integren los sabores.
+                <strong>4.</strong> Corta las salchichas en rodajas y colócalas en un plato. Vierte la mezcla de salsa de curry por encima generosamente.
               </p>
               <p>
-                <strong>5.</strong> Prueba y ajusta la sazón con sal y pimienta al gusto. Sirve caliente acompañado de papas fritas y tu cerveza LA20 favorita.
+                <strong>5.</strong> Sirve con pan al lado y disfruta de este sabroso plato típico alemán.
               </p>
             </div>
           </div>
