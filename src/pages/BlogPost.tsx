@@ -177,51 +177,6 @@ const BlogPost = () => {
         </div>
       </div>
 
-      {/* Wave Divider Section */}
-      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
-        {/* Black Wave SVG with parallel waves on top and bottom */}
-        <svg 
-          className="block w-full"
-          style={{ 
-            height: '200px',
-            display: 'block'
-          }}
-          viewBox="0 0 1440 200" 
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <path
-              id="waveTextPath"
-              d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60"
-              fill="none"
-            />
-          </defs>
-          
-          {/* Black wave band with parallel curves on top and bottom */}
-          <path 
-            d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60 L1440,140 Q1260,100 1080,140 T720,140 T360,140 T0,140 Z" 
-            fill="hsl(0, 0%, 0%)" 
-          />
-          
-          {/* White text following the wave curve */}
-          <text
-            style={{
-              fontFamily: 'Oswald',
-              fontSize: '48px',
-              fontWeight: 900,
-              letterSpacing: '4px',
-              fill: '#FFFFFF',
-              textTransform: 'uppercase',
-            }}
-          >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="40">
-              COMPARTE, DISFRUTA, RELÁJATE, COMPARTE
-            </textPath>
-          </text>
-        </svg>
-      </section>
-
       <Footer />
     </div>
   );
