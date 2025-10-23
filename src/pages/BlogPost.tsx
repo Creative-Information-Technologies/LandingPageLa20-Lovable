@@ -11,39 +11,30 @@ const BlogPost = () => {
       
       {/* Header with wavy pattern */}
       <div 
-        className="relative w-full px-6 overflow-hidden"
+        className="relative w-full py-16 px-6 overflow-hidden"
         style={{
           backgroundColor: '#974119',
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          paddingTop: '120px',
-          paddingBottom: '80px',
         }}
       >
         <div className="max-w-7xl mx-auto relative z-10">
           <h1 
-            className="text-white uppercase mb-8"
+            className="text-white uppercase text-center"
             style={{
               fontFamily: 'Oswald',
-              fontWeight: 900,
-              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-              lineHeight: '1.1',
+              fontWeight: 700,
+              fontSize: '96px',
+              lineHeight: '115%',
               letterSpacing: '0%',
-              textAlign: 'left',
             }}
           >
-            CONOCÉ ESTA <span style={{
-              backgroundColor: '#FFD600',
-              color: '#000',
-              borderRadius: '8px',
-              padding: '0 10px',
-            }}>RECETA</span><br />
-            DE LA CASA: CURRYWURST
+            CONOCÉ ESTA RECETA DE<br />LA CASA: CURRYWURST
           </h1>
           
-          {/* Metadata and Social Media Icons */}
-          <div className="flex items-center gap-6 mt-8">
+          {/* Social Media Icons */}
+          <div className="flex justify-center items-center gap-4 mt-6">
             <span className="text-white font-semibold">Compartir</span>
             <a 
               href="#" 
@@ -70,24 +61,22 @@ const BlogPost = () => {
         </div>
       </div>
 
-      {/* Main Image Section */}
-      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingTop: '80px', paddingBottom: '60px' }}>
-        <div style={{ maxWidth: '960px', margin: '0 auto' }}>
-          <img
-            src={blogCurrywurstMain}
-            alt="Currywurst con papas y cerveza"
-            style={{ 
-              width: '100%',
-              borderRadius: '12px',
-              display: 'block',
-            }}
-          />
-        </div>
-      </div>
-
-      {/* Content Section */}
-      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
+      {/* Main Content */}
+      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
+          {/* Main Image */}
+          <div className="mb-12">
+            <img
+              src={blogCurrywurstMain}
+              alt="Currywurst con papas y cerveza"
+              className="w-full rounded-xl shadow-lg"
+              style={{ 
+                maxWidth: '900px',
+                margin: '0 auto',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)'
+              }}
+            />
+          </div>
 
           {/* Ingredients Section */}
           <div className="mb-12">
