@@ -179,30 +179,27 @@ const BlogPost = () => {
 
       {/* Wave Divider Section */}
       <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
-        {/* Black Wave SVG with double curves */}
+        {/* Black Wave SVG */}
         <svg 
           className="block w-full"
           style={{ 
-            height: '180px',
+            height: '320px',
             display: 'block'
           }}
-          viewBox="0 0 1440 180" 
+          viewBox="0 0 1440 320" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="waveTextPath"
-              d="M0,70 C360,110 1080,30 1440,80"
+              d="M0,125 Q180,60 360,125 T720,125 T1080,125 T1440,125"
               fill="none"
             />
           </defs>
           
-          {/* Black wave band with curves on top and bottom */}
-          <path
-            fill="#000000"
-            d="M0,30 C360,70 1080,-10 1440,40 L1440,120 C1080,170 360,90 0,130 Z"
-          />
+          {/* Black wave band shape - matches text curve exactly */}
+          <path d="M0,125 Q180,60 360,125 T720,125 T1080,125 T1440,125 L1440,320 L0,320 Z" fill="hsl(0, 0%, 0%)" />
           
           {/* White text following the wave curve */}
           <text
