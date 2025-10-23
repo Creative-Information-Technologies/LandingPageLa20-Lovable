@@ -351,13 +351,13 @@ const BlogSection = () => {
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '64px',
+              fontSize: '76px',
               fontWeight: 900,
-              letterSpacing: '6px',
+              letterSpacing: '8px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
-            dy="12"
+            dy="18"
           >
             <textPath href="#waveTextPath" startOffset="0">
               UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES • UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES • UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES •
