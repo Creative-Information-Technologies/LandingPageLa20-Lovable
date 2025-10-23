@@ -178,43 +178,51 @@ const BlogPost = () => {
       </div>
 
       {/* Wave Divider Section */}
-      <section className="relative w-full" style={{ backgroundColor: '#000000', overflow: 'hidden' }}>
-        {/* Black Wave SVG */}
+      <section className="relative w-full" style={{ backgroundColor: '#000000', overflow: 'hidden', height: '200px' }}>
+        {/* Black Wave SVG with text path */}
         <svg 
           className="absolute block"
           style={{ 
             top: '-40px',
             left: 0,
             width: '100%',
-            height: 'auto',
+            height: '240px',
             zIndex: 1
           }}
-          viewBox="0 0 1440 180" 
+          viewBox="0 0 1440 240" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
+          <defs>
+            <path
+              id="wavePath"
+              d="M0,80 C360,130 1080,30 1440,90"
+              fill="none"
+            />
+          </defs>
+          
+          {/* Black wave background */}
           <path
             fill="#000000"
-            d="M0,50 C360,100 1080,0 1440,60 L1440,180 L0,180 Z"
+            d="M0,50 C360,110 1080,10 1440,70 L1440,240 L0,240 Z"
           />
+          
+          {/* Text following the wave path */}
+          <text
+            style={{
+              fontFamily: 'Oswald',
+              fontSize: '64px',
+              fontWeight: 900,
+              letterSpacing: '8px',
+              fill: '#FFFFFF',
+              textTransform: 'uppercase',
+            }}
+          >
+            <textPath href="#wavePath" startOffset="50%" textAnchor="middle">
+              COMPARTE, DISFRUTA, RELÁJATE, COMPARTE
+            </textPath>
+          </text>
         </svg>
-        
-        {/* Curved Text on Wave */}
-        <div 
-          className="relative text-center text-white font-bold uppercase"
-          style={{
-            fontFamily: 'Oswald',
-            fontSize: 'clamp(2rem, 5vw, 4rem)',
-            fontWeight: 900,
-            letterSpacing: '3px',
-            transform: 'rotate(-4deg)',
-            paddingTop: '3rem',
-            paddingBottom: '2rem',
-            zIndex: 2,
-          }}
-        >
-          COMPARTE · DISFRUTA · RELÁJATE · COMPARTE
-        </div>
       </section>
 
       {/* Orange Background Section with wavy pattern */}
