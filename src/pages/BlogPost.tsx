@@ -222,21 +222,6 @@ const BlogPost = () => {
         </svg>
       </section>
 
-      {/* Orange Background Section with wavy pattern */}
-      <section 
-        className="w-full relative"
-        style={{ 
-          backgroundColor: '#FF9500',
-          backgroundImage: `url(${wavyPatternBrown})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: 'cover',
-          padding: '5rem 0',
-          zIndex: 1
-        }}
-      >
-        {/* Additional content can go here */}
-      </section>
-
       <Footer />
     </div>
   );
