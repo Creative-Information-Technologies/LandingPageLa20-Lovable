@@ -97,42 +97,70 @@ const Footer = () => {
               </div>
 
               {/* CERVEZAS Column */}
-              <div>
+              <div className="col-span-2 md:col-span-1">
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">Cervezas</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      La Jefa
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      El Jefe
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Aleros
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      La Flaka
-                    </a>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-2 gap-x-8">
+                  <ul className="space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        La Jefa
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        El Chele
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        Aleros
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        La Flaka
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        La Metiche
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        La Morenaza
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        Ediciones especiales
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* PRODUCTOS Column */}
