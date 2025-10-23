@@ -192,7 +192,7 @@ const BlogPost = () => {
           <defs>
             <path
               id="waveTextPath"
-              d="M0,150 Q360,110 720,150 T1440,150"
+              d="M-200,150 Q160,110 520,150 T1240,150 T1960,150 T2680,150"
               fill="none"
             />
           </defs>
@@ -207,43 +207,15 @@ const BlogPost = () => {
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '56px',
+              fontSize: '48px',
               fontWeight: 900,
               letterSpacing: '6px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
           >
-            <textPath href="#waveTextPath" startOffset="0%" textAnchor="start">
-              COMPARTE, DISFRUTA, RELÁJATE • 
-            </textPath>
-          </text>
-          <text
-            style={{
-              fontFamily: 'Oswald',
-              fontSize: '56px',
-              fontWeight: 900,
-              letterSpacing: '6px',
-              fill: '#FFFFFF',
-              textTransform: 'uppercase',
-            }}
-          >
-            <textPath href="#waveTextPath" startOffset="33%" textAnchor="start">
-              COMPARTE, DISFRUTA, RELÁJATE • 
-            </textPath>
-          </text>
-          <text
-            style={{
-              fontFamily: 'Oswald',
-              fontSize: '56px',
-              fontWeight: 900,
-              letterSpacing: '6px',
-              fill: '#FFFFFF',
-              textTransform: 'uppercase',
-            }}
-          >
-            <textPath href="#waveTextPath" startOffset="66%" textAnchor="start">
-              COMPARTE, DISFRUTA, RELÁJATE • 
+            <textPath href="#waveTextPath" startOffset="0">
+              COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE •
             </textPath>
           </text>
         </svg>
