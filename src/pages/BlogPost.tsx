@@ -94,9 +94,13 @@ const BlogPost = () => {
             <h2 
               className="font-bold uppercase mb-6"
               style={{ 
-                color: '#3B200B',
-                fontSize: '1.75rem',
-                fontFamily: 'Montserrat, sans-serif'
+                color: '#000000',
+                fontFamily: 'Oswald',
+                fontWeight: 700,
+                fontSize: '24px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                textTransform: 'uppercase'
               }}
             >
               INGREDIENTES:
@@ -104,7 +108,7 @@ const BlogPost = () => {
             <ul 
               className="space-y-2"
               style={{ 
-                color: '#3B200B',
+                color: '#000000',
                 fontFamily: 'Poppins, sans-serif',
                 fontWeight: 400,
                 fontSize: '16px',
@@ -130,9 +134,13 @@ const BlogPost = () => {
             <h2 
               className="font-bold uppercase mb-6"
               style={{ 
-                color: '#3B200B',
-                fontSize: '1.75rem',
-                fontFamily: 'Montserrat, sans-serif'
+                color: '#000000',
+                fontFamily: 'Oswald',
+                fontWeight: 700,
+                fontSize: '24px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                textTransform: 'uppercase'
               }}
             >
               INSTRUCCIONES:
@@ -140,7 +148,7 @@ const BlogPost = () => {
             <div 
               className="space-y-4"
               style={{ 
-                color: '#3B200B',
+                color: '#000000',
                 fontFamily: 'Poppins, sans-serif',
                 fontWeight: 400,
                 fontSize: '16px',
@@ -178,7 +186,7 @@ const BlogPost = () => {
             <p 
               className="italic"
               style={{ 
-                color: '#3B200B',
+                color: '#000000',
                 fontFamily: 'Poppins, sans-serif',
                 fontWeight: 400,
                 fontSize: '16px',
