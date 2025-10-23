@@ -285,10 +285,28 @@ const BlogSection = () => {
                       />
                     </div>
                     <div className="pt-4">
-                      <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
+                      <h3 
+                        className="text-white mb-2 uppercase line-clamp-2"
+                        style={{
+                          fontFamily: 'Oswald',
+                          fontWeight: 700,
+                          fontSize: '24px',
+                          lineHeight: '100%',
+                          letterSpacing: '0%',
+                        }}
+                      >
                         {item.title}
                       </h3>
-                      <p className="text-white text-sm leading-relaxed">
+                      <p 
+                        className="text-white line-clamp-2"
+                        style={{
+                          fontFamily: 'Poppins',
+                          fontWeight: 400,
+                          fontSize: '16px',
+                          lineHeight: '100%',
+                          letterSpacing: '0%',
+                        }}
+                      >
                         {item.description}
                       </p>
                     </div>
