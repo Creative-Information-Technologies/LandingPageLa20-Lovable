@@ -357,7 +357,7 @@ const BlogSection = () => {
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
-            dy="18"
+            dy="25"
           >
             <textPath href="#waveTextPath" startOffset="0">
               UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES • UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES • UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES •
