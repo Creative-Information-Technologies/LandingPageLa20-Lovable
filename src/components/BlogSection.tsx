@@ -291,19 +291,19 @@ const BlogSection = () => {
                           fontFamily: 'Oswald',
                           fontWeight: 700,
                           fontSize: '24px',
-                          lineHeight: '120%',
+                          lineHeight: '130%',
                           letterSpacing: '0%',
                         }}
                       >
                         {item.title}
                       </h3>
                       <p 
-                        className="text-white line-clamp-2"
+                        className="text-white line-clamp-3"
                         style={{
                           fontFamily: 'Poppins',
                           fontWeight: 400,
                           fontSize: '16px',
-                          lineHeight: '140%',
+                          lineHeight: '150%',
                           letterSpacing: '0%',
                         }}
                       >
