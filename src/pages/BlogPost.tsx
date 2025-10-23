@@ -11,18 +11,18 @@ const BlogPost = () => {
       
       {/* Header Section with wavy pattern */}
       <section 
-        className="relative w-full px-6 overflow-hidden flex flex-col justify-center items-start"
+        className="relative w-full px-6 overflow-hidden"
         style={{
           backgroundColor: '#94421D',
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          paddingTop: '10rem',
-          paddingBottom: '5rem',
+          paddingTop: '8rem',
+          paddingBottom: '3rem',
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10 w-full">
+        <div className="max-w-7xl mx-auto relative z-10">
           <h1 
             className="text-white uppercase"
             style={{
@@ -71,9 +71,11 @@ const BlogPost = () => {
             </a>
           </div>
         </div>
-        
-        {/* Main Image positioned at the bottom of hero */}
-        <div className="w-full px-4 sm:px-6 lg:px-8" style={{ maxWidth: '960px', margin: '3rem auto 0 auto' }}>
+      </section>
+
+      {/* Main Image Section */}
+      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingTop: '5rem', paddingBottom: '3rem' }}>
+        <div style={{ maxWidth: '960px', margin: '0 auto' }}>
           <img
             src={blogCurrywurstMain}
             alt="Currywurst con papas y cerveza"
@@ -84,10 +86,7 @@ const BlogPost = () => {
             }}
           />
         </div>
-      </section>
-
-      {/* Spacer */}
-      <div className="w-full" style={{ backgroundColor: '#FFFFFF', paddingTop: '60px' }}></div>
+      </div>
 
       {/* Content Section */}
       <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
