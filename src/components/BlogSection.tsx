@@ -74,7 +74,7 @@ const BlogSection = () => {
               style={{
                 fontSize: '84px',
                 lineHeight: '110%',
-                textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
+                textShadow: '5px 5px 0px #3d1505',
               }}
             >
               CONOCÉ<br />
@@ -110,10 +110,10 @@ const BlogSection = () => {
                 alt="La Flaka Gose Beer Bottle"
                 className="absolute"
                 style={{
-                  right: '8%',
+                  right: '3%',
                   top: '20px',
                   bottom: '0',
-                  width: '88%',
+                  width: '98%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
