@@ -314,6 +314,58 @@ const BlogSection = () => {
         </div>
       </div>
 
+      {/* Wave Divider Section with text */}
+      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px', zIndex: 1 }}>
+        <svg 
+          className="block w-full"
+          style={{ 
+            height: '300px',
+            display: 'block',
+            overflow: 'visible'
+          }}
+          viewBox="0 0 1440 300" 
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <path
+              id="waveTextPath"
+              d="M0,150 Q360,100 720,150 T1440,150 T2160,150 T2880,150"
+              fill="none"
+            />
+          </defs>
+          
+          {/* Brown background covering from top to middle of black band */}
+          <rect x="0" y="0" width="1440" height="150" fill="#974119" />
+          
+          {/* Brown background continuing down */}
+          <rect x="0" y="150" width="1440" height="1000" fill="#974119" />
+          
+          {/* Black wave band with curves on top and bottom */}
+          <path 
+            d="M0,100 Q360,50 720,100 T1440,100 L1440,200 Q1080,250 720,200 T0,200 Z" 
+            fill="hsl(0, 0%, 0%)" 
+          />
+          
+          {/* White text following the wave curve - repeated multiple times */}
+          <text
+            style={{
+              fontFamily: 'Oswald',
+              fontSize: '64px',
+              fontWeight: 900,
+              letterSpacing: '6px',
+              fill: '#FFFFFF',
+              textTransform: 'uppercase',
+            }}
+            dy="12"
+          >
+            <textPath href="#waveTextPath" startOffset="0">
+              UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES • UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES • UNITE AL CLUB LA20, Y OBTENÉ BENEFICIOS ESPECIALES •
+            </textPath>
+          </text>
+        </svg>
+      </section>
+
       {/* Club Membership Section */}
       <div
         className="w-full py-20 px-6 relative"
