@@ -368,7 +368,7 @@ const BlogSection = () => {
           <img
             src={beerGlassClub}
             alt="LA20 Beer Glass"
-            className="hidden lg:absolute"
+            className="hidden lg:block absolute"
             style={{
               right: "0%",
               bottom: "0",
