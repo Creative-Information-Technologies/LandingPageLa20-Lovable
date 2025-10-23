@@ -227,22 +227,24 @@ const BlogSection = () => {
           </div>
 
           {/* Assets */}
-          <img
-            src={beerBottleMetiche}
-            alt="La Metiche Belgian Witbier"
-            className="hidden lg:block absolute"
-            style={{
-              left: "-40%",
-              bottom: "-380px",
-              width: "105%",
-              height: "auto",
-              zIndex: 10,
-              filter: "drop-shadow(0 15px 30px rgba(0,0,0,0.35))",
-              transform: "rotate(-11deg)",
-              transformOrigin: "bottom center",
-              pointerEvents: "none",
-            }}
-          />
+          <div className="overflow-hidden">
+            <img
+              src={beerBottleMetiche}
+              alt="La Metiche Belgian Witbier"
+              className="absolute"
+              style={{
+                left: "-40%",
+                bottom: "-380px",
+                width: "105%",
+                height: "auto",
+                zIndex: 10,
+                filter: "drop-shadow(0 15px 30px rgba(0,0,0,0.35))",
+                transform: "rotate(-11deg)",
+                transformOrigin: "bottom center",
+                pointerEvents: "none",
+              }}
+            />
+          </div>
 
           <img
             src={beerGlassClub}
