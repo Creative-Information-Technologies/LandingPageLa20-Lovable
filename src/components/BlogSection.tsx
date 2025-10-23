@@ -199,8 +199,8 @@ const BlogSection = () => {
       </div>
 
       {/* Club Section */}
-      <div className="w-full py-20 px-6 relative overflow-x-hidden" style={{ backgroundColor: "#974119", zIndex: 5 }}>
-        <div className="max-w-7xl mx-auto relative overflow-x-hidden">
+      <div className="w-full py-20 px-6 relative overflow-hidden" style={{ backgroundColor: "#974119", zIndex: 5 }}>
+        <div className=" mx-auto relative overflow-hidden">
           <div className="relative text-center py-12" style={{ zIndex: 20 }}>
             <h2
               className="text-white uppercase mb-8 font-barlow-condensed"
