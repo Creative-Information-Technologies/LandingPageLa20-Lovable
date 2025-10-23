@@ -350,15 +350,15 @@ const BlogSection = () => {
           <img 
             src={beerBottleMetiche}
             alt="La Metiche Belgian Witbier"
-            className="hidden lg:block absolute"
+            className="hidden lg:block absolute pointer-events-none"
             style={{ 
-              left: '-40%',
-              bottom: '-380px',
+              left: '0%',
+              bottom: '0',
               width: '105%',
               height: 'auto',
               zIndex: 10,
               filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.35))',
-              transform: 'rotate(-11deg)',
+              transform: 'rotate(-11deg) translate(-40%, 380px)',
               transformOrigin: 'bottom center'
             }}
           />
@@ -367,15 +367,15 @@ const BlogSection = () => {
           <img 
             src={beerGlassClub}
             alt="LA20 Beer Glass"
-            className="hidden lg:block absolute"
+            className="hidden lg:block absolute pointer-events-none"
             style={{ 
-              right: '-9.5%',
-              bottom: '-600px',
-              width: '42%',
+              right: '0%',
+              bottom: '0',
+              width: '40%',
               height: 'auto',
               zIndex: 10,
               filter: 'drop-shadow(0 20px 35px rgba(0,0,0,0.35))',
-              transform: 'rotate(7deg)',
+              transform: 'rotate(7deg) translateY(560px)',
               transformOrigin: 'bottom center'
             }}
           />
