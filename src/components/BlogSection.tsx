@@ -112,7 +112,7 @@ const BlogSection = () => {
                   right: '8%',
                   top: '20px',
                   bottom: '0',
-                  width: '58%',
+                  width: '80%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
