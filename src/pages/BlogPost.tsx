@@ -178,44 +178,44 @@ const BlogPost = () => {
       </div>
 
       {/* Wave Divider Section */}
-      <section className="relative w-full" style={{ overflow: 'visible' }}>
-        {/* Black Wave SVG with text path - double wave (top and bottom) */}
+      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
+        {/* Black Wave SVG with double curves */}
         <svg 
           className="block w-full"
           style={{ 
-            height: '200px',
+            height: '180px',
             display: 'block'
           }}
-          viewBox="0 0 1440 200" 
+          viewBox="0 0 1440 180" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
-              id="wavePath"
-              d="M0,60 C360,100 1080,20 1440,70"
+              id="waveTextPath"
+              d="M0,70 C360,110 1080,30 1440,80"
               fill="none"
             />
           </defs>
           
-          {/* Black wave background with curves on both sides */}
+          {/* Black wave band with curves on top and bottom */}
           <path
             fill="#000000"
-            d="M0,40 C360,90 1080,0 1440,60 L1440,140 C1080,180 360,100 0,150 Z"
+            d="M0,30 C360,70 1080,-10 1440,40 L1440,120 C1080,170 360,90 0,130 Z"
           />
           
-          {/* Text following the wave path */}
+          {/* White text following the wave curve */}
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '56px',
+              fontSize: '52px',
               fontWeight: 900,
-              letterSpacing: '6px',
+              letterSpacing: '4px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
           >
-            <textPath href="#wavePath" startOffset="50%" textAnchor="middle">
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle">
               COMPARTE, DISFRUTA, RELÁJATE, COMPARTE
             </textPath>
           </text>
