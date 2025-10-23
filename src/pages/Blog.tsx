@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 const Blog = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <div className="min-h-screen w-full overflow-x-hidden overflow-y-auto">
       <Navigation />
       <BlogSection />
       <Footer />
