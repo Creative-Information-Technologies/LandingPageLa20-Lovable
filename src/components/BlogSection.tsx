@@ -72,7 +72,7 @@ const BlogSection = () => {
               className="font-oswald font-bold text-white uppercase tracking-[0%]"
               style={{
                 fontSize: '96px',
-                lineHeight: '100%',
+                lineHeight: '110%',
                 textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
               }}
             >
