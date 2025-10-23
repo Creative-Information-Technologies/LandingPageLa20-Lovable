@@ -1,3 +1,16 @@
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import blogCurrywurstMain from "@/assets/currywurst-recipe-main.png";
+import blogCervezaArtesanal from "@/assets/blog-cerveza-artesanal.png";
+import blogSaboresPerspectiva from "@/assets/blog-sabores-perspectiva.png";
+import blogTourCervecero from "@/assets/blog-tour-cervecero.png";
+import blogClubPromo from "@/assets/blog-club-promo.png";
+import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
+import beerGlassBlog from "@/assets/beer-glass-blog.png";
+import beerBottleBlog from "@/assets/beer-bottle-blog.png";
+import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
+import beerGlassClub from "@/assets/beer-glass-club.png";
+
 const BlogSection = () => {
   const navigate = useNavigate();
 
@@ -252,9 +265,9 @@ const BlogSection = () => {
               alt="LA20 Beer Glass"
               className="absolute overflow-hidden"
               style={{
-                right: "-9.5%",
+                right: "0%",
                 bottom: "-600px",
-                width: "42%",
+                width: "38%",
                 height: "auto",
                 zIndex: 10,
                 filter: "drop-shadow(0 20px 35px rgba(0,0,0,0.35))",
@@ -269,3 +282,5 @@ const BlogSection = () => {
     </section>
   );
 };
+
+export default BlogSection;
