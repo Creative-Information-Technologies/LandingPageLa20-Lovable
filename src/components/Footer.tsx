@@ -16,8 +16,8 @@ const Footer = () => {
       />
 
       {/* Footer Content - Relative, above background */}
-      <footer className="relative" style={{ zIndex: 5 }}>
-        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start py-12 px-6 lg:px-12">
+      <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
           
           {/* Left Block - Logo and Contact */}
           <div className="w-full lg:w-[30%] bg-black rounded-[25px] p-8 flex flex-col items-center text-center" style={{ zIndex: 5 }}>
