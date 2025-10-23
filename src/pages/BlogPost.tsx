@@ -179,7 +179,7 @@ const BlogPost = () => {
 
       {/* Wave Divider Section */}
       <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px' }}>
-        {/* Black Wave SVG with waves on both top and bottom */}
+        {/* Black Wave SVG with parallel waves on top and bottom */}
         <svg 
           className="block w-full"
           style={{ 
@@ -198,9 +198,9 @@ const BlogPost = () => {
             />
           </defs>
           
-          {/* Black wave band with curves on top and bottom */}
+          {/* Black wave band with parallel curves on top and bottom */}
           <path 
-            d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60 L1440,160 Q1260,120 1080,160 T720,160 T360,160 T0,160 Z" 
+            d="M0,60 Q180,20 360,60 T720,60 T1080,60 T1440,60 L1440,140 Q1260,100 1080,140 T720,140 T360,140 T0,140 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
@@ -215,7 +215,7 @@ const BlogPost = () => {
               textTransform: 'uppercase',
             }}
           >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dominantBaseline="middle">
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="40">
               COMPARTE, DISFRUTA, RELÁJATE, COMPARTE
             </textPath>
           </text>
