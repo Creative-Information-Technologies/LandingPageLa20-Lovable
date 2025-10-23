@@ -62,7 +62,7 @@ const BlogPost = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', overflowY: 'visible' }}>
+      <div className="w-full py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           {/* Main Image */}
           <div className="mb-12">
