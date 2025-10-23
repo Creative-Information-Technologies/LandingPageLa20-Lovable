@@ -252,7 +252,9 @@ const BlogPost = () => {
           zIndex: 1,
         }}
       >
-        <Footer />
+        <div style={{ position: 'relative', zIndex: 10 }}>
+          <Footer />
+        </div>
       </section>
     </div>
   );
