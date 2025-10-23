@@ -5,171 +5,173 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="relative w-full bg-[#8B3A14] py-8 px-4 md:px-8">
-      <footer className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Logo and Contact Section */}
-          <div className="md:col-span-1 bg-black text-white py-12 px-8 md:px-12 rounded-[40px]">
-            <div className="flex flex-col items-start">
-              <img src={la20Logo} alt="LA20 Logo" className="w-32 mb-6" />
-              <p className="text-sm text-gray-400 max-w-xs leading-relaxed mb-8">
-                Estuvimos locos, pero éramos una buena cerveza en Honduras, por lo que estudiamos nuestras raíces para
-                servirte con nuestra bebida.
-              </p>
-              <div>
-                <p className="font-bold mb-4 text-sm">CONTACTANOS</p>
-                <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
-                  >
-                    <Instagram className="w-5 h-5 text-black" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
-                  >
-                    <Facebook className="w-5 h-5 text-black" />
-                  </a>
-                </div>
-              </div>
+    <section className="w-full relative overflow-x-hidden overflow-y-visible">
+      {/* Footer Background - Absolute, behind everything */}
+      <div 
+        className="absolute inset-0" 
+        style={{ 
+          backgroundColor: '#974119',
+          zIndex: 0 
+        }}
+      />
+
+      {/* Footer Content - Relative, above background */}
+      <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
+          
+          {/* Left Block - Logo and Contact */}
+          <div className="w-full lg:w-[30%] bg-black rounded-[25px] p-8 flex flex-col items-center text-center" style={{ zIndex: 5 }}>
+            <img src={la20Logo} alt="La 20" className="h-20 w-auto mb-6" />
+            
+            <p className="text-white text-sm leading-relaxed mb-6 font-['Montserrat']">
+              Estaremos locos, pero amamos una buena cerveza artesanal, por lo que dedicamos nuestras vidas para servirte bebidas de clase mundial.
+            </p>
+            
+            <button 
+              className="bg-[#111] hover:bg-[#222] text-white font-bold uppercase tracking-wider rounded-full px-8 py-3 mb-6 transition-all duration-300 hover:shadow-lg"
+            >
+              Contáctanos
+            </button>
+            
+            <div className="flex gap-4">
+              <a 
+                href="#" 
+                className="w-9 h-9 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-black" />
+              </a>
+              <a 
+                href="#" 
+                className="w-9 h-9 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-black" />
+              </a>
             </div>
           </div>
 
-          {/* Navigation and Copyright Section */}
-          <div className="md:col-span-2 bg-black text-white py-12 px-8 md:px-12 rounded-[40px]">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              {/* Servicios */}
+          {/* Right Block - Navigation Links */}
+          <div className="w-full lg:w-[65%] bg-black rounded-[25px] p-10" style={{ zIndex: 5 }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+              
+              {/* SERVICIOS Column */}
               <div>
-                <h3
-                  className="font-black text-sm mb-4"
-                  style={{ fontFamily: '"Deacon Condensed Test", sans-serif', color: "#FFD801" }}
-                >
-                  SERVICIOS
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-400">
+                <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                  Servicios
+                </h4>
+                <ul className="space-y-2">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Eventos privados
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Cervecería
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Experiencias cerveceras
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Tours
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Reservaciones
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Eventos
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Club LA20
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Distribución
                     </a>
                   </li>
                 </ul>
               </div>
 
-              {/* Cervezas */}
+              {/* CERVEZAS Column */}
               <div>
-                <h3
-                  className="font-black text-sm mb-4"
-                  style={{ fontFamily: '"Deacon Condensed Test", sans-serif', color: "#FFD801" }}
-                >
-                  CERVEZAS
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-400">
+                <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                  Cervezas
+                </h4>
+                <ul className="space-y-2">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
                       La Jefa
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      El Chele
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      La Metiche
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Aleros
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Vienna Lager
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      La Flaka
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Productos */}
-              <div>
-                <h3
-                  className="font-black text-sm mb-4"
-                  style={{ fontFamily: '"Deacon Condensed Test", sans-serif', color: "#FFD801" }}
-                >
-                  PRODUCTOS
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Mano Taproom
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Merchandise
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Ediciones especiales
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Weissbier
                     </a>
                   </li>
                 </ul>
               </div>
 
-              {/* Legal */}
+              {/* PRODUCTOS Column */}
               <div>
-                <h3
-                  className="font-black text-sm mb-4"
-                  style={{ fontFamily: '"Deacon Condensed Test", sans-serif', color: "#FFD801" }}
-                >
-                  LEGAL
-                </h3>
-                <ul className="space-y-2 text-sm text-gray-400">
+                <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                  Productos
+                </h4>
+                <ul className="space-y-2">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Política de privacidad
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Merchandising
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Términos de uso
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Gift Cards
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
-                      Cookies
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Club La 20
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* LEGAL Column */}
+              <div>
+                <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
+                  Legal
+                </h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Términos y Condiciones
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Política de Privacidad
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']">
+                      Aviso Legal
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Copyright */}
-            <div className="border-t border-gray-800 pt-8 text-center">
-              <p className="text-xs text-gray-500">
-                © 2025 Copyright EMUCA - Desarrollado por Creative Information Technologies ∞
-                <br />
-                ADVERTENCIA: EL ABUSO EN EL CONSUMO DE ESTE PRODUCTO ES NOCIVO PARA LA SALUD. LEY 42.12
-              </p>
+            {/* Legal Text */}
+            <div className="text-center text-gray-400 text-xs leading-relaxed pt-6 border-t border-white/10 font-['Montserrat']">
+              <p>© 2025 Copyright EMSULA – Desarrollado por CloudPixels.</p>
+              <p className="mt-1">ADVERTENCIA: EL ABUSO DE LA BEBIDA PERJUDICA LA SALUD. I.H.A.D.F.A.</p>
             </div>
           </div>
+
         </div>
       </footer>
-    </div>
+    </section>
   );
 };
 
