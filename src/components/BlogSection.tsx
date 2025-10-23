@@ -14,6 +14,7 @@ import blogCervezaArtesanal from "@/assets/blog-cerveza-artesanal.png";
 import blogCarousel1 from "@/assets/blog-carousel-1.png";
 import blogCarousel2 from "@/assets/blog-carousel-2.png";
 import blogCarousel3 from "@/assets/blog-carousel-3.png";
+import blogAguachile from "@/assets/blog-aguachile-camaron.png";
 import {
   Carousel,
   CarouselContent,
@@ -255,19 +256,23 @@ const BlogSection = () => {
               {[
                 {
                   title: "¿Cerveza artesanal o industria? Te lo contamos...",
+                  description: "Conocé las diferencias y elegí tu favorita.",
                   image: blogCarousel1,
                 },
                 {
                   title: "La jefa cumple hoy 5 años",
+                  description: "Conoce el origen, el proceso y toda la historia de esta mística cerveza.",
                   image: blogCarousel2,
                 },
                 {
                   title: "Celebremos lo nuestro, ven este 15 de septiembre.",
+                  description: "Hoy celebramos con orgullo nuestra independencia!​ Brindemos con el sabor auténtico de lo nuestro: cerveza artesanal hecha en Honduras. 🍻​",
                   image: blogCarousel3,
                 },
                 {
                   title: "Receta del día: Aguachile de camarón",
-                  image: blogTourCervecero,
+                  description: "Preparate un Aguachile con sabor original en 5 pasos. Conocé como prepararlo.",
+                  image: blogAguachile,
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
@@ -283,6 +288,9 @@ const BlogSection = () => {
                       <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
                         {item.title}
                       </h3>
+                      <p className="text-white text-sm leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </CarouselItem>
