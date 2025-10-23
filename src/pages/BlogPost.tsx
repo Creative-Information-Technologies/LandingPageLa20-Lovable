@@ -86,7 +86,7 @@ const BlogPost = () => {
       </div>
 
       {/* Content Section with padding bottom */}
-      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingBottom: '3rem' }}>
+      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingBottom: '4rem' }}>
         <div className="max-w-4xl mx-auto">
 
           {/* Ingredients Section */}
@@ -178,48 +178,58 @@ const BlogPost = () => {
       </div>
 
       {/* Wave Divider Section */}
-      <section className="relative w-full overflow-hidden" style={{ backgroundColor: '#FF9500' }}>
+      <section className="relative w-full" style={{ backgroundColor: '#000000', overflow: 'hidden' }}>
         {/* Black Wave SVG */}
         <svg 
-          className="w-full block relative z-10"
-          style={{ height: '160px', transform: 'rotate(180deg)' }}
-          viewBox="0 0 1440 200" 
+          className="absolute block"
+          style={{ 
+            top: '-40px',
+            left: 0,
+            width: '100%',
+            height: 'auto',
+            zIndex: 1
+          }}
+          viewBox="0 0 1440 180" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <path
             fill="#000000"
-            d="M0,160 C480,220 960,100 1440,160 L1440,0 L0,0 Z"
+            d="M0,50 C360,100 1080,0 1440,60 L1440,180 L0,180 Z"
           />
         </svg>
         
         {/* Curved Text on Wave */}
         <div 
-          className="absolute left-1/2 text-white font-bold uppercase whitespace-nowrap"
+          className="relative text-center text-white font-bold uppercase"
           style={{
-            top: '-40px',
-            transform: 'translateX(-50%) rotate(-4deg)',
             fontFamily: 'Oswald',
             fontSize: 'clamp(2rem, 5vw, 4rem)',
             fontWeight: 900,
             letterSpacing: '3px',
-            zIndex: 20,
+            transform: 'rotate(-4deg)',
+            paddingTop: '3rem',
+            paddingBottom: '2rem',
+            zIndex: 2,
           }}
         >
-          COMPARTE · DISFRUTA · RELÁJATE
+          COMPARTE · DISFRUTA · RELÁJATE · COMPARTE
         </div>
       </section>
 
-      {/* Orange Background Section */}
+      {/* Orange Background Section with wavy pattern */}
       <section 
         className="w-full relative"
         style={{ 
           backgroundColor: '#FF9500',
-          padding: '4rem 0',
+          backgroundImage: `url(${wavyPatternBrown})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: 'cover',
+          padding: '5rem 0',
           zIndex: 1
         }}
       >
-        {/* Content can go here */}
+        {/* Additional content can go here */}
       </section>
 
       <Footer />
