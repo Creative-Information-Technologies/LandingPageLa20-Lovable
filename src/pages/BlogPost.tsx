@@ -242,17 +242,30 @@ const BlogPost = () => {
       <section 
         className="relative w-full"
         style={{
-          backgroundColor: 'hsl(var(--blog-orange))',
-          backgroundImage: `url(${wavyPatternOrange})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat',
           marginTop: '-150px',
           paddingTop: '150px',
-          zIndex: 0,
         }}
       >
-        <div style={{ position: 'relative', zIndex: 10 }}>
+        {/* Background layer behind everything */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            zIndex: 0,
+            backgroundColor: 'hsl(var(--blog-orange))',
+            backgroundImage: `url(${wavyPatternOrange})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'repeat',
+            pointerEvents: 'none',
+          }}
+        />
+        {/* Footer content above background */}
+        <div style={{ position: 'relative', zIndex: 2 }}>
           <Footer />
         </div>
       </section>
