@@ -350,7 +350,7 @@ const BlogSection = () => {
             alt="La Metiche Belgian Witbier"
             className="hidden lg:block absolute"
             style={{
-              left: "-30%",
+              left: "-35%",
               bottom: "-430px",
               width: "105%",
               height: "auto",
