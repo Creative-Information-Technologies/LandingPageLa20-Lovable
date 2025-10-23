@@ -213,6 +213,7 @@ const BlogPost = () => {
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
+            dy="55"
           >
             <textPath href="#waveTextPath" startOffset="0">
               COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE •
