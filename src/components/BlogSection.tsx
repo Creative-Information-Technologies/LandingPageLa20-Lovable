@@ -276,7 +276,7 @@ const BlogSection = () => {
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
-                  <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]" style={{ minHeight: '400px' }}>
+                  <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img 
                         src={item.image} 
@@ -284,26 +284,26 @@ const BlogSection = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="pt-4 pb-4">
+                    <div className="pt-4">
                       <h3 
-                        className="text-white mb-3 uppercase line-clamp-2"
+                        className="text-white mb-2 uppercase line-clamp-2"
                         style={{
                           fontFamily: 'Oswald',
                           fontWeight: 700,
                           fontSize: '24px',
-                          lineHeight: '130%',
+                          lineHeight: '100%',
                           letterSpacing: '0%',
                         }}
                       >
                         {item.title}
                       </h3>
                       <p 
-                        className="text-white line-clamp-3"
+                        className="text-white line-clamp-2"
                         style={{
                           fontFamily: 'Poppins',
                           fontWeight: 400,
                           fontSize: '16px',
-                          lineHeight: '150%',
+                          lineHeight: '100%',
                           letterSpacing: '0%',
                         }}
                       >
