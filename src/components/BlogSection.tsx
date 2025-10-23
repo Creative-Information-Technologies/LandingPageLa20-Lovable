@@ -276,8 +276,8 @@ const BlogSection = () => {
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
-                  <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-                    <div className="aspect-[4/3] overflow-hidden">
+                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                    <div className="aspect-[4/3] overflow-hidden rounded-2xl">
                       <img 
                         src={item.image} 
                         alt={item.title}
