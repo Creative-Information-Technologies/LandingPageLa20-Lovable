@@ -363,6 +363,23 @@ const BlogSection = () => {
               transformOrigin: "bottom center",
             }}
           />
+
+          {/* Right Glass Image - Extending into Footer */}
+          <img
+            src={beerGlassClub}
+            alt="LA20 Beer Glass"
+            className="hidden lg:absolute"
+            style={{
+              right: "0%",
+              bottom: "0",
+              width: "40%",
+              height: "auto",
+              zIndex: 10,
+              filter: "drop-shadow(0 20px 35px rgba(0,0,0,0.35))",
+              transform: "rotate(7deg) translateY(560px)",
+              transformOrigin: "bottom center",
+            }}
+          />
         </div>
       </div>
     </section>
