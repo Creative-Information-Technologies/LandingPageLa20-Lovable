@@ -243,6 +243,10 @@ const BlogPost = () => {
         className="relative w-full"
         style={{
           backgroundColor: 'hsl(var(--blog-orange))',
+          backgroundImage: `url(${wavyPatternOrange})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat',
         }}
       >
         <Footer />
