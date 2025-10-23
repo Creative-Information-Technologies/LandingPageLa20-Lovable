@@ -345,7 +345,12 @@ const BlogSection = () => {
               style={{
                 padding: "1.75rem 4rem",
                 fontSize: "1.25rem",
-                boxShadow: "0 6px 0 #8B4513",
+                boxShadow: `
+      0 0 10px rgba(0, 0, 0, 0.6),   /* sombra exterior difuminada */
+      inset 0 2px 6px rgba(255, 255, 255, 0.1), /* brillo interno suave */
+      inset 0 -4px 8px rgba(0, 0, 0, 0.8) /* sombra interna inferior */
+    `,
+                filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4))", // agrega más profundidad
               }}
             >
               UNIRME AL CLUB
