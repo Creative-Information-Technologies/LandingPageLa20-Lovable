@@ -173,55 +173,27 @@ const BlogPost = () => {
       </div>
 
       {/* Black Banner Section */}
-      {/* Black Wavy Banner */}
-<div className="relative w-full overflow-hidden">
-  <svg
-    viewBox="0 0 1440 320"
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-full h-[160px]"
-    preserveAspectRatio="none"
-  >
-    {/* Forma ondulada negra */}
-    <path
-      d="M0,160 C300,240 1140,80 1440,160 L1440,320 L0,320 Z"
-      fill="#000000"
-    />
-  </svg>
-
-  {/* Texto centrado sobre la ola */}
-  <div
-    className="absolute top-0 left-0 w-full h-full flex items-center justify-center overflow-hidden"
-  >
-    <div className="animate-marquee whitespace-nowrap">
-      <span
-        className="inline-block font-extrabold text-white uppercase mx-8"
-        style={{
-          fontFamily: "Montserrat, sans-serif",
-          fontSize: "36px",
-          letterSpacing: "2px",
-          transform: "rotate(-4deg)",
-        }}
+      <div 
+        className="w-full py-8 overflow-hidden"
+        style={{ backgroundColor: '#000000' }}
       >
-        COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
-      </span>
-      <span
-        className="inline-block font-extrabold text-white uppercase mx-8"
-        style={{
-          fontFamily: "Montserrat, sans-serif",
-          fontSize: "36px",
-          letterSpacing: "2px",
-          transform: "rotate(-4deg)",
-        }}
-      >
-        COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
-      </span>
-    </div>
-  </div>
-</div>
-
+        <div className="animate-marquee whitespace-nowrap">
+          <span 
+            className="inline-block font-bold text-white uppercase mx-8"
+            style={{ fontSize: '24px', fontFamily: 'Montserrat, sans-serif' }}
+          >
+            COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
+          </span>
+          <span 
+            className="inline-block font-bold text-white uppercase mx-8"
+            style={{ fontSize: '24px', fontFamily: 'Montserrat, sans-serif' }}
+          >
+            COMPARTE · DISFRUTA · RELÁJATE · COMPARTE · ¡VIVE LA EXPERIENCIA LA20!
+          </span>
+        </div>
       </div>
 
-      <Footer />
+      <Footer/>
     </div>
   );
 };
