@@ -355,6 +355,8 @@ const BlogSection = () => {
               fontWeight: 900,
               letterSpacing: '8px',
               fill: '#FFFFFF',
+              stroke: '#FFFFFF',
+              strokeWidth: '2px',
               textTransform: 'uppercase',
             }}
             dy="25"
