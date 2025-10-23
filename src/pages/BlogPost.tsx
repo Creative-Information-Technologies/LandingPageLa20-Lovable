@@ -229,9 +229,11 @@ const BlogPost = () => {
               fontWeight: 900,
               letterSpacing: '6px',
               fill: '#FFFFFF',
+              stroke: '#FFFFFF',
+              strokeWidth: '2px',
               textTransform: 'uppercase',
             }}
-            dy="12"
+            dy="22"
           >
             <textPath href="#waveTextPath" startOffset="0">
               COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE • COMPARTE, DISFRUTA, RELÁJATE •
