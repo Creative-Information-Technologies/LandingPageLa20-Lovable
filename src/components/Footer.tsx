@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Right Block - Navigation Links */}
           <div className="w-full h-full lg:w-[65%] bg-black rounded-[25px] p-10" style={{ zIndex: 5 }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
               {/* SERVICIOS Column */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
 
               {/* CERVEZAS Column */}
-              <div className="col-span-2 md:col-span-1">
+              <div className="col-span-2 md:col-span-2">
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">Cervezas</h4>
                 <div className="grid grid-cols-2 gap-x-8">
                   <ul className="space-y-2">
