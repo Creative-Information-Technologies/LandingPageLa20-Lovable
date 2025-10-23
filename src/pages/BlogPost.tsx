@@ -197,8 +197,8 @@ const BlogPost = () => {
             />
           </defs>
           
-          {/* White background above the black band */}
-          <rect x="0" y="0" width="1440" height="100" fill="hsl(0, 0%, 100%)" />
+          {/* White background covering from top to middle of black band */}
+          <rect x="0" y="0" width="1440" height="150" fill="hsl(0, 0%, 100%)" />
           
           {/* Black wave band with curves on top and bottom - much bigger */}
           <path 
