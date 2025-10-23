@@ -81,7 +81,7 @@ const BlogPost = () => {
               width: '100%',
               height: '400px',
               objectFit: 'cover',
-              objectPosition: 'center bottom',
+              objectPosition: 'center 40%',
               display: 'block',
             }}
           />
