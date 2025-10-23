@@ -112,7 +112,7 @@ const BlogSection = () => {
                   right: '8%',
                   top: '20px',
                   bottom: '0',
-                  width: '80%',
+                  width: '88%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
@@ -279,7 +279,7 @@ const BlogSection = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 bg-transparent">
                       <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
                         {item.title}
                       </h3>
