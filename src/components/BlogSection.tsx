@@ -319,31 +319,31 @@ const BlogSection = () => {
         <svg 
           className="block w-full"
           style={{ 
-            height: '400px',
+            height: '350px',
             display: 'block',
             overflow: 'visible'
           }}
-          viewBox="0 0 1440 400" 
+          viewBox="0 0 1440 350" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="waveTextPath"
-              d="M0,200 Q360,140 720,200 T1440,200 T2160,200 T2880,200"
+              d="M0,175 Q360,125 720,175 T1440,175 T2160,175 T2880,175"
               fill="none"
             />
           </defs>
           
           {/* Brown background covering from top to middle of black band */}
-          <rect x="0" y="0" width="1440" height="200" fill="#974119" />
+          <rect x="0" y="0" width="1440" height="175" fill="#974119" />
           
           {/* Brown background continuing down */}
-          <rect x="0" y="200" width="1440" height="1000" fill="#974119" />
+          <rect x="0" y="175" width="1440" height="1000" fill="#974119" />
           
-          {/* Black wave band with curves on top and bottom - bigger */}
+          {/* Black wave band with curves on top and bottom */}
           <path 
-            d="M0,120 Q360,50 720,120 T1440,120 L1440,280 Q1080,350 720,280 T0,280 Z" 
+            d="M0,110 Q360,60 720,110 T1440,110 L1440,240 Q1080,290 720,240 T0,240 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
