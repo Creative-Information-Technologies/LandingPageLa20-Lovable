@@ -319,31 +319,31 @@ const BlogSection = () => {
         <svg 
           className="block w-full"
           style={{ 
-            height: '350px',
+            height: '300px',
             display: 'block',
             overflow: 'visible'
           }}
-          viewBox="0 0 1440 350" 
+          viewBox="0 0 1440 300" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="waveTextPath"
-              d="M0,175 Q360,125 720,175 T1440,175 T2160,175 T2880,175"
+              d="M0,150 Q360,100 720,150 T1440,150 T2160,150 T2880,150"
               fill="none"
             />
           </defs>
           
           {/* Brown background covering from top to middle of black band */}
-          <rect x="0" y="0" width="1440" height="175" fill="#974119" />
+          <rect x="0" y="0" width="1440" height="150" fill="#974119" />
           
           {/* Brown background continuing down */}
-          <rect x="0" y="175" width="1440" height="1000" fill="#974119" />
+          <rect x="0" y="150" width="1440" height="1000" fill="#974119" />
           
           {/* Black wave band with curves on top and bottom */}
           <path 
-            d="M0,110 Q360,60 720,110 T1440,110 L1440,240 Q1080,290 720,240 T0,240 Z" 
+            d="M0,100 Q360,50 720,100 T1440,100 L1440,200 Q1080,250 720,200 T0,200 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
@@ -351,9 +351,9 @@ const BlogSection = () => {
           <text
             style={{
               fontFamily: 'Oswald',
-              fontSize: '80px',
+              fontSize: '64px',
               fontWeight: 900,
-              letterSpacing: '8px',
+              letterSpacing: '6px',
               fill: '#FFFFFF',
               textTransform: 'uppercase',
             }}
