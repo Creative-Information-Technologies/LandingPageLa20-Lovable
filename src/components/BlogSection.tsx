@@ -110,10 +110,10 @@ const BlogSection = () => {
                 alt="La Flaka Gose Beer Bottle"
                 className="absolute"
                 style={{
-                  right: "1%",
+                  right: "-10%",
                   top: "20px",
                   bottom: "0",
-                  width: "98%",
+                  width: "120%",
                   height: "auto",
                   objectFit: "contain",
                   objectPosition: "bottom",
