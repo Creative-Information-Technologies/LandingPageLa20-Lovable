@@ -341,9 +341,11 @@ const BlogSection = () => {
             </h2>
             <Button
               size="lg"
-              className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full transition-all"
+              className="bg-black hover:bg-black/80 text-white font-bold uppercase rounded-full transition-all"
               style={{
-                boxShadow: "0 4px 8px rgba(0,0,0,0.25)",
+                padding: "1.75rem 4rem",
+                fontSize: "1.25rem",
+                boxShadow: "0 6px 0 #8B4513",
               }}
             >
               UNIRME AL CLUB
