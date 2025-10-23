@@ -196,17 +196,13 @@ const BlogPost = () => {
               d="M0,150 Q360,100 720,150 T1440,150 T2160,150 T2880,150"
               fill="none"
             />
-            <pattern id="wavyPattern" x="0" y="0" width="1440" height="600" patternUnits="userSpaceOnUse">
-              <image href={wavyPatternBrown} x="0" y="0" width="1440" height="600" preserveAspectRatio="xMidYMid slice" />
-            </pattern>
           </defs>
           
           {/* White background covering from top to middle of black band */}
           <rect x="0" y="0" width="1440" height="150" fill="hsl(0, 0%, 100%)" />
           
-          {/* Orange background with wavy pattern from middle of black band continuing down */}
+          {/* Orange background from middle of black band continuing down */}
           <rect x="0" y="150" width="1440" height="1000" fill="hsl(36, 100%, 50%)" />
-          <rect x="0" y="150" width="1440" height="1000" fill="url(#wavyPattern)" opacity="1" />
           
           {/* Black wave band with curves on top and bottom - much bigger */}
           <path 
