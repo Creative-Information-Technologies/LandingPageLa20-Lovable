@@ -157,6 +157,8 @@ const Footer = () => {
                       Merchandise
                     </a>
                   </li>
+                </ul>
+              </div>
 
               {/* LEGAL Column */}
               <div>
