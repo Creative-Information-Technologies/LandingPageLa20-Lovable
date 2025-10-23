@@ -27,7 +27,7 @@ const BlogSection = () => {
   
   const mainArticle = {
     title: "Conocé esta receta de la casa: Currywurst",
-    description: "Esta receta, Currywurst, es perfecta para compartir entre amigos y marida muy bien con cervezas alemanas. Estate pendiente para conocer la receta del Chef Coto.",
+    description: "Esta receta, Currywurst, es perfecta para compartir entre amigos y marida muy bien con cervezas alemanas.",
     image: blogCurrywurstMain,
   };
 
