@@ -111,7 +111,7 @@ const BlogSection = () => {
                 className="absolute"
                 style={{
                   right: "0%",
-                  top: "-20%",
+                  top: "0%",
                   bottom: "0",
                   width: "200%",
                   height: "auto",
