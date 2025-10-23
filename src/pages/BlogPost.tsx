@@ -24,51 +24,48 @@ const BlogPost = () => {
       >
         <div className="max-w-7xl mx-auto relative z-10">
           <h1 
-            className="text-white uppercase"
+            className="text-white uppercase text-center"
             style={{
               fontFamily: 'Oswald',
               fontWeight: 900,
               fontSize: 'clamp(3rem, 8vw, 5rem)',
               lineHeight: '1',
               letterSpacing: '0',
-              textAlign: 'left',
               textShadow: '5px 5px 0 #3b0d00',
               marginBottom: '2rem',
             }}
           >
-            CONOCÉ ESTA <span style={{
-              backgroundColor: '#FFE500',
-              color: '#000',
-              borderRadius: '0.2em',
-              padding: '0.1em 0.2em',
-            }}>RECETA</span><br />
-            DE LA CASA: CURRYWURST
+            CONOCÉ ESTA RECETA DE LA CASA: CURRYWURST
           </h1>
           
-          {/* Metadata and Social Media Icons */}
-          <div className="flex items-center gap-6">
-            <span className="text-white font-semibold">Compartir</span>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5 text-white" />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5 text-white" />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5 text-white" />
-            </a>
+          {/* Metadata row: Date on left, Social on right */}
+          <div className="flex items-center justify-between">
+            <span className="text-white font-normal">Publicado: 20 Ago, 25</span>
+            
+            <div className="flex items-center gap-4">
+              <span className="text-white font-semibold">Compartir</span>
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5 text-white" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 text-white" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:bg-black/80 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-white" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
