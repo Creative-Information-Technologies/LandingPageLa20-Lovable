@@ -309,7 +309,6 @@ const BlogSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 bg-white/20 hover:bg-white/30 text-white border-0" />
             <CarouselNext className="right-2 bg-white/20 hover:bg-white/30 text-white border-0" />
           </Carousel>
         </div>
