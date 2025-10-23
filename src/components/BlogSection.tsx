@@ -14,7 +14,6 @@ import blogCervezaArtesanal from "@/assets/blog-cerveza-artesanal.png";
 import blogCarousel1 from "@/assets/blog-carousel-1.png";
 import blogCarousel2 from "@/assets/blog-carousel-2.png";
 import blogCarousel3 from "@/assets/blog-carousel-3.png";
-import blogAguachile from "@/assets/blog-aguachile-camaron.png";
 import {
   Carousel,
   CarouselContent,
@@ -28,7 +27,7 @@ const BlogSection = () => {
   
   const mainArticle = {
     title: "Conocé esta receta de la casa: Currywurst",
-    description: "Esta receta, Currywurst, es perfecta para compartir entre amigos y marida muy bien con cervezas alemanas.",
+    description: "Esta receta, Currywurst, es perfecta para compartir entre amigos y marida muy bien con cervezas alemanas. Estate pendiente para conocer la receta del Chef Coto.",
     image: blogCurrywurstMain,
   };
 
@@ -72,13 +71,24 @@ const BlogSection = () => {
             <h1 
               className="font-oswald font-bold text-white uppercase tracking-[0%]"
               style={{
-                fontSize: '84px',
-                lineHeight: '110%',
-                textShadow: '5px 5px 0px #3d1505',
+                fontSize: '96px',
+                lineHeight: '100%',
+                textShadow: '10px 10px 25px #521C03, 5px 5px 15px rgba(82, 28, 3, 0.9)',
               }}
             >
               CONOCÉ<br />
-              LAS ÚLTIMAS NOTICIAS
+              LAS ÚLTIMAS{' '}
+              <span 
+                className="inline-block"
+                style={{
+                  backgroundColor: '#FFE135',
+                  color: '#000000',
+                  padding: '4px 12px',
+                  borderRadius: '12px',
+                }}
+              >
+                NOTICIAS
+              </span>
             </h1>
             </div>
             
@@ -93,7 +103,7 @@ const BlogSection = () => {
                   right: '0%',
                   top: '-15px',
                   bottom: '-10px',
-                  width: '58%',
+                  width: '42%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
@@ -110,10 +120,10 @@ const BlogSection = () => {
                 alt="La Flaka Gose Beer Bottle"
                 className="absolute"
                 style={{
-                  right: '3%',
+                  right: '10%',
                   top: '20px',
                   bottom: '0',
-                  width: '98%',
+                  width: '90%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
@@ -255,60 +265,35 @@ const BlogSection = () => {
             <CarouselContent className="-ml-4">
               {[
                 {
-                  title: "¿Cerveza artesanal o industria? Te lo contamos...",
-                  description: "Conocé las diferencias y elegí tu favorita.",
+                  title: "El Chele Helles - Cerveza de tradición alemana",
                   image: blogCarousel1,
                 },
                 {
-                  title: "La jefa cumple hoy 5 años",
-                  description: "Conoce el origen, el proceso y toda la historia de esta mística cerveza.",
+                  title: "La Jefa IPA - Con ingredientes naturales",
                   image: blogCarousel2,
                 },
                 {
-                  title: "Celebremos lo nuestro, ven este 15 de septiembre.",
-                  description: "Hoy celebramos con orgullo nuestra independencia!​ Brindemos con el sabor auténtico de lo nuestro: cerveza artesanal hecha en Honduras. 🍻​",
+                  title: "Celebramos el sabor y calidad de lo nuestro",
                   image: blogCarousel3,
                 },
                 {
-                  title: "Receta del día: Aguachile de camarón",
-                  description: "Preparate un Aguachile con sabor original en 5 pasos. Conocé como prepararlo.",
-                  image: blogAguachile,
+                  title: "Tour cervecero - Descubrí el proceso",
+                  image: blogTourCervecero,
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
-                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-                    <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+                  <div className="bg-gradient-to-br from-[hsl(var(--blog-orange))] to-[hsl(var(--blog-yellow))] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                    <div className="aspect-[4/3] overflow-hidden bg-white/10">
                       <img 
                         src={item.image} 
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="pt-4">
-                      <h3 
-                        className="text-white mb-2 uppercase line-clamp-2"
-                        style={{
-                          fontFamily: 'Oswald',
-                          fontWeight: 700,
-                          fontSize: '24px',
-                          lineHeight: '100%',
-                          letterSpacing: '0%',
-                        }}
-                      >
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
                         {item.title}
                       </h3>
-                      <p 
-                        className="text-white line-clamp-2"
-                        style={{
-                          fontFamily: 'Poppins',
-                          fontWeight: 400,
-                          fontSize: '16px',
-                          lineHeight: '100%',
-                          letterSpacing: '0%',
-                        }}
-                      >
-                        {item.description}
-                      </p>
                     </div>
                   </div>
                 </CarouselItem>
