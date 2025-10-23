@@ -247,7 +247,7 @@ const BlogSection = () => {
           <img
             src={beerGlassClub}
             alt="LA20 Beer Glass"
-            className="hidden lg:block absolute overflow-hidden"
+            className="absolute overflow-hidden"
             style={{
               right: "-9.5%",
               bottom: "-600px",
