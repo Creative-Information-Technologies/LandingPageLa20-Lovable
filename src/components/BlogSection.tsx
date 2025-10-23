@@ -372,7 +372,7 @@ const BlogSection = () => {
             style={{
               right: "0%",
               bottom: "0",
-              width: "40%",
+              width: "35%",
               height: "auto",
               zIndex: 10,
               filter: "drop-shadow(0 20px 35px rgba(0,0,0,0.35))",
