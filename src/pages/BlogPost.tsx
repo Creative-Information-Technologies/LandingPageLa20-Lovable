@@ -9,41 +9,44 @@ const BlogPost = () => {
     <div className="min-h-screen w-full">
       <Navigation />
       
-      {/* Header with wavy pattern */}
-      <div 
-        className="relative w-full px-6 overflow-hidden"
+      {/* Header Section with wavy pattern */}
+      <section 
+        className="relative w-full px-6 overflow-hidden flex flex-col justify-center items-start"
         style={{
-          backgroundColor: '#974119',
+          backgroundColor: '#94421D',
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          paddingTop: '120px',
-          paddingBottom: '80px',
+          backgroundRepeat: 'no-repeat',
+          paddingTop: '10rem',
+          paddingBottom: '5rem',
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
           <h1 
-            className="text-white uppercase mb-8"
+            className="text-white uppercase"
             style={{
               fontFamily: 'Oswald',
               fontWeight: 900,
-              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-              lineHeight: '1.1',
-              letterSpacing: '0%',
+              fontSize: 'clamp(3rem, 8vw, 5rem)',
+              lineHeight: '1',
+              letterSpacing: '0',
               textAlign: 'left',
+              textShadow: '5px 5px 0 #3b0d00',
+              marginBottom: '2rem',
             }}
           >
             CONOCÉ ESTA <span style={{
-              backgroundColor: '#FFD600',
+              backgroundColor: '#FFE500',
               color: '#000',
-              borderRadius: '8px',
-              padding: '0 10px',
+              borderRadius: '0.2em',
+              padding: '0.1em 0.2em',
             }}>RECETA</span><br />
             DE LA CASA: CURRYWURST
           </h1>
           
           {/* Metadata and Social Media Icons */}
-          <div className="flex items-center gap-6 mt-8">
+          <div className="flex items-center gap-6">
             <span className="text-white font-semibold">Compartir</span>
             <a 
               href="#" 
@@ -68,22 +71,23 @@ const BlogPost = () => {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Main Image Section */}
-      <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF', paddingTop: '80px', paddingBottom: '60px' }}>
-        <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+        
+        {/* Main Image positioned at the bottom of hero */}
+        <div className="w-full px-4 sm:px-6 lg:px-8" style={{ maxWidth: '960px', margin: '3rem auto 0 auto' }}>
           <img
             src={blogCurrywurstMain}
             alt="Currywurst con papas y cerveza"
             style={{ 
               width: '100%',
-              borderRadius: '12px',
+              borderRadius: '1rem',
               display: 'block',
             }}
           />
         </div>
-      </div>
+      </section>
+
+      {/* Spacer */}
+      <div className="w-full" style={{ backgroundColor: '#FFFFFF', paddingTop: '60px' }}></div>
 
       {/* Content Section */}
       <div className="w-full px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
