@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Right Block - Navigation Links */}
           <div className="w-full h-full lg:w-[65%] bg-black rounded-[25px] p-10" style={{ zIndex: 5 }}>
-            <div className="grid grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
               {/* SERVICIOS Column */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
@@ -130,30 +130,6 @@ const Footer = () => {
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
                       La Flaka
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      La Metiche
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      La Morenaza
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Ediciones Especiales
                     </a>
                   </li>
                 </ul>
