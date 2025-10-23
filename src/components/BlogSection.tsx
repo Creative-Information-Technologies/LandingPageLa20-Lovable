@@ -275,8 +275,8 @@ const BlogSection = () => {
                   image: blogAguachile,
                 },
               ].map((item, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
-                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4" style={{ minHeight: '400px' }}>
+                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] h-full">
                     <div className="aspect-[4/3] overflow-hidden rounded-2xl">
                       <img 
                         src={item.image} 
@@ -284,7 +284,7 @@ const BlogSection = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="pt-4">
+                    <div className="pt-4 pb-4">
                       <h3 
                         className="text-white mb-2 uppercase line-clamp-2"
                         style={{
@@ -314,8 +314,6 @@ const BlogSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 bg-white/20 hover:bg-white/30 text-white border-0" />
-            <CarouselNext className="right-2 bg-white/20 hover:bg-white/30 text-white border-0" />
           </Carousel>
         </div>
       </div>
