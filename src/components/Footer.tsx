@@ -6,10 +6,11 @@ import { Facebook, Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <section className="w-full relative overflow-x-hidden overflow-y-visible">
-      {/* Footer Background - Brown */}
+      {/* Footer Background - Transparent */}
       <div 
-        className="absolute inset-0 bg-[hsl(var(--blog-brown))]" 
+        className="absolute inset-0" 
         style={{ 
+          backgroundColor: 'transparent',
           zIndex: 0 
         }}
       />
