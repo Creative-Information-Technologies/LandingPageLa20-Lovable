@@ -174,30 +174,6 @@ const BlogPost = () => {
               </p>
             </div>
           </div>
-
-          {/* Chef's Note */}
-          <div 
-            className="p-6 rounded-lg mb-12"
-            style={{ 
-              backgroundColor: '#FFF8E7',
-              border: '2px solid #FFD200'
-            }}
-          >
-            <p 
-              className="italic"
-              style={{ 
-                color: '#000000',
-                fontFamily: 'Poppins, sans-serif',
-                fontWeight: 400,
-                fontSize: '16px',
-                lineHeight: '180%',
-                letterSpacing: '0%',
-                textAlign: 'justify'
-              }}
-            >
-              <strong>Consejo del Chef Coto:</strong> Esta receta marida perfectamente con nuestras cervezas de estilo alemán. Te recomendamos acompañarla con una Vienna Lager o una Weiss bien fría para realzar los sabores especiados del curry.
-            </p>
-          </div>
         </div>
       </div>
 
