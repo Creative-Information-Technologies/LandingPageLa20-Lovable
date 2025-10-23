@@ -249,7 +249,7 @@ const BlogPost = () => {
           backgroundRepeat: 'repeat',
           marginTop: '-150px',
           paddingTop: '150px',
-          zIndex: 1,
+          zIndex: 0,
         }}
       >
         <div style={{ position: 'relative', zIndex: 10 }}>
