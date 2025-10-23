@@ -247,6 +247,8 @@ const BlogPost = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'repeat',
+          marginTop: '-150px',
+          paddingTop: '150px',
         }}
       >
         <Footer />
