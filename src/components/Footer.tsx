@@ -5,24 +5,34 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <section className="w-full relative overflow-x-hidden overflow-y-visible">
-      {/* Footer Background - Transparent */}
-      <div
-        className="absolute inset-0"
+    <section
+      className="w-full relative overflow-hidden" // evita que nada se salga horizontalmente
+      style={{
+        backgroundColor: "transparent",
+      }}
+    >
+      {/* Beer Images - Optional background decorations */}
+      <img
+        src={beerBottleMetiche}
+        alt="Botella de cerveza La Metiche"
+        className="absolute left-0 bottom-0 w-[280px] max-w-[40vw] object-contain pointer-events-none select-none"
+        style={{ zIndex: 1 }}
+      />
+      <img
+        src={beerGlassClub}
+        alt="Vaso de cerveza Club La20"
+        className="absolute right-0 bottom-0 w-[300px] max-w-[45vw] object-contain pointer-events-none select-none"
         style={{
-          backgroundColor: "transparent",
-          zIndex: 0,
+          zIndex: 1,
+          transform: "translateX(5%)", // mueve el vaso un poco a la derecha sin romper layout
         }}
       />
 
-      {/* Footer Content - Relative, above background */}
-      <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
-        <div className="max-w-[1400px] h-[25rem] mx-auto flex flex-col lg:flex-row gap-8 items-start">
-          {/* Left Block - Logo and Contact */}
-          <div
-            className="w-full lg:w-[30%] h-full bg-black rounded-[25px] p-8 flex flex-col items-center text-center"
-            style={{ zIndex: 5 }}
-          >
+      {/* Footer Content */}
+      <footer className="relative py-12 px-6 lg:px-12 z-10">
+        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
+          {/* Left Block */}
+          <div className="w-full lg:w-[30%] bg-black rounded-[25px] p-8 flex flex-col items-center text-center shadow-lg">
             <img src={la20Logo} alt="La 20" className="h-20 w-auto mb-6" />
 
             <p className="text-white text-sm leading-relaxed mb-6 font-['Montserrat']">
@@ -52,150 +62,78 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Block - Navigation Links */}
-          <div className="w-full h-full lg:w-[65%] bg-black rounded-[25px] p-10" style={{ zIndex: 5 }}>
+          {/* Right Block */}
+          <div className="w-full lg:w-[65%] bg-black rounded-[25px] p-10 shadow-lg">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-              {/* SERVICIOS Column */}
+              {/* SERVICIOS */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
                   Servicios
                 </h4>
                 <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Cervecería
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Tours
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Eventos
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Distribución
-                    </a>
-                  </li>
+                  {["Cervecería", "Tours", "Eventos", "Distribución"].map((item) => (
+                    <li key={item}>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              {/* CERVEZAS Column */}
+              {/* CERVEZAS */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">Cervezas</h4>
                 <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      La Jefa
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      La Metiche
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Vienna Lager
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Weissbier
-                    </a>
-                  </li>
+                  {["La Jefa", "La Metiche", "Vienna Lager", "Weissbier"].map((beer) => (
+                    <li key={beer}>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        {beer}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              {/* PRODUCTOS Column */}
+              {/* PRODUCTOS */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">
                   Productos
                 </h4>
                 <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Merchandising
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Gift Cards
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Club La 20
-                    </a>
-                  </li>
+                  {["Merchandising", "Gift Cards", "Club La 20"].map((prod) => (
+                    <li key={prod}>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        {prod}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
-              {/* LEGAL Column */}
+              {/* LEGAL */}
               <div>
                 <h4 className="text-[#FFD100] font-extrabold text-base uppercase mb-4 font-['Montserrat']">Legal</h4>
                 <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Términos y Condiciones
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Política de Privacidad
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Aviso Legal
-                    </a>
-                  </li>
+                  {["Términos y Condiciones", "Política de Privacidad", "Aviso Legal"].map((link) => (
+                    <li key={link}>
+                      <a
+                        href="#"
+                        className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
