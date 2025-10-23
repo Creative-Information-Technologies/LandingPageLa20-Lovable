@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
+import wavyPatternOrange from "@/assets/wavy-pattern-orange.png";
 import blogCurrywurstMain from "@/assets/blog-currywurst-new.png";
 import { Twitter, Linkedin, Facebook } from "lucide-react";
 
@@ -201,8 +202,16 @@ const BlogPost = () => {
           {/* White background covering from top to middle of black band */}
           <rect x="0" y="0" width="1440" height="150" fill="hsl(0, 0%, 100%)" />
           
-          {/* Orange background from middle of black band continuing down */}
+          {/* Orange background with pattern from middle of black band continuing down */}
           <rect x="0" y="150" width="1440" height="1000" fill="hsl(36, 100%, 50%)" />
+          
+          {/* Wavy pattern overlay */}
+          <defs>
+            <pattern id="orangeWavyPattern" x="0" y="0" width="1440" height="600" patternUnits="userSpaceOnUse">
+              <image href={wavyPatternOrange} x="0" y="0" width="1440" height="600" preserveAspectRatio="xMidYMid slice" />
+            </pattern>
+          </defs>
+          <rect x="0" y="150" width="1440" height="1000" fill="url(#orangeWavyPattern)" opacity="1" />
           
           {/* Black wave band with curves on top and bottom - much bigger */}
           <path 
