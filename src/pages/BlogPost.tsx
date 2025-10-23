@@ -182,24 +182,24 @@ const BlogPost = () => {
         <svg 
           className="block w-full"
           style={{ 
-            height: '200px',
+            height: '300px',
             display: 'block'
           }}
-          viewBox="0 0 1440 200" 
+          viewBox="0 0 1440 300" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="waveTextPath"
-              d="M0,70 Q360,30 720,70 T1440,70"
+              d="M0,100 Q360,50 720,100 T1440,100"
               fill="none"
             />
           </defs>
           
-          {/* Black wave band with curves on top and bottom */}
+          {/* Black wave band with curves on top and bottom - much bigger */}
           <path 
-            d="M0,70 Q360,30 720,70 T1440,70 L1440,130 Q1080,170 720,130 T0,130 Z" 
+            d="M0,100 Q360,50 720,100 T1440,100 L1440,200 Q1080,250 720,200 T0,200 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
@@ -214,7 +214,7 @@ const BlogPost = () => {
               textTransform: 'uppercase',
             }}
           >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="35">
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="60">
               COMPARTE, DISFRUTA, RELÁJATE
             </textPath>
           </text>
