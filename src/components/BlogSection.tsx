@@ -227,7 +227,7 @@ const BlogSection = () => {
       </div>
 
       {/* Carousel Section - Additional Articles */}
-      <div className="w-full py-16 px-6" style={{ backgroundColor: '#974119' }}>
+      <div className="w-full py-16 px-6 pb-24" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header with title and button */}
           <div className="flex justify-between items-center mb-8">
