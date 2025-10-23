@@ -343,7 +343,7 @@ const BlogSection = () => {
               size="lg"
               className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full transition-all"
               style={{
-                boxShadow: "inset 0 -8px 15px rgba(128,128,128,0.6), 0 4px 15px rgba(0,0,0,0.3)",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.25)",
               }}
             >
               UNIRME AL CLUB
