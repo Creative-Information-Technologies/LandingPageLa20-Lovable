@@ -177,29 +177,29 @@ const BlogPost = () => {
         </div>
       </div>
 
-      {/* Wave Divider Section with 2 peaks */}
+      {/* Wave Divider Section with 2 peaks on both sides */}
       <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px' }}>
         <svg 
           className="block w-full"
           style={{ 
-            height: '150px',
+            height: '200px',
             display: 'block'
           }}
-          viewBox="0 0 1440 150" 
+          viewBox="0 0 1440 200" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
             <path
               id="waveTextPath"
-              d="M0,75 Q360,25 720,75 T1440,75"
+              d="M0,70 Q360,30 720,70 T1440,70"
               fill="none"
             />
           </defs>
           
-          {/* Black wave band with 2 peaks */}
+          {/* Black wave band with curves on top and bottom */}
           <path 
-            d="M0,75 Q360,25 720,75 T1440,75 L1440,150 L0,150 Z" 
+            d="M0,70 Q360,30 720,70 T1440,70 L1440,130 Q1080,170 720,130 T0,130 Z" 
             fill="hsl(0, 0%, 0%)" 
           />
           
@@ -214,7 +214,7 @@ const BlogPost = () => {
               textTransform: 'uppercase',
             }}
           >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="15">
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle" dy="35">
               COMPARTE, DISFRUTA, RELÁJATE
             </textPath>
           </text>
