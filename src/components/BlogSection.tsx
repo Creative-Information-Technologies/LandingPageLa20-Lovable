@@ -271,15 +271,15 @@ const BlogSection = () => {
                 },
               ].map((item, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
-                  <div className="bg-gradient-to-br from-[hsl(var(--blog-orange))] to-[hsl(var(--blog-yellow))] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-                    <div className="aspect-[4/3] overflow-hidden bg-white/10">
+                  <div className="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                    <div className="aspect-[4/3] overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-6 bg-transparent">
+                    <div className="pt-4">
                       <h3 className="text-xl font-bold text-white mb-2 font-deacon uppercase">
                         {item.title}
                       </h3>
