@@ -56,10 +56,10 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="w-full overflow-x-hidden overflow-y-visible">
+    <section className="w-full">
       {/* Hero Header */}
       <div 
-        className="relative w-full py-20 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden overflow-x-hidden"
+        className="relative w-full py-20 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
         style={{
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
