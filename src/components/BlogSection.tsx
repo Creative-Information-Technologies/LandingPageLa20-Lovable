@@ -227,7 +227,7 @@ const BlogSection = () => {
       </div>
 
       {/* Carousel Section - Additional Articles */}
-      <div className="w-full py-16 px-6 pb-24" style={{ backgroundColor: '#974119' }}>
+      <div className="w-full py-16 px-6" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header with title and button */}
           <div className="flex justify-between items-center mb-8">
@@ -275,16 +275,16 @@ const BlogSection = () => {
                   image: blogAguachile,
                 },
               ].map((item, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4" style={{ minHeight: '280px' }}>
-                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] h-full rounded-2xl overflow-hidden">
-                    <div className="aspect-[4/3] overflow-hidden">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4">
+                  <div className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+                    <div className="aspect-[4/3] overflow-hidden rounded-2xl">
                       <img 
                         src={item.image} 
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="pt-4 pb-4">
+                    <div className="pt-4">
                       <h3 
                         className="text-white mb-2 uppercase line-clamp-2"
                         style={{
@@ -314,6 +314,8 @@ const BlogSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="left-2 bg-white/20 hover:bg-white/30 text-white border-0" />
+            <CarouselNext className="right-2 bg-white/20 hover:bg-white/30 text-white border-0" />
           </Carousel>
         </div>
       </div>
@@ -339,9 +341,6 @@ const BlogSection = () => {
             <Button 
               size="lg"
               className="bg-black hover:bg-black/80 text-white font-bold uppercase px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
-              style={{
-                boxShadow: 'inset 0 2px 8px rgba(255, 255, 255, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5)'
-              }}
             >
               UNIRME AL CLUB
             </Button>
