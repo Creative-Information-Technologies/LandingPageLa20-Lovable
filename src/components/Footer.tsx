@@ -66,7 +66,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Cervecería
+                      Eventos privados
                     </a>
                   </li>
                   <li>
@@ -74,7 +74,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Tours
+                      Experiencias cerveceras
                     </a>
                   </li>
                   <li>
@@ -82,7 +82,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Eventos
+                      Reservaciones
                     </a>
                   </li>
                   <li>
@@ -90,7 +90,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Distribución
+                      Club LA20
                     </a>
                   </li>
                 </ul>
@@ -113,7 +113,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      La Metiche
+                      El Jefe
                     </a>
                   </li>
                   <li>
@@ -121,7 +121,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Vienna Lager
+                      Aleros
                     </a>
                   </li>
                   <li>
@@ -129,7 +129,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Weissbier
+                      La Flaka
                     </a>
                   </li>
                 </ul>
@@ -146,7 +146,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Merchandising
+                      Menú Taproom
                     </a>
                   </li>
                   <li>
@@ -154,19 +154,9 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Gift Cards
+                      Merchandise
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
-                    >
-                      Club La 20
-                    </a>
-                  </li>
-                </ul>
-              </div>
 
               {/* LEGAL Column */}
               <div>
@@ -177,7 +167,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Términos y Condiciones
+                      Politica de Privacidad
                     </a>
                   </li>
                   <li>
@@ -185,7 +175,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Política de Privacidad
+                      Terminos de uso.
                     </a>
                   </li>
                   <li>
@@ -193,7 +183,7 @@ const Footer = () => {
                       href="#"
                       className="text-white text-sm hover:text-[#FFD100] transition-colors font-['Montserrat']"
                     >
-                      Aviso Legal
+                      Cookies
                     </a>
                   </li>
                 </ul>
@@ -202,8 +192,8 @@ const Footer = () => {
 
             {/* Legal Text */}
             <div className="text-center text-gray-400 text-xs leading-relaxed pt-6 border-t border-white/10 font-['Montserrat']">
-              <p>© 2025 Copyright EMSULA – Desarrollado por CloudPixels.</p>
-              <p className="mt-1">ADVERTENCIA: EL ABUSO DE LA BEBIDA PERJUDICA LA SALUD. I.H.A.D.F.A.</p>
+              <p>© 2025 Copyright EMSULA - Desarrollado por CloudPixels.</p>
+              <p className="mt-1">ADVERTENCIA: EL ABUSO DE LA BEBIDA PERJUDICA LA SALUD, I.H.A.D.F.A.</p>
             </div>
           </div>
         </div>
