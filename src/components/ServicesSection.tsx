@@ -349,10 +349,10 @@ const ServicesSection = () => {
             style={{
               width: "700px",
               height: "auto",
-              transform: "rotate(5deg)",
+              transform: "rotate(7deg)",
               filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
               top: "50%",
-              marginTop: "-10px",
+              marginTop: "20px",
             }}
           />
 
