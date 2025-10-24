@@ -183,13 +183,12 @@ const ServicesSection = () => {
       </div>
 
       {/* Wave Divider Section with text */}
-      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px', zIndex: 1 }}>
+      <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px', zIndex: 1 }}>
         <svg 
           className="block w-full"
           style={{ 
             height: '300px',
-            display: 'block',
-            overflow: 'visible'
+            display: 'block'
           }}
           viewBox="0 0 1440 300" 
           xmlns="http://www.w3.org/2000/svg"
@@ -205,9 +204,6 @@ const ServicesSection = () => {
           
           {/* Brown background covering from top to middle of black band */}
           <rect x="0" y="0" width="1440" height="150" fill="#974119" />
-          
-          {/* Brown background continuing down */}
-          <rect x="0" y="150" width="1440" height="1000" fill="#974119" />
           
           {/* Black wave band with curves on top and bottom */}
           <path 
