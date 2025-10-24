@@ -373,7 +373,6 @@ const ServicesSection = () => {
               src={beerBottleWeiss}
               alt="LA20 Weiss"
               className="h-[450px] w-auto transition-transform duration-300 hover:scale-105"
-              style={{ objectFit: "contain" }}
             />
 
             {/* El Chele */}
