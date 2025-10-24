@@ -183,42 +183,54 @@ const ServicesSection = () => {
       </div>
 
       {/* Wave Divider Section with text */}
-      <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px', zIndex: 1 }}>
+      <section className="relative w-full" style={{ overflow: 'visible', marginTop: '-2px', zIndex: 1 }}>
         <svg 
           className="block w-full"
           style={{ 
-            height: '200px',
-            display: 'block'
+            height: '300px',
+            display: 'block',
+            overflow: 'visible'
           }}
-          viewBox="0 0 1440 200" 
+          viewBox="0 0 1440 300" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
-            {/* Path for text to follow - matches the wave center */}
             <path
               id="waveTextPath"
-              d="M-300,100 Q60,75 420,100 T1140,100 T1860,100 T2580,100"
+              d="M0,150 Q360,80 720,150 T1440,150 T2160,150 T2880,150"
               fill="none"
             />
           </defs>
           
-          {/* Wavy black band */}
-          <path
-            d="M0,60 Q360,35 720,60 T1440,60 L1440,140 Q1080,165 720,140 T0,140 Z"
-            fill="#000000"
+          {/* Brown background covering from top to middle of black band */}
+          <rect x="0" y="0" width="1440" height="150" fill="#974119" />
+          
+          {/* Brown background continuing down */}
+          <rect x="0" y="150" width="1440" height="1000" fill="#974119" />
+          
+          {/* Black wave band with curves on top and bottom */}
+          <path 
+            d="M0,100 Q360,30 720,100 T1440,100 L1440,200 Q1080,270 720,200 T0,200 Z" 
+            fill="hsl(0, 0%, 0%)" 
           />
           
-          {/* Wavy text */}
-          <text 
-            fill="white" 
-            fontSize="56" 
-            fontWeight="900" 
-            letterSpacing="10"
-            className="uppercase font-oswald"
+          {/* White text following the wave curve - repeated multiple times */}
+          <text
+            style={{
+              fontFamily: 'Oswald',
+              fontSize: '76px',
+              fontWeight: 900,
+              letterSpacing: '8px',
+              fill: '#FFFFFF',
+              stroke: '#FFFFFF',
+              strokeWidth: '2px',
+              textTransform: 'uppercase',
+            }}
+            dy="25"
           >
-            <textPath href="#waveTextPath" startOffset="0%">
-              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE
+            <textPath href="#waveTextPath" startOffset="0">
+              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE
             </textPath>
           </text>
         </svg>
