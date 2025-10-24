@@ -7,6 +7,8 @@ import servicesExperiencias from "@/assets/services-experiencias.png";
 import servicesEventos from "@/assets/services-eventos.png";
 import servicesReservaciones from "@/assets/services-reservaciones.png";
 import servicesClub from "@/assets/services-club.png";
+import taproomImage1 from "@/assets/taproom-image-1.png";
+import taproomImage2 from "@/assets/taproom-image-2.png";
 
 const ServicesSection = () => {
   const services = [
@@ -235,17 +237,35 @@ const ServicesSection = () => {
       {/* Taproom Promotion Section */}
       <div className="w-full py-32 relative" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase leading-tight">
+          <h2 
+            className="text-5xl md:text-7xl font-black text-white mb-8 uppercase leading-tight font-oswald"
+            style={{
+              textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+            }}
+          >
             TENEMOS EL MEJOR TAPROOM
             <br />
             DE SAN PEDRO SULA
           </h2>
-          <p className="text-2xl md:text-4xl text-white font-bold">Vení, disfrutá y viví la experiencia cervecera</p>
         </div>
 
-        {/* Diagonal images placeholders */}
-        <div className="absolute top-10 left-10 w-56 h-56 bg-white/10 rounded-3xl transform -rotate-12 hidden lg:block"></div>
-        <div className="absolute bottom-10 right-10 w-56 h-56 bg-white/10 rounded-3xl transform rotate-12 hidden lg:block"></div>
+        {/* Diagonal images */}
+        <div 
+          className="absolute top-10 left-10 w-56 h-56 rounded-3xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl"
+          style={{
+            backgroundImage: `url(${taproomImage1})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
+        <div 
+          className="absolute bottom-10 right-10 w-56 h-56 rounded-3xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl"
+          style={{
+            backgroundImage: `url(${taproomImage2})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div>
       </div>
 
       {/* Beer Exploration Section */}
