@@ -343,8 +343,8 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          {/* Beer bottles row */}
-          <div className="flex justify-center gap-0 items-end px-4">
+          {/* Beer bottles row - Uniformly sized and spaced */}
+          <div className="flex justify-center items-end px-8 md:px-16 max-w-6xl mx-auto" style={{ gap: "clamp(20px, 3vw, 50px)" }}>
             {[
               beerBottleElChele,
               beerBottleWeiss,
@@ -352,12 +352,24 @@ const ServicesSection = () => {
               beerBottleLaFlaka,
               beerBottleAlerosExplore,
             ].map((bottle, index) => (
-              <img
+              <div
                 key={index}
-                src={bottle}
-                alt={`LA20 Beer Bottle ${index + 1}`}
-                className="w-[70px] md:w-[90px] h-auto object-contain drop-shadow-2xl flex-shrink-0"
-              />
+                className="flex-1 flex items-end justify-center"
+                style={{ maxWidth: "180px" }}
+              >
+                <img
+                  src={bottle}
+                  alt={`LA20 Beer Bottle ${index + 1}`}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  style={{
+                    height: "clamp(280px, 35vh, 420px)",
+                    width: "auto",
+                    maxWidth: "100%",
+                    objectFit: "contain",
+                    filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
+                  }}
+                />
+              </div>
             ))}
           </div>
         </div>
