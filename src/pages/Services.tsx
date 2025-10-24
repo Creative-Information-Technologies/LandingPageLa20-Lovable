@@ -37,14 +37,23 @@ const Services = () => {
       
       {/* Header with wavy pattern */}
       <div 
-        className="relative w-full py-20 overflow-hidden bg-[hsl(var(--blog-orange))]"
+        className="relative w-full py-32 overflow-hidden bg-[hsl(var(--blog-orange))]"
         style={{ 
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <h1 className="relative text-7xl md:text-9xl font-black text-white text-center uppercase tracking-wider font-['Bebas_Neue']">
+        <h1 
+          className="relative text-white text-center uppercase font-oswald"
+          style={{
+            fontWeight: 700,
+            fontSize: '148px',
+            lineHeight: '100%',
+            letterSpacing: '0%',
+            textShadow: '8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)'
+          }}
+        >
           SERVICIOS
         </h1>
       </div>
