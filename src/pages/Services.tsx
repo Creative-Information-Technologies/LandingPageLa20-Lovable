@@ -2,6 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
+import beerGlassTall from "@/assets/beer-glass-services-tall.png";
+import beerBottleJefa from "@/assets/beer-bottle-services-jefa.png";
+import beerGlassSnifter from "@/assets/beer-glass-services-snifter.png";
 
 const Services = () => {
   const services = [
@@ -37,25 +40,99 @@ const Services = () => {
       
       {/* Header with wavy pattern */}
       <div 
-        className="relative w-full py-32 overflow-hidden bg-[hsl(var(--blog-orange))]"
+        className="relative w-full px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
         style={{ 
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          paddingTop: '80px',
+          paddingBottom: '80px'
         }}
       >
-        <h1 
-          className="relative text-white text-center uppercase font-oswald"
-          style={{
-            fontWeight: 700,
-            fontSize: '148px',
-            lineHeight: '100%',
-            letterSpacing: '0%',
-            textShadow: '8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)'
-          }}
-        >
-          SERVICIOS
-        </h1>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1 max-w-2xl" style={{ paddingLeft: '10%' }}>
+              <h1 
+                className="text-white uppercase font-oswald"
+                style={{
+                  fontWeight: 700,
+                  fontSize: '148px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  textShadow: '8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)'
+                }}
+              >
+                SERVICIOS
+              </h1>
+            </div>
+
+            {/* Assets - Glass, Bottle and Snifter */}
+            <div
+              className="hidden lg:block absolute right-0 top-0 bottom-0 pointer-events-none"
+              style={{ width: '50%', zIndex: 10 }}
+            >
+              {/* Snifter Glass - Right */}
+              <img
+                src={beerGlassSnifter}
+                alt="LA20 Beer Glass"
+                className="absolute"
+                style={{
+                  right: '5%',
+                  top: '0',
+                  bottom: '0',
+                  width: '35%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom',
+                  filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))',
+                  transform: 'rotate(7deg)',
+                  transformOrigin: 'bottom center',
+                  zIndex: 2,
+                }}
+              />
+
+              {/* Beer Bottle - Center */}
+              <img
+                src={beerBottleJefa}
+                alt="La Jefa Beer Bottle"
+                className="absolute"
+                style={{
+                  right: '15%',
+                  top: '10%',
+                  bottom: '0',
+                  width: '50%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom',
+                  filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))',
+                  transform: 'rotate(-7deg) scale(1.25)',
+                  transformOrigin: 'bottom center',
+                  zIndex: 3,
+                }}
+              />
+
+              {/* Tall Glass - Left side of assets */}
+              <img
+                src={beerGlassTall}
+                alt="LA20 Tall Beer Glass"
+                className="absolute"
+                style={{
+                  right: '55%',
+                  top: '-15px',
+                  bottom: '-10px',
+                  width: '40%',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom',
+                  filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))',
+                  transform: 'rotate(-5deg)',
+                  transformOrigin: 'bottom center',
+                  zIndex: 1,
+                }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Services Grid Section */}
