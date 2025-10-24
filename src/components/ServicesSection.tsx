@@ -367,14 +367,49 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      {/* Final Banner */}
-      <div className="w-full py-16 relative" style={{ backgroundColor: "#974119" }}>
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-3xl md:text-5xl font-black text-white uppercase tracking-wide">
-            CONOCÉ TU BARRIO · SABORES PARA TODOS
-          </p>
-        </div>
-      </div>
+      {/* Final Wave Banner */}
+      <section className="relative w-full" style={{ overflow: "hidden", marginTop: "-2px", zIndex: 1 }}>
+        <svg
+          className="block w-full"
+          style={{
+            height: "250px",
+            display: "block",
+          }}
+          viewBox="0 0 1440 250"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <path id="finalWaveTextPath" d="M0,125 Q360,65 720,125 T1440,125 T2160,125 T2880,125" fill="none" />
+          </defs>
+
+          {/* Brown background covering from top to middle of black band */}
+          <rect x="0" y="0" width="1440" height="125" fill="#974119" />
+
+          {/* Black wave band with curves on top and bottom */}
+          <path d="M0,85 Q360,25 720,85 T1440,85 L1440,165 Q1080,225 720,165 T0,165 Z" fill="hsl(0, 0%, 0%)" />
+
+          {/* White text following the wave curve - repeated multiple times */}
+          <text
+            style={{
+              fontFamily: "Oswald",
+              fontSize: "64px",
+              fontWeight: 900,
+              letterSpacing: "8px",
+              fill: "#FFFFFF",
+              stroke: "#FFFFFF",
+              strokeWidth: "2px",
+              textTransform: "uppercase",
+            }}
+            dy="20"
+          >
+            <textPath href="#finalWaveTextPath" startOffset="0">
+              CONOCÉ TU BARRIO,SABORES PARA TODOS,CONOCÉ TU BARRIO,SABORES PARA TODOS,
+              CONOCÉ TU BARRIO,SABORES PARA TODOS
+            </textPath>
+          </text>
+        </svg>
+      </section>
 
       <style>{`
         @keyframes marquee {
