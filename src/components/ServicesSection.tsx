@@ -315,18 +315,22 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full py-24 relative" style={{ backgroundColor: "#FF9A01" }}>
-        <div className="max-w-7xl mx-auto px-4 text-center relative">
+      <div className="w-full py-24 relative overflow-visible" style={{ backgroundColor: "#FF9A01" }}>
+        <div className="max-w-7xl mx-auto px-4 text-center relative overflow-visible">
           {/* Purple Character - Left side */}
           <img
             src={characterPurple}
             alt="Character"
-            className="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block"
+            className="absolute hidden lg:block"
             style={{
-              width: "300px",
+              width: "400px",
               height: "auto",
               objectFit: "contain",
-              zIndex: 10
+              zIndex: 10,
+              left: "-180px",
+              top: "-120px",
+              transform: "rotate(-8deg)",
+              transformOrigin: "center center"
             }}
           />
           
