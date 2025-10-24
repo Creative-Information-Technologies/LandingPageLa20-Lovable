@@ -344,7 +344,7 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row */}
-          <div className="flex justify-center -gap-5 md:gap-2 items-end px-4">
+          <div className="flex justify-center -gap-20 md:gap-2 items-end px-4">
             {[
               beerBottleElChele,
               beerBottleWeiss,
