@@ -95,7 +95,7 @@ const ServicesSection = () => {
                 className="absolute"
                 style={{
                   right: "110%",
-                  top: "-45%",
+                  top: "-55%",
                   bottom: "0",
                   width: "100%",
                   height: "auto",
