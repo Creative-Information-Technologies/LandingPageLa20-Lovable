@@ -154,10 +154,10 @@ const ServicesSection = () => {
                   {/* Text content */}
                   <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-3xl md:text-4xl font-black text-black mb-4 uppercase leading-tight">
+                      <h3 className="font-oswald font-bold text-black mb-4 uppercase text-center" style={{ fontSize: "42px", lineHeight: "110%", letterSpacing: "0%" }}>
                         {service.title}
                       </h3>
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed">{service.description}</p>
+                      <p className="font-poppins font-normal text-gray-700 text-center" style={{ fontSize: "16px", lineHeight: "100%", letterSpacing: "0%" }}>{service.description}</p>
                     </div>
                     <Button className="mt-6 bg-black text-white hover:bg-gray-800 rounded-full font-bold uppercase px-8 py-6 text-base w-fit">
                       {service.buttonText}
