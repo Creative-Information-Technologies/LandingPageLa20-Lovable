@@ -14,13 +14,13 @@ const ServicesSection = () => {
     },
     {
       title: "EVENTOS PRIVADOS",
-      description: "Ten tus eventos en el mejor sitio de San Pedro Sula. Reservá nuestro Taproom para celebrar los mejores momentos.",
+      description: "Ten tus eventos en el mejor sitio de San Pedro Sula. Reserva nuestro Taproom para celebrar los mejores momentos.",
       buttonText: "COTIZÁ",
       image: "/placeholder.svg"
     },
     {
       title: "RESERVACIONES",
-      description: "Reservá tu lugar y los de tus afectos en el mejor Taproom de la ciudad. No corras el riesgo de quedarte sin tu lugar.",
+      description: "Reservá tu lugar y los de tus aleros en el mejor Taproom de la ciudad. No corras el riesgo de quedarte sin tu lugar.",
       buttonText: "RESERVAR",
       image: "/placeholder.svg"
     },
