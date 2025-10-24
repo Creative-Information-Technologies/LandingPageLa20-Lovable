@@ -345,18 +345,18 @@ const ServicesSection = () => {
           <img
             src={characterPurpleExplore}
             alt="LA20 Character"
-            className="absolute left-0 hidden lg:block"
+            className="absolute -left-10 hidden lg:block"
             style={{
-              width: "350px",
+              width: "700px",
               height: "auto",
               transform: "rotate(5deg)",
               filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
               top: "50%",
-              marginTop: "-175px",
+              marginTop: "-10px",
             }}
           />
-          
-          <h2 
+
+          <h2
             className="text-5xl md:text-7xl font-black text-white mb-6 uppercase"
             style={{
               textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
@@ -364,7 +364,7 @@ const ServicesSection = () => {
           >
             ¿CON GANAS DE EXPLORAR?
           </h2>
-          <p 
+          <p
             className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase"
             style={{
               textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
@@ -420,8 +420,8 @@ const ServicesSection = () => {
             dy="20"
           >
             <textPath href="#finalWaveTextPath" startOffset="0">
-              CONOCE TU BARRIO,SABORES PARA TODOS,CONOCE TU BARRIO,SABORES PARA TODOS,
-              CONOCE TU BARRIO,SABORES PARA TODOS
+              CONOCE TU BARRIO,SABORES PARA TODOS,CONOCE TU BARRIO,SABORES PARA TODOS, CONOCE TU BARRIO,SABORES PARA
+              TODOS
             </textPath>
           </text>
         </svg>
