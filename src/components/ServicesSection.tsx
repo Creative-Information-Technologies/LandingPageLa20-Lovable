@@ -42,7 +42,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full overflow-x-hidden">
       {/* Header with wavy pattern */}
       <div
         className="relative w-full py-40 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"

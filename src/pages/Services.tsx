@@ -4,7 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 
 const Services = () => {
   return (
-    <div className="min-h-screen w-full bg-[#974119]">
+    <div className="min-h-screen w-full bg-[#974119] overflow-x-hidden">
       <Navigation />
       <ServicesSection />
       <Footer />
