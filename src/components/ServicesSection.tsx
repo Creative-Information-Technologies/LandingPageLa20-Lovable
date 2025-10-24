@@ -326,9 +326,9 @@ const ServicesSection = () => {
           {/* Dark Brown Background - Same as page background */}
           <rect x="0" y="0" width="1440" height="420" fill="#974119" />
           
-          {/* Wavy Division Line */}
+          {/* Wavy Division Line with more pronounced curves */}
           <path
-            d="M0,420 Q360,380 720,420 T1440,420 L1440,600 L0,600 Z"
+            d="M0,420 Q360,340 720,420 T1440,420 L1440,600 L0,600 Z"
             fill="#FFA500"
           />
         </svg>
