@@ -144,7 +144,7 @@ const ServicesSection = () => {
               <div
                 key={index}
                 className={`bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-                  index === 0 ? "md:col-span-5" : index === 1 ? "md:col-span-4" : index === 2 ? "md:col-span-4" : "md:col-span-5"
+                  index === 0 ? "md:col-span-5" : index === 1 ? "md:col-span-4" : index === 2 ? "md:col-span-5" : "md:col-span-4"
                 }`}
                 style={{
                   height: index < 2 ? "380px" : "320px",
@@ -183,7 +183,15 @@ const ServicesSection = () => {
       </div>
 
       {/* Animated Text Strip */}
-      <div className="w-full py-8 overflow-hidden" style={{ backgroundColor: "#FF9A01" }}>
+      <div 
+        className="w-full py-8 overflow-hidden relative" 
+        style={{
+          backgroundColor: "#000000",
+          backgroundImage: `url(${wavyPatternBrown})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="flex animate-marquee">
           <span className="text-4xl md:text-5xl font-black text-white uppercase whitespace-nowrap px-8">
             COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ
