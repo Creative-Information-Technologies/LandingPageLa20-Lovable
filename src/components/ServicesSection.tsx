@@ -343,45 +343,12 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          <div className="w-full flex justify-center items-end gap-0 px-0 py-0 bg-transparent overflow-hidden">
-            {/* Aleros */}
-            <img
-              src={beerBottleAlerosExplore}
-              alt="LA20 Aleros"
-              className="h-[700px] w-auto transition-transform duration-300 hover:scale-105"
-              style={{ objectFit: "contain" }}
-            />
-
-            {/* La Flaka */}
-            <img
-              src={beerBottleLaFlaka}
-              alt="LA20 La Flaka"
-              className="h-[650px] w-auto transition-transform duration-300 hover:scale-105"
-              style={{ objectFit: "contain" }}
-            />
-
-            {/* La Jefa */}
-            <img
-              src={beerBottleLaJefaExplore}
-              alt="LA20 La Jefa"
-              className="h-[700px] w-auto transition-transform duration-300 hover:scale-105"
-              style={{ objectFit: "contain" }}
-            />
-
-            {/* Weiss */}
-            <img
-              src={beerBottleWeiss}
-              alt="LA20 Weiss"
-              className="h-[650px] w-auto transition-transform duration-300 hover:scale-105"
-            />
-
-            {/* El Chele */}
-            <img
-              src={beerBottleElChele}
-              alt="LA20 El Chele"
-              className="h-[700px] w-auto transition-transform duration-300 hover:scale-105"
-              style={{ objectFit: "contain" }}
-            />
+          <div className="w-full flex justify-center items-end bg-transparent overflow-hidden gap-[4px]">
+            <img src={beerBottleAlerosExplore} className="h-[700px]" />
+            <img src={beerBottleLaFlaka} className="h-[700px]" />
+            <img src={beerBottleLaJefaExplore} className="h-[700px]" />
+            <img src={beerBottleWeiss} className="h-[700px]" />
+            <img src={beerBottleElChele} className="h-[700px]" />
           </div>
         </div>
       </div>
