@@ -323,7 +323,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full relative overflow-hidden pb-0" style={{ minHeight: "600px" }}>
+      <div className="w-full relative pb-0" style={{ minHeight: "600px", overflow: "hidden" }}>
         {/* SVG Background with Wave - Behind content */}
         <svg
           className="absolute inset-0 w-full h-full"
