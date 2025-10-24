@@ -39,7 +39,7 @@ const ServicesSection = () => {
     <section className="w-full">
       {/* Header with wavy pattern */}
       <div
-        className="relative w-full py-20 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
+        className="relative w-full py-40 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
         style={{
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: "cover",
