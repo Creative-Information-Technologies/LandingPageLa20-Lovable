@@ -343,7 +343,7 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          {/* Beer bottles row - Each with individual sizing */}
+          {/* Beer bottles row - Each with individual sizing for visual uniformity */}
           <div className="flex justify-center items-end px-8 md:px-16 max-w-6xl mx-auto" style={{ gap: "clamp(20px, 3vw, 50px)" }}>
             {/* El Chele */}
             <img
@@ -351,7 +351,7 @@ const ServicesSection = () => {
               alt="LA20 El Chele Beer Bottle"
               className="object-contain drop-shadow-2xl"
               style={{
-                height: "350px",
+                height: "380px",
                 width: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
               }}
@@ -363,7 +363,7 @@ const ServicesSection = () => {
               alt="LA20 Weiss Beer Bottle"
               className="object-contain drop-shadow-2xl"
               style={{
-                height: "350px",
+                height: "370px",
                 width: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
               }}
@@ -375,7 +375,7 @@ const ServicesSection = () => {
               alt="LA20 La Jefa Beer Bottle"
               className="object-contain drop-shadow-2xl"
               style={{
-                height: "350px",
+                height: "360px",
                 width: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
               }}
@@ -387,7 +387,7 @@ const ServicesSection = () => {
               alt="LA20 La Flaka Beer Bottle"
               className="object-contain drop-shadow-2xl"
               style={{
-                height: "350px",
+                height: "375px",
                 width: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
               }}
@@ -399,7 +399,7 @@ const ServicesSection = () => {
               alt="LA20 Aleros Beer Bottle"
               className="object-contain drop-shadow-2xl"
               style={{
-                height: "350px",
+                height: "365px",
                 width: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
               }}
