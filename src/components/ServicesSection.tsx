@@ -182,22 +182,37 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      {/* Animated Text Strip */}
-      <div 
-        className="w-full py-8 overflow-hidden" 
-        style={{ 
-          backgroundColor: "#000000",
-          backgroundImage: `url(${wavyPatternBrown})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      >
-        <div className="flex animate-marquee">
-          <span className="text-4xl md:text-5xl font-black text-white uppercase whitespace-nowrap px-8">
-            COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE
-          </span>
-        </div>
-      </div>
+      {/* Wave Divider Section with text */}
+      <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px', zIndex: 1 }}>
+        <svg 
+          className="block w-full"
+          style={{ 
+            height: '300px',
+            display: 'block',
+            backgroundColor: '#000000'
+          }}
+          viewBox="0 0 1440 300" 
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <path
+              id="waveTextPath"
+              d="M0,150 Q360,80 720,150 T1440,150 T2160,150 T2880,150"
+              fill="none"
+            />
+          </defs>
+          
+          <rect width="100%" height="100%" fill="#000000"/>
+          
+          <text className="wave-text" fill="white" fontSize="48" fontWeight="900" letterSpacing="8">
+            <textPath href="#waveTextPath" startOffset="0%">
+              <animate attributeName="startOffset" from="0%" to="100%" dur="25s" repeatCount="indefinite" />
+              COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE
+            </textPath>
+          </text>
+        </svg>
+      </section>
 
       {/* Taproom Promotion Section */}
       <div className="w-full py-32 relative" style={{ backgroundColor: "#974119" }}>
