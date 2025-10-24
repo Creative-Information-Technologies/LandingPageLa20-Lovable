@@ -383,8 +383,8 @@ const ServicesSection = () => {
             <path id="finalWaveTextPath" d="M0,125 Q360,65 720,125 T1440,125 T2160,125 T2880,125" fill="none" />
           </defs>
 
-          {/* Brown background covering from top to middle of black band */}
-          <rect x="0" y="0" width="1440" height="125" fill="#974119" />
+          {/* Orange/Yellow background covering from top to middle of black band */}
+          <rect x="0" y="0" width="1440" height="125" fill="#FFA500" />
 
           {/* Black wave band with curves on top and bottom */}
           <path d="M0,85 Q360,25 720,85 T1440,85 L1440,165 Q1080,225 720,165 T0,165 Z" fill="hsl(0, 0%, 0%)" />
