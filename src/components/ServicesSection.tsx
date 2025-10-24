@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerGlassTall from "@/assets/beer-glass-services-tall.png";
 import beerBottleJefa from "@/assets/beer-bottle-services-jefa.png";
@@ -132,44 +131,62 @@ const ServicesSection = () => {
       {/* Services Grid Section */}
       <div className="w-full py-20" style={{ backgroundColor: '#974119' }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-              >
-                <div className="flex flex-col md:flex-row h-full">
-                  {/* Left side - Text content */}
-                  <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-3xl md:text-4xl font-black text-black mb-4 uppercase leading-tight">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => {
+              const isImageRight = index % 2 === 0;
+              return (
+                <div 
+                  key={index}
+                  className="bg-white overflow-hidden"
+                  style={{
+                    borderRadius: '16px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                    height: index === 1 ? 'auto' : index === 2 ? '340px' : '320px'
+                  }}
+                >
+                  <div className={`flex ${isImageRight ? 'flex-row' : 'flex-row-reverse'} h-full`}>
+                    {/* Text side */}
+                    <div className="w-1/2 p-8 flex flex-col justify-center">
+                      <h3 
+                        className="text-black uppercase mb-4 leading-tight"
+                        style={{
+                          fontFamily: 'Bebas Neue, sans-serif',
+                          fontWeight: 'bold',
+                          fontSize: '2rem'
+                        }}
+                      >
                         {service.title}
                       </h3>
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <p className="text-black text-sm leading-relaxed mb-6">
                         {service.description}
                       </p>
+                      <button
+                        className="bg-black text-white font-bold uppercase px-6 py-3 w-fit"
+                        style={{
+                          borderRadius: '8px',
+                          boxShadow: '0 3px 0 #8B4513'
+                        }}
+                      >
+                        {service.buttonText}
+                      </button>
                     </div>
-                    <Button 
-                      className="mt-6 bg-black text-white hover:bg-gray-800 rounded-full font-bold uppercase px-8 py-6 text-base w-fit"
-                    >
-                      {service.buttonText}
-                    </Button>
-                  </div>
-                  
-                  {/* Right side - Image */}
-                  <div className="w-full md:w-1/2 h-64 md:h-auto">
+                    
+                    {/* Image side */}
                     <div 
-                      className="w-full h-full bg-gray-200 rounded-[25px] m-2"
-                      style={{ 
-                        backgroundImage: `url(${service.image})`, 
+                      className="w-1/2 h-full"
+                      style={{
+                        backgroundImage: `url(${service.image})`,
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center'
+                        backgroundPosition: 'center',
+                        borderRadius: isImageRight 
+                          ? '0 16px 16px 0' 
+                          : '16px 0 0 16px'
                       }}
                     ></div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
