@@ -315,15 +315,16 @@ const ServicesSection = () => {
 
       {/* Beer Exploration Section */}
       <div className="w-full relative overflow-hidden" style={{ minHeight: "600px" }}>
-        {/* SVG Background with Wave */}
+        {/* SVG Background with Wave - Behind content */}
         <svg
           className="absolute inset-0 w-full h-full"
+          style={{ zIndex: 0 }}
           viewBox="0 0 1440 600"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
-          {/* Dark Brown Background - Top 70% */}
-          <rect x="0" y="0" width="1440" height="420" fill="#7B4323" />
+          {/* Dark Brown Background - Same as page background */}
+          <rect x="0" y="0" width="1440" height="420" fill="#974119" />
           
           {/* Wavy Division Line */}
           <path
@@ -333,7 +334,7 @@ const ServicesSection = () => {
         </svg>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center py-24">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-24">
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
