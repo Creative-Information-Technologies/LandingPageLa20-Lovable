@@ -348,7 +348,14 @@ const ServicesSection = () => {
           >
             ¿CON GANAS DE EXPLORAR?
           </h2>
-          <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
+          <p 
+            className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase"
+            style={{
+              textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+            }}
+          >
+            MIRÁ TODAS LAS OPCIONES
+          </p>
 
           <div className="w-full flex justify-center items-end overflow-hidden -mt-36">
             <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[670px] w-auto -mr-[430px]" />
