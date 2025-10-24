@@ -352,8 +352,7 @@ const ServicesSection = () => {
                   <img
                     src={beerBottleElChele}
                     alt="LA20 El Chele Beer Bottle"
-                    className="w-full h-auto drop-shadow-2xl"
-                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                    className="w-full h-auto"
                   />
                 </div>
                 {/* Weiss */}
@@ -361,8 +360,7 @@ const ServicesSection = () => {
                   <img
                     src={beerBottleWeiss}
                     alt="LA20 Weiss Beer Bottle"
-                    className="w-full h-auto drop-shadow-2xl"
-                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                    className="w-full h-auto"
                   />
                 </div>
                 {/* La Jefa */}
@@ -370,8 +368,7 @@ const ServicesSection = () => {
                   <img
                     src={beerBottleLaJefaExplore}
                     alt="LA20 La Jefa Beer Bottle"
-                    className="w-full h-auto drop-shadow-2xl"
-                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                    className="w-full h-auto"
                   />
                 </div>
                 {/* La Flaka */}
@@ -379,8 +376,7 @@ const ServicesSection = () => {
                   <img
                     src={beerBottleLaFlaka}
                     alt="LA20 La Flaka Beer Bottle"
-                    className="w-full h-auto drop-shadow-2xl"
-                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                    className="w-full h-auto"
                   />
                 </div>
                 {/* Aleros */}
@@ -388,8 +384,7 @@ const ServicesSection = () => {
                   <img
                     src={beerBottleAlerosExplore}
                     alt="LA20 Aleros Beer Bottle"
-                    className="w-full h-auto drop-shadow-2xl"
-                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
