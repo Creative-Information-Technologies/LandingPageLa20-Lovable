@@ -94,8 +94,8 @@ const ServicesSection = () => {
                 alt="La Jefa Beer Bottle"
                 className="absolute"
                 style={{
-                  right: "130%",
-                  top: "10%",
+                  right: "110%",
+                  top: "5%",
                   bottom: "0",
                   width: "90%",
                   height: "auto",
