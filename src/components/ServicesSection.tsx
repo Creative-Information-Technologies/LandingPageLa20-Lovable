@@ -14,6 +14,7 @@ import beerBottleWeiss from "@/assets/beer-bottle-weiss.png";
 import beerBottleLaJefaExplore from "@/assets/beer-bottle-la-jefa-explore.png";
 import beerBottleLaFlaka from "@/assets/beer-bottle-la-flaka.png";
 import beerBottleAlerosExplore from "@/assets/beer-bottle-aleros-explore.png";
+import characterPurpleExplore from "@/assets/character-purple-explore.png";
 
 const ServicesSection = () => {
   const services = [
@@ -340,6 +341,21 @@ const ServicesSection = () => {
 
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-24">
+          {/* Character on the left */}
+          <img
+            src={characterPurpleExplore}
+            alt="LA20 Character"
+            className="absolute left-0 hidden lg:block"
+            style={{
+              width: "350px",
+              height: "auto",
+              transform: "rotate(5deg)",
+              filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
+              top: "50%",
+              marginTop: "-175px",
+            }}
+          />
+          
           <h2 
             className="text-5xl md:text-7xl font-black text-white mb-6 uppercase"
             style={{
