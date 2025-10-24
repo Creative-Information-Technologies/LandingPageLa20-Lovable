@@ -71,10 +71,10 @@ const ServicesSection = () => {
                 alt="LA20 Beer Glass"
                 className="absolute"
                 style={{
-                  right: '70%',
+                  right: '190%',
                   top: '0',
                   bottom: '0',
-                  width: '35%',
+                  width: '38%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
@@ -91,10 +91,10 @@ const ServicesSection = () => {
                 alt="La Jefa Beer Bottle"
                 className="absolute"
                 style={{
-                  right: '15%',
+                  right: '180%',
                   top: '10%',
                   bottom: '0',
-                  width: '50%',
+                  width: '65%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
@@ -111,10 +111,10 @@ const ServicesSection = () => {
                 alt="LA20 Tall Beer Glass"
                 className="absolute"
                 style={{
-                  right: '55%',
+                  right: '5%',
                   top: '-15px',
                   bottom: '-10px',
-                  width: '40%',
+                  width: '45%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
