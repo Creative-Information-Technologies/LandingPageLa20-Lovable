@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServicesSection from "@/components/ServicesSection";
-import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
+import wavyPatternFooter from "@/assets/wavy-pattern-footer.png";
 
 const Services = () => {
   return (
@@ -11,9 +11,9 @@ const Services = () => {
       <div 
         className="relative w-full"
         style={{
-          backgroundImage: `url(${wavyPatternBrown})`,
+          backgroundImage: `url(${wavyPatternFooter})`,
           backgroundRepeat: "repeat",
-          backgroundSize: "auto 300px",
+          backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
