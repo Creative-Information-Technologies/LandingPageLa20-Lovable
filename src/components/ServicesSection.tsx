@@ -343,68 +343,56 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          {/* Beer bottles row - Each with individual sizing for visual uniformity */}
-          <div className="flex justify-center items-end px-2 sm:px-4 w-full overflow-x-auto" style={{ gap: "clamp(2px, 0.5vw, 6px)" }}>
-            <div className="flex justify-center items-end min-w-max mx-auto" style={{ gap: "clamp(2px, 0.5vw, 6px)" }}>
-              {/* El Chele */}
-              <img
-                src={beerBottleElChele}
-                alt="LA20 El Chele Beer Bottle"
-                className="object-contain drop-shadow-2xl flex-shrink-0"
-                style={{
-                  height: "clamp(240px, 28vw, 380px)",
-                  width: "auto",
-                  filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
-                }}
-              />
-              
-              {/* Weiss */}
-              <img
-                src={beerBottleWeiss}
-                alt="LA20 Weiss Beer Bottle"
-                className="object-contain drop-shadow-2xl flex-shrink-0"
-                style={{
-                  height: "clamp(234px, 27.5vw, 370px)",
-                  width: "auto",
-                  filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
-                }}
-              />
-              
-              {/* La Jefa */}
-              <img
-                src={beerBottleLaJefaExplore}
-                alt="LA20 La Jefa Beer Bottle"
-                className="object-contain drop-shadow-2xl flex-shrink-0"
-                style={{
-                  height: "clamp(228px, 27vw, 360px)",
-                  width: "auto",
-                  filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
-                }}
-              />
-              
-              {/* La Flaka */}
-              <img
-                src={beerBottleLaFlaka}
-                alt="LA20 La Flaka Beer Bottle"
-                className="object-contain drop-shadow-2xl flex-shrink-0"
-                style={{
-                  height: "clamp(237px, 27.8vw, 375px)",
-                  width: "auto",
-                  filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
-                }}
-              />
-              
-              {/* Aleros */}
-              <img
-                src={beerBottleAlerosExplore}
-                alt="LA20 Aleros Beer Bottle"
-                className="object-contain drop-shadow-2xl flex-shrink-0"
-                style={{
-                  height: "clamp(231px, 27.2vw, 365px)",
-                  width: "auto",
-                  filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))",
-                }}
-              />
+          {/* Beer bottles row - 5 across, no horizontal scroll */}
+          <div className="w-full overflow-hidden">
+            <div className="max-w-7xl mx-auto w-full px-2 sm:px-4">
+              <div className="flex items-end justify-between gap-0.5 sm:gap-1">
+                {/* El Chele */}
+                <div className="flex-1 min-w-0 flex items-end justify-center">
+                  <img
+                    src={beerBottleElChele}
+                    alt="LA20 El Chele Beer Bottle"
+                    className="w-full h-auto drop-shadow-2xl"
+                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                  />
+                </div>
+                {/* Weiss */}
+                <div className="flex-1 min-w-0 flex items-end justify-center">
+                  <img
+                    src={beerBottleWeiss}
+                    alt="LA20 Weiss Beer Bottle"
+                    className="w-full h-auto drop-shadow-2xl"
+                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                  />
+                </div>
+                {/* La Jefa */}
+                <div className="flex-1 min-w-0 flex items-end justify-center">
+                  <img
+                    src={beerBottleLaJefaExplore}
+                    alt="LA20 La Jefa Beer Bottle"
+                    className="w-full h-auto drop-shadow-2xl"
+                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                  />
+                </div>
+                {/* La Flaka */}
+                <div className="flex-1 min-w-0 flex items-end justify-center">
+                  <img
+                    src={beerBottleLaFlaka}
+                    alt="LA20 La Flaka Beer Bottle"
+                    className="w-full h-auto drop-shadow-2xl"
+                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                  />
+                </div>
+                {/* Aleros */}
+                <div className="flex-1 min-w-0 flex items-end justify-center">
+                  <img
+                    src={beerBottleAlerosExplore}
+                    alt="LA20 Aleros Beer Bottle"
+                    className="w-full h-auto drop-shadow-2xl"
+                    style={{ filter: "drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))" }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
