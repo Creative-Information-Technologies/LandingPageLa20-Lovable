@@ -343,12 +343,12 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          <div className="w-full flex justify-center items-end bg-transparent overflow-hidden gap-[0px]">
-            <img src={beerBottleAlerosExplore} className="h-[700px]" />
-            <img src={beerBottleLaFlaka} className="h-[700px]" />
-            <img src={beerBottleLaJefaExplore} className="h-[700px]" />
-            <img src={beerBottleWeiss} className="h-[700px]" />
-            <img src={beerBottleElChele} className="h-[700px]" />
+          <div className="w-full flex justify-center items-end bg-transparent overflow-hidden">
+            <img src={beerBottleAlerosExplore} className="h-[700px] w-auto -mr-[4px]" />
+            <img src={beerBottleLaFlaka} className="h-[700px] w-auto -mr-[4px]" />
+            <img src={beerBottleLaJefaExplore} className="h-[700px] w-auto -mr-[4px]" />
+            <img src={beerBottleWeiss} className="h-[700px] w-auto -mr-[4px]" />
+            <img src={beerBottleElChele} className="h-[700px] w-auto" />
           </div>
         </div>
       </div>
