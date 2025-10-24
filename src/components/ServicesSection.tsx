@@ -240,8 +240,8 @@ const ServicesSection = () => {
             dy="25"
           >
             <textPath href="#waveTextPath" startOffset="0">
-              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE ·
-              COMPARTI · DISFRUTA · RELAJATE
+              COMPARTI,DISFRUTA,RELAJATE,COMPARTI,DISFRUTA,RELAJATE,COMPARTI,DISFRUTA,RELAJATE,
+              COMPARTI,DISFRUTA,RELAJATE
             </textPath>
           </text>
         </svg>
@@ -349,43 +349,23 @@ const ServicesSection = () => {
               <div className="flex items-end justify-between gap-0.5 sm:gap-1">
                 {/* El Chele */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleElChele}
-                    alt="LA20 El Chele Beer Bottle"
-                    className="w-full h-auto"
-                  />
+                  <img src={beerBottleElChele} alt="LA20 El Chele Beer Bottle" className="w-full h-auto" />
                 </div>
                 {/* Weiss */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleWeiss}
-                    alt="LA20 Weiss Beer Bottle"
-                    className="w-full h-auto"
-                  />
+                  <img src={beerBottleWeiss} alt="LA20 Weiss Beer Bottle" className="w-full h-auto" />
                 </div>
                 {/* La Jefa */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleLaJefaExplore}
-                    alt="LA20 La Jefa Beer Bottle"
-                    className="w-full h-auto"
-                  />
+                  <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa Beer Bottle" className="w-full h-auto" />
                 </div>
                 {/* La Flaka */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleLaFlaka}
-                    alt="LA20 La Flaka Beer Bottle"
-                    className="w-full h-auto"
-                  />
+                  <img src={beerBottleLaFlaka} alt="LA20 La Flaka Beer Bottle" className="w-full h-auto" />
                 </div>
                 {/* Aleros */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleAlerosExplore}
-                    alt="LA20 Aleros Beer Bottle"
-                    className="w-full h-auto"
-                  />
+                  <img src={beerBottleAlerosExplore} alt="LA20 Aleros Beer Bottle" className="w-full h-auto" />
                 </div>
               </div>
             </div>
