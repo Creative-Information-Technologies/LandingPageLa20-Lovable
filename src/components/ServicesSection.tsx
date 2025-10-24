@@ -323,7 +323,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full relative pb-0" style={{ minHeight: "600px", overflow: "hidden" }}>
+      <div className="w-full relative pb-0" style={{ minHeight: "600px", overflow: "hidden", clipPath: "inset(0)" }}>
         {/* SVG Background with Wave - Behind content */}
         <svg
           className="absolute inset-0 w-full h-full"
@@ -384,7 +384,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Final Wave Banner */}
-      <section className="relative w-full" style={{ overflow: "hidden", marginTop: "-80px", zIndex: 1 }}>
+      <section className="relative w-full bg-[#FFA500]" style={{ overflow: "hidden", marginTop: "-80px", zIndex: 30 }}>
         <svg
           className="block w-full"
           style={{
