@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import wavyPatternOrange from "@/assets/wavy-pattern-orange.png";
+import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 
 const Services = () => {
   const services = [
@@ -37,21 +37,13 @@ const Services = () => {
       
       {/* Header with wavy pattern */}
       <div 
-        className="relative w-full py-20 overflow-hidden"
+        className="relative w-full py-20 overflow-hidden bg-[hsl(var(--blog-orange))]"
         style={{ 
-          backgroundColor: '#FF9A01',
-          backgroundImage: `url(${wavyPatternOrange})`,
+          backgroundImage: `url(${wavyPatternBrown})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 opacity-30" 
-             style={{ 
-               backgroundImage: `url(${wavyPatternOrange})`,
-               backgroundSize: '200% 100%',
-               animation: 'wave 10s ease-in-out infinite'
-             }}>
-        </div>
         <h1 className="relative text-7xl md:text-9xl font-black text-white text-center uppercase tracking-wider font-['Bebas_Neue']">
           SERVICIOS
         </h1>
@@ -164,15 +156,6 @@ const Services = () => {
       <Footer />
 
       <style>{`
-        @keyframes wave {
-          0%, 100% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(-10%);
-          }
-        }
-
         @keyframes marquee {
           0% {
             transform: translateX(0);
