@@ -312,7 +312,10 @@ const ServicesSection = () => {
       {/* Hours Band */}
       <div className="w-full py-8 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <p className="text-white text-center font-oswald font-bold uppercase" style={{ fontSize: "32px", letterSpacing: "2px" }}>
+          <p
+            className="text-white text-center font-oswald font-bold uppercase"
+            style={{ fontSize: "32px", letterSpacing: "2px" }}
+          >
             De Jueves y Viernes 4:00 PM a 12:00 PM
           </p>
         </div>
@@ -330,12 +333,9 @@ const ServicesSection = () => {
         >
           {/* Dark Brown Background - Same as page background */}
           <rect x="0" y="0" width="1440" height="420" fill="#974119" />
-          
+
           {/* Wavy Division Line with more pronounced curves */}
-          <path
-            d="M0,420 Q360,340 720,420 T1440,420 L1440,600 L0,600 Z"
-            fill="#FFA500"
-          />
+          <path d="M0,420 Q360,340 720,420 T1440,420 L1440,600 L0,600 Z" fill="#FFA500" />
         </svg>
 
         {/* Content */}
@@ -344,7 +344,7 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row */}
-          <div className="flex justify-center gap-1 md:gap-2 items-end px-4">
+          <div className="flex justify-center -gap-5 md:gap-2 items-end px-4">
             {[
               beerBottleElChele,
               beerBottleWeiss,
