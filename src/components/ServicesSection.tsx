@@ -345,14 +345,14 @@ const ServicesSection = () => {
           <img
             src={characterPurpleExplore}
             alt="LA20 Character"
-            className="absolute -left-40 hidden lg:block"
+            className="absolute -left-80 hidden lg:block"
             style={{
               width: "700px",
               height: "auto",
               transform: "rotate(7deg)",
               filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
               top: "5%",
-              marginTop: "-250px",
+              marginTop: "-200px",
             }}
           />
 
