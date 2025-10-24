@@ -194,25 +194,32 @@ const ServicesSection = () => {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
+          <defs>
+            {/* Path for text to follow */}
+            <path
+              id="waveTextPath"
+              d="M0,100 Q360,70 720,100 T1440,100"
+              fill="none"
+            />
+          </defs>
+          
           {/* Wavy black band */}
           <path
-            d="M0,60 Q360,20 720,60 T1440,60 L1440,140 Q1080,180 720,140 T0,140 Z"
+            d="M0,60 Q360,30 720,60 T1440,60 L1440,140 Q1080,170 720,140 T0,140 Z"
             fill="#000000"
           />
           
-          {/* Static text */}
+          {/* Wavy text */}
           <text 
-            x="50%" 
-            y="50%" 
-            dominantBaseline="middle" 
-            textAnchor="middle" 
             fill="white" 
             fontSize="48" 
             fontWeight="900" 
             letterSpacing="8"
             className="uppercase font-oswald"
           >
-            COMPARTÍ · DISFRUTÁ · RELAJATE
+            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle">
+              COMPARTÍ · DISFRUTÁ · RELAJATE
+            </textPath>
           </text>
         </svg>
       </section>
