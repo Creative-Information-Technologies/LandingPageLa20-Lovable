@@ -144,14 +144,14 @@ const ServicesSection = () => {
               <div
                 key={index}
                 className={`bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-                  index === 0 || index === 2 ? "md:col-span-3" : "md:col-span-2"
+                  index === 0 || index === 3 ? "md:col-span-3" : "md:col-span-2"
                 }`}
                 style={{
                   height: index < 2 ? "380px" : "320px",
                 }}
               >
-                <div className="flex flex-col md:flex-row h-full">
-                  {/* Left side - Text content */}
+                <div className={`flex flex-col md:flex-row h-full ${index >= 2 ? 'md:flex-row-reverse' : ''}`}>
+                  {/* Text content */}
                   <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
                     <div>
                       <h3 className="text-3xl md:text-4xl font-black text-black mb-4 uppercase leading-tight">
@@ -164,8 +164,8 @@ const ServicesSection = () => {
                     </Button>
                   </div>
 
-                  {/* Right side - Image */}
-                  <div className="w-full md:w-1/2 h-64 md:h-auto p-4">
+                  {/* Image */}
+                  <div className="w-full md:w-1/2 h-64 md:h-auto p-2">
                     <div
                       className="w-full h-full bg-gray-200 rounded-[25px]"
                       style={{
