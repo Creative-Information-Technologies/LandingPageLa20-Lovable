@@ -353,7 +353,13 @@ const ServicesSection = () => {
                     src={beerBottleElChele}
                     alt="LA20 El Chele Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{ maxHeight: "800px", objectFit: "contain" }}
+                    style={{
+                      maxHeight: "800px",
+                      objectFit: "contain",
+                      objectPosition: "bottom",
+                      filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
+                      transformOrigin: "bottom center",
+                    }}
                   />
                 </div>
                 {/* Weiss */}
@@ -362,7 +368,13 @@ const ServicesSection = () => {
                     src={beerBottleWeiss}
                     alt="LA20 Weiss Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-110"
-                    style={{ maxHeight: "400px", objectFit: "contain" }}
+                    style={{
+                      maxHeight: "400px",
+                      objectFit: "contain",
+                      objectPosition: "bottom",
+                      filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))",
+                      transformOrigin: "bottom center",
+                    }}
                   />
                 </div>
                 {/* La Jefa */}
@@ -371,7 +383,13 @@ const ServicesSection = () => {
                     src={beerBottleLaJefaExplore}
                     alt="LA20 La Jefa Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{ maxHeight: "420px", objectFit: "contain" }}
+                    style={{
+                      maxHeight: "420px",
+                      objectFit: "contain",
+                      objectPosition: "bottom",
+                      filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
+                      transformOrigin: "bottom center",
+                    }}
                   />
                 </div>
                 {/* La Flaka */}
@@ -380,7 +398,13 @@ const ServicesSection = () => {
                     src={beerBottleLaFlaka}
                     alt="LA20 La Flaka Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-110"
-                    style={{ maxHeight: "390px", objectFit: "contain" }}
+                    style={{
+                      maxHeight: "390px",
+                      objectFit: "contain",
+                      objectPosition: "bottom",
+                      filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))",
+                      transformOrigin: "bottom center",
+                    }}
                   />
                 </div>
                 {/* Aleros */}
@@ -389,7 +413,13 @@ const ServicesSection = () => {
                     src={beerBottleAlerosExplore}
                     alt="LA20 Aleros Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{ maxHeight: "410px", objectFit: "contain" }}
+                    style={{
+                      maxHeight: "410px",
+                      objectFit: "contain",
+                      objectPosition: "bottom",
+                      filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
+                      transformOrigin: "bottom center",
+                    }}
                   />
                 </div>
               </div>
