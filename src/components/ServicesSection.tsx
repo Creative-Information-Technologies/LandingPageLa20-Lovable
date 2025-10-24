@@ -15,6 +15,7 @@ import beerBottleLaJefaExplore from "@/assets/beer-bottle-la-jefa-explore.png";
 import beerBottleLaFlaka from "@/assets/beer-bottle-la-flaka.png";
 import beerBottleAlerosExplore from "@/assets/beer-bottle-aleros-explore.png";
 import characterPurpleExplore from "@/assets/character-purple-explore.png";
+import wavyPatternYellow from "@/assets/wavy-pattern-yellow.png";
 
 const ServicesSection = () => {
   const services = [
@@ -343,6 +344,14 @@ const ServicesSection = () => {
 
           {/* Wavy Division Line with more pronounced curves */}
           <path d="M0,300 Q360,260 720,300 T1440,300 L1440,600 L0,600 Z" fill="#FFA500" />
+          
+          {/* Pattern overlay for yellow section */}
+          <defs>
+            <pattern id="wavyPattern" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
+              <image href={wavyPatternYellow} x="0" y="0" width="400" height="400" />
+            </pattern>
+          </defs>
+          <rect x="0" y="300" width="1440" height="300" fill="url(#wavyPattern)" opacity="0.4" />
         </svg>
 
         {/* Content */}
