@@ -318,7 +318,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full py-24 relative overflow-relative" style={{ backgroundColor: "#FF9A01" }}>
+      <div className="w-full py-24 relative overflow-hidden" style={{ backgroundColor: "#FF9A01" }}>
         {/* Purple character on the left */}
         <img
           src={characterPurpleWoman}
