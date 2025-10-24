@@ -9,6 +9,11 @@ import servicesReservaciones from "@/assets/services-reservaciones.png";
 import servicesClub from "@/assets/services-club.png";
 import taproomImage1 from "@/assets/taproom-image-1.png";
 import taproomImage2 from "@/assets/taproom-image-2.png";
+import beerBottleElChele from "@/assets/beer-bottle-el-chele.png";
+import beerBottleWeiss from "@/assets/beer-bottle-weiss.png";
+import beerBottleLaJefaExplore from "@/assets/beer-bottle-la-jefa-explore.png";
+import beerBottleLaFlaka from "@/assets/beer-bottle-la-flaka.png";
+import beerBottleAlerosExplore from "@/assets/beer-bottle-aleros-explore.png";
 
 const ServicesSection = () => {
   const services = [
@@ -339,9 +344,21 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row */}
-          <div className="flex justify-center gap-8 flex-wrap">
-            {[1, 2, 3, 4, 5].map((item) => (
-              <div key={item} className="w-32 h-64 bg-white/20 rounded-lg shadow-lg"></div>
+          <div className="flex justify-center gap-8 flex-wrap items-end">
+            {[
+              beerBottleElChele,
+              beerBottleWeiss,
+              beerBottleLaJefaExplore,
+              beerBottleLaFlaka,
+              beerBottleAlerosExplore,
+            ].map((bottle, index) => (
+              <div key={index} className="w-40 h-80 flex items-end justify-center">
+                <img
+                  src={bottle}
+                  alt={`LA20 Beer Bottle ${index + 1}`}
+                  className="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             ))}
           </div>
         </div>
