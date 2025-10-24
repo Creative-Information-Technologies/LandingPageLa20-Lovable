@@ -9,6 +9,11 @@ import servicesReservaciones from "@/assets/services-reservaciones.png";
 import servicesClub from "@/assets/services-club.png";
 import taproomImage1 from "@/assets/taproom-image-1.png";
 import taproomImage2 from "@/assets/taproom-image-2.png";
+import beerBottleElChele from "@/assets/beer-bottle-el-chele.png";
+import beerBottleWeiss from "@/assets/beer-bottle-weiss.png";
+import beerBottleLaJefaExplore from "@/assets/beer-bottle-la-jefa-explore.png";
+import beerBottleLaFlaka from "@/assets/beer-bottle-la-flaka.png";
+import beerBottleAlerosExplore from "@/assets/beer-bottle-aleros-explore.png";
 
 const ServicesSection = () => {
   const services = [
@@ -235,8 +240,8 @@ const ServicesSection = () => {
             dy="25"
           >
             <textPath href="#waveTextPath" startOffset="0">
-              COMPARTI,DISFRUTA,RELAJATE,COMPARTI,DISFRUTA,RELAJATE,COMPARTI,DISFRUTA,RELAJATE,
-              COMPARTI,DISFRUTA,RELAJATE
+              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE ·
+              COMPARTI · DISFRUTA · RELAJATE
             </textPath>
           </text>
         </svg>
@@ -307,25 +312,52 @@ const ServicesSection = () => {
       {/* Hours Band */}
       <div className="w-full py-8 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <p
-            className="text-white text-center font-oswald font-bold uppercase"
-            style={{ fontSize: "32px", letterSpacing: "2px" }}
-          >
+          <p className="text-white text-center font-oswald font-bold uppercase" style={{ fontSize: "32px", letterSpacing: "2px" }}>
             De Jueves y Viernes 4:00 PM a 12:00 PM
           </p>
         </div>
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full py-24" style={{ backgroundColor: "#FF9A01" }}>
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <div className="w-full relative overflow-hidden" style={{ minHeight: "600px" }}>
+        {/* SVG Background with Wave - Behind content */}
+        <svg
+          className="absolute inset-0 w-full h-full"
+          style={{ zIndex: 0 }}
+          viewBox="0 0 1440 600"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          {/* Dark Brown Background - Same as page background */}
+          <rect x="0" y="0" width="1440" height="420" fill="#974119" />
+          
+          {/* Wavy Division Line with more pronounced curves */}
+          <path
+            d="M0,420 Q360,340 720,420 T1440,420 L1440,600 L0,600 Z"
+            fill="#FFA500"
+          />
+        </svg>
+
+        {/* Content */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-24">
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row */}
-          <div className="flex justify-center gap-8 flex-wrap">
-            {[1, 2, 3, 4, 5].map((item) => (
-              <div key={item} className="w-32 h-64 bg-white/20 rounded-lg shadow-lg"></div>
+          <div className="flex justify-center gap-1 md:gap-2 items-end px-4">
+            {[
+              beerBottleElChele,
+              beerBottleWeiss,
+              beerBottleLaJefaExplore,
+              beerBottleLaFlaka,
+              beerBottleAlerosExplore,
+            ].map((bottle, index) => (
+              <img
+                key={index}
+                src={bottle}
+                alt={`LA20 Beer Bottle ${index + 1}`}
+                className="h-[250px] md:h-[280px] w-auto object-contain drop-shadow-2xl flex-shrink-0"
+              />
             ))}
           </div>
         </div>
