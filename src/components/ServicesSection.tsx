@@ -1,12 +1,10 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerGlassTall from "@/assets/beer-glass-services-tall.png";
 import beerBottleJefa from "@/assets/beer-bottle-services-jefa.png";
 import beerGlassSnifter from "@/assets/beer-glass-services-snifter.png";
 
-const Services = () => {
+const ServicesSection = () => {
   const services = [
     {
       title: "EXPERIENCIAS CERVECERAS",
@@ -35,9 +33,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full">
-      <Navigation />
-      
+    <section id="servicios" className="w-full">
       {/* Header with wavy pattern */}
       <div 
         className="relative w-full py-20 px-6 bg-[hsl(var(--blog-orange))] overflow-hidden"
@@ -237,8 +233,6 @@ const Services = () => {
         </div>
       </div>
 
-      <Footer />
-
       <style>{`
         @keyframes marquee {
           0% {
@@ -253,8 +247,8 @@ const Services = () => {
           animation: marquee 25s linear infinite;
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 
-export default Services;
+export default ServicesSection;

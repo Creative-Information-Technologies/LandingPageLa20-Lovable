@@ -17,9 +17,9 @@ const Navigation = () => {
           <a href="#catalogo" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Catálogo
           </a>
-          <Link to="/services" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
+          <a href="#servicios" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Servicios
-          </Link>
+          </a>
         </div>
 
         {/* Logo - Center */}
