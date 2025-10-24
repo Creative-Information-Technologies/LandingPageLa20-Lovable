@@ -351,8 +351,8 @@ const ServicesSection = () => {
               height: "auto",
               transform: "rotate(7deg)",
               filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
-              top: "50%",
-              marginTop: "20px",
+              top: "5%",
+              marginTop: "-400px",
             }}
           />
 
