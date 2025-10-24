@@ -333,10 +333,10 @@ const ServicesSection = () => {
           preserveAspectRatio="none"
         >
           {/* Dark Brown Background - Same as page background */}
-          <rect x="0" y="0" width="1440" height="480" fill="#974119" />
+          <rect x="0" y="0" width="1440" height="300" fill="#974119" />
 
           {/* Wavy Division Line with more pronounced curves */}
-          <path d="M0,480 Q360,400 720,480 T1440,480 L1440,600 L0,600 Z" fill="#FFA500" />
+          <path d="M0,300 Q360,220 720,300 T1440,300 L1440,600 L0,600 Z" fill="#FFA500" />
         </svg>
 
         {/* Content */}
