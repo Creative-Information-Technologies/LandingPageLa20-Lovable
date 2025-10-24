@@ -293,7 +293,7 @@ const ServicesSection = () => {
           }}
         ></div>
         <div
-          className="absolute -bottom-20 -right-20 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+          className="absolute bottom-55 -right-20 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
             width: "420px",
             height: "310px",
