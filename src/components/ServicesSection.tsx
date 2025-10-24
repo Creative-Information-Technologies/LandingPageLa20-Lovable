@@ -340,7 +340,14 @@ const ServicesSection = () => {
 
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-24">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
+          <h2 
+            className="text-5xl md:text-7xl font-black text-white mb-6 uppercase"
+            style={{
+              textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+            }}
+          >
+            ¿CON GANAS DE EXPLORAR?
+          </h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           <div className="w-full flex justify-center items-end overflow-hidden -mt-36">
