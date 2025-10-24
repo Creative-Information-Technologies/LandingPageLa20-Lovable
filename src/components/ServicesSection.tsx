@@ -139,12 +139,12 @@ const ServicesSection = () => {
       {/* Services Grid Section */}
       <div className="w-full py-20" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-7 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
                 className={`bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-                  index === 0 || index === 3 ? "md:col-span-3" : "md:col-span-2"
+                  index === 0 ? "md:col-span-4" : index === 1 ? "md:col-span-3" : index === 2 ? "md:col-span-3" : "md:col-span-4"
                 }`}
                 style={{
                   height: index < 2 ? "380px" : "320px",
@@ -165,7 +165,7 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Image */}
-                  <div className="w-full md:w-1/2 h-64 md:h-auto p-2">
+                  <div className="w-full md:w-1/2 h-64 md:h-auto p-1">
                     <div
                       className="w-full h-full bg-gray-200 rounded-[25px]"
                       style={{
