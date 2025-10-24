@@ -345,7 +345,7 @@ const ServicesSection = () => {
           <img
             src={characterPurpleExplore}
             alt="LA20 Character"
-            className="absolute -left-85 hidden lg:block z-0"
+            className="absolute -left-80 hidden lg:block z-0"
             style={{
               width: "750px",
               height: "auto",
