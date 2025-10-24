@@ -344,10 +344,10 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           <div className="w-full flex justify-center items-end overflow-hidden -mt-36">
-            <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[700px] w-auto -mr-[300px]" />
-            <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[700px] w-auto -mr-[300px]" />
-            <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[700px] w-auto -mr-[300px]" />
-            <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[700px] w-auto -mr-[300px]" />
+            <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[700px] w-auto -mr-[500px]" />
+            <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[700px] w-auto -mr-[500px]" />
+            <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[700px] w-auto -mr-[500px]" />
+            <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[700px] w-auto -mr-[500px]" />
             <img src={beerBottleElChele} alt="LA20 El Chele" className="h-[700px] w-auto" />
           </div>
         </div>
