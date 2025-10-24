@@ -343,87 +343,46 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          {/* Beer bottles row - 5 across, no horizontal scroll */}
-          <div className="w-full overflow-hidden">
-            <div className="max-w-7xl mx-auto w-full px-2 sm:px-4">
-              <div className="flex items-end justify-between gap-0.5 sm:gap-1">
-                {/* El Chele */}
-                <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleElChele}
-                    alt="LA20 El Chele Beer Bottle"
-                    className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{
-                      maxHeight: "800px",
-                      objectFit: "contain",
-                      objectPosition: "bottom",
-                      filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
-                      transformOrigin: "bottom center",
-                    }}
-                  />
-                </div>
-                {/* Weiss */}
-                <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleWeiss}
-                    alt="LA20 Weiss Beer Bottle"
-                    className="w-full h-auto transition-transform duration-300 hover:scale-110"
-                    style={{
-                      maxHeight: "400px",
-                      objectFit: "contain",
-                      objectPosition: "bottom",
-                      filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))",
-                      transformOrigin: "bottom center",
-                    }}
-                  />
-                </div>
-                {/* La Jefa */}
-                <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleLaJefaExplore}
-                    alt="LA20 La Jefa Beer Bottle"
-                    className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{
-                      maxHeight: "420px",
-                      objectFit: "contain",
-                      objectPosition: "bottom",
-                      filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
-                      transformOrigin: "bottom center",
-                    }}
-                  />
-                </div>
-                {/* La Flaka */}
-                <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleLaFlaka}
-                    alt="LA20 La Flaka Beer Bottle"
-                    className="w-full h-auto transition-transform duration-300 hover:scale-110"
-                    style={{
-                      maxHeight: "390px",
-                      objectFit: "contain",
-                      objectPosition: "bottom",
-                      filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))",
-                      transformOrigin: "bottom center",
-                    }}
-                  />
-                </div>
-                {/* Aleros */}
-                <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img
-                    src={beerBottleAlerosExplore}
-                    alt="LA20 Aleros Beer Bottle"
-                    className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{
-                      maxHeight: "410px",
-                      objectFit: "contain",
-                      objectPosition: "bottom",
-                      filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
-                      transformOrigin: "bottom center",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="w-full flex justify-center items-end gap-10 px-6 py-10 bg-transparent overflow-hidden">
+            {/* Aleros */}
+            <img
+              src={beerBottleAlerosExplore}
+              alt="LA20 Aleros"
+              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              style={{ objectFit: "contain" }}
+            />
+
+            {/* La Flaka */}
+            <img
+              src={beerBottleLaFlaka}
+              alt="LA20 La Flaka"
+              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              style={{ objectFit: "contain" }}
+            />
+
+            {/* La Jefa */}
+            <img
+              src={beerBottleLaJefaExplore}
+              alt="LA20 La Jefa"
+              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              style={{ objectFit: "contain" }}
+            />
+
+            {/* Weiss */}
+            <img
+              src={beerBottleWeiss}
+              alt="LA20 Weiss"
+              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              style={{ objectFit: "contain" }}
+            />
+
+            {/* El Chele */}
+            <img
+              src={beerBottleElChele}
+              alt="LA20 El Chele"
+              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              style={{ objectFit: "contain" }}
+            />
           </div>
         </div>
       </div>
