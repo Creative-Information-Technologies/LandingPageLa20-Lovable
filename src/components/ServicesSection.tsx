@@ -183,11 +183,18 @@ const ServicesSection = () => {
       </div>
 
       {/* Animated Text Strip */}
-      <div className="w-full py-8 overflow-hidden" style={{ backgroundColor: "#FF9A01" }}>
+      <div 
+        className="w-full py-8 overflow-hidden" 
+        style={{ 
+          backgroundColor: "#000000",
+          backgroundImage: `url(${wavyPatternBrown})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
         <div className="flex animate-marquee">
           <span className="text-4xl md:text-5xl font-black text-white uppercase whitespace-nowrap px-8">
-            COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ
-            · DISFRUTÁ · RELAJATE
+            COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE
           </span>
         </div>
       </div>
