@@ -71,10 +71,10 @@ const ServicesSection = () => {
                 alt="LA20 Beer Glass"
                 className="absolute"
                 style={{
-                  right: '-50%',
+                  right: '-15%',
                   top: '0',
                   bottom: '0',
-                  width: '40%',
+                  width: '35%',
                   height: 'auto',
                   objectFit: 'contain',
                   objectPosition: 'bottom',
