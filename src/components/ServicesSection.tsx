@@ -47,8 +47,8 @@ const ServicesSection = () => {
         }}
       >
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex-1 max-w-2xl" style={{ paddingLeft: "10%" }}>
+          <div className="flex items-center justify-center">
+            <div className="text-center">
               <h1
                 className="text-white uppercase font-oswald"
                 style={{
