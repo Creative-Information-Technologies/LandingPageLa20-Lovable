@@ -344,7 +344,7 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row */}
-          <div className="flex justify-center gap-8 flex-wrap items-end">
+          <div className="flex justify-center gap-8 items-end overflow-x-auto pb-4">
             {[
               beerBottleElChele,
               beerBottleWeiss,
@@ -352,11 +352,11 @@ const ServicesSection = () => {
               beerBottleLaFlaka,
               beerBottleAlerosExplore,
             ].map((bottle, index) => (
-              <div key={index} className="flex items-end justify-center">
+              <div key={index} className="flex items-end justify-center flex-shrink-0">
                 <img
                   src={bottle}
                   alt={`LA20 Beer Bottle ${index + 1}`}
-                  className="w-80 h-auto object-contain drop-shadow-2xl"
+                  className="h-[500px] w-auto object-contain drop-shadow-2xl"
                 />
               </div>
             ))}
