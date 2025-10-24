@@ -349,45 +349,45 @@ const ServicesSection = () => {
               <div className="flex items-end justify-between gap-0.5 sm:gap-1">
                 {/* El Chele */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img 
-                    src={beerBottleElChele} 
-                    alt="LA20 El Chele Beer Bottle" 
+                  <img
+                    src={beerBottleElChele}
+                    alt="LA20 El Chele Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-105"
-                    style={{ maxHeight: "380px", objectFit: "contain" }}
+                    style={{ maxHeight: "700px", objectFit: "contain" }}
                   />
                 </div>
                 {/* Weiss */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img 
-                    src={beerBottleWeiss} 
-                    alt="LA20 Weiss Beer Bottle" 
+                  <img
+                    src={beerBottleWeiss}
+                    alt="LA20 Weiss Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-110"
                     style={{ maxHeight: "400px", objectFit: "contain" }}
                   />
                 </div>
                 {/* La Jefa */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img 
-                    src={beerBottleLaJefaExplore} 
-                    alt="LA20 La Jefa Beer Bottle" 
+                  <img
+                    src={beerBottleLaJefaExplore}
+                    alt="LA20 La Jefa Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-105"
                     style={{ maxHeight: "420px", objectFit: "contain" }}
                   />
                 </div>
                 {/* La Flaka */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img 
-                    src={beerBottleLaFlaka} 
-                    alt="LA20 La Flaka Beer Bottle" 
+                  <img
+                    src={beerBottleLaFlaka}
+                    alt="LA20 La Flaka Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-110"
                     style={{ maxHeight: "390px", objectFit: "contain" }}
                   />
                 </div>
                 {/* Aleros */}
                 <div className="flex-1 min-w-0 flex items-end justify-center">
-                  <img 
-                    src={beerBottleAlerosExplore} 
-                    alt="LA20 Aleros Beer Bottle" 
+                  <img
+                    src={beerBottleAlerosExplore}
+                    alt="LA20 Aleros Beer Bottle"
                     className="w-full h-auto transition-transform duration-300 hover:scale-105"
                     style={{ maxHeight: "410px", objectFit: "contain" }}
                   />
