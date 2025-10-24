@@ -187,29 +187,32 @@ const ServicesSection = () => {
         <svg 
           className="block w-full"
           style={{ 
-            height: '300px',
-            display: 'block',
-            backgroundColor: '#000000'
+            height: '200px',
+            display: 'block'
           }}
-          viewBox="0 0 1440 300" 
+          viewBox="0 0 1440 200" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
-          <defs>
-            <path
-              id="waveTextPath"
-              d="M0,150 Q360,80 720,150 T1440,150 T2160,150 T2880,150"
-              fill="none"
-            />
-          </defs>
+          {/* Wavy black band */}
+          <path
+            d="M0,60 Q360,20 720,60 T1440,60 L1440,140 Q1080,180 720,140 T0,140 Z"
+            fill="#000000"
+          />
           
-          <rect width="100%" height="100%" fill="#000000"/>
-          
-          <text className="wave-text" fill="white" fontSize="48" fontWeight="900" letterSpacing="8">
-            <textPath href="#waveTextPath" startOffset="0%">
-              <animate attributeName="startOffset" from="0%" to="100%" dur="25s" repeatCount="indefinite" />
-              COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE · COMPARTÍ · DISFRUTÁ · RELAJATE
-            </textPath>
+          {/* Static text */}
+          <text 
+            x="50%" 
+            y="50%" 
+            dominantBaseline="middle" 
+            textAnchor="middle" 
+            fill="white" 
+            fontSize="48" 
+            fontWeight="900" 
+            letterSpacing="8"
+            className="uppercase font-oswald"
+          >
+            COMPARTÍ · DISFRUTÁ · RELAJATE
           </text>
         </svg>
       </section>
