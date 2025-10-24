@@ -138,6 +138,15 @@ const ServicesSection = () => {
         </div>
       </div>
 
+      {/* Hours Band */}
+      <div className="w-full py-8 bg-black">
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-white text-center font-oswald font-bold uppercase" style={{ fontSize: "32px", letterSpacing: "2px" }}>
+            De Jueves y Viernes 4:00 PM a 12:00 PM
+          </p>
+        </div>
+      </div>
+
       {/* Services Grid Section */}
       <div className="w-full py-20" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4">
