@@ -344,7 +344,7 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row */}
-          <div className="flex justify-center gap-8 items-end overflow-x-auto pb-4">
+          <div className="flex justify-center gap-4 items-end">
             {[
               beerBottleElChele,
               beerBottleWeiss,
@@ -356,7 +356,7 @@ const ServicesSection = () => {
                 <img
                   src={bottle}
                   alt={`LA20 Beer Bottle ${index + 1}`}
-                  className="h-[500px] w-auto object-contain drop-shadow-2xl"
+                  className="h-[350px] w-auto object-contain drop-shadow-2xl"
                 />
               </div>
             ))}
