@@ -308,24 +308,27 @@ const ServicesSection = () => {
       {/* Hours Band */}
       <div className="w-full py-8 bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <p className="text-white text-center font-oswald font-bold uppercase" style={{ fontSize: "32px", letterSpacing: "2px" }}>
+          <p
+            className="text-white text-center font-oswald font-bold uppercase"
+            style={{ fontSize: "32px", letterSpacing: "2px" }}
+          >
             De Jueves y Viernes 4:00 PM a 12:00 PM
           </p>
         </div>
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full py-24 relative overflow-hidden" style={{ backgroundColor: "#FF9A01" }}>
+      <div className="w-full py-24 relative overflow-relative" style={{ backgroundColor: "#FF9A01" }}>
         {/* Purple character on the left */}
         <img
           src={characterPurpleWoman}
           alt="LA20 Character"
           className="absolute hidden lg:block"
           style={{
-            left: "-100px",
+            left: "-200px",
             top: "50%",
-            transform: "translateY(-50%) rotate(-8deg)",
-            width: "350px",
+            transform: "translateY(-50%) rotate(12deg)",
+            width: "550px",
             height: "auto",
             objectFit: "contain",
             zIndex: 5,
