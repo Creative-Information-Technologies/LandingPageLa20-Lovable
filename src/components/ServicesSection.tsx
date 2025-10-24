@@ -3,6 +3,7 @@ import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerGlassTall from "@/assets/beer-glass-services-tall.png";
 import beerBottleJefa from "@/assets/beer-bottle-services-jefa.png";
 import beerGlassSnifter from "@/assets/beer-glass-services-snifter.png";
+import characterPurpleWoman from "@/assets/character-purple-woman.png";
 import servicesExperiencias from "@/assets/services-experiencias.png";
 import servicesEventos from "@/assets/services-eventos.png";
 import servicesReservaciones from "@/assets/services-reservaciones.png";
@@ -314,7 +315,22 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full py-24" style={{ backgroundColor: "#FF9A01" }}>
+      <div className="w-full py-24 relative overflow-hidden" style={{ backgroundColor: "#FF9A01" }}>
+        {/* Purple character on the left */}
+        <img
+          src={characterPurpleWoman}
+          alt="LA20 Character"
+          className="absolute hidden lg:block"
+          style={{
+            left: "-100px",
+            top: "50%",
+            transform: "translateY(-50%) rotate(-8deg)",
+            width: "350px",
+            height: "auto",
+            objectFit: "contain",
+            zIndex: 5,
+          }}
+        />
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
