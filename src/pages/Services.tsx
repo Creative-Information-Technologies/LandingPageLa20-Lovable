@@ -9,7 +9,7 @@ const Services = () => {
       <Navigation />
       <ServicesSection />
       <div 
-        className="relative w-full -mt-32"
+        className="relative w-full -mt-32 pt-20"
         style={{
           backgroundImage: `url(${wavyPatternFooter})`,
           backgroundRepeat: "repeat",
