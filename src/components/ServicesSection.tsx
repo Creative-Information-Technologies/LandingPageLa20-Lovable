@@ -133,7 +133,10 @@ const ServicesSection = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
-              const isImageRight = index % 2 === 0;
+              // Different heights for each card
+              const heights = ['380px', '380px', '320px', '320px'];
+              const cardHeight = heights[index];
+              
               return (
                 <div 
                   key={index}
@@ -141,11 +144,12 @@ const ServicesSection = () => {
                   style={{
                     borderRadius: '16px',
                     boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-                    height: index === 1 ? 'auto' : index === 2 ? '340px' : '320px'
+                    height: cardHeight
                   }}
                 >
-                  <div className={`flex ${isImageRight ? 'flex-row' : 'flex-row-reverse'} h-full`}>
-                    {/* Text side */}
+                  {/* All cards: text left, image right */}
+                  <div className="flex flex-row h-full">
+                    {/* Text side - Left */}
                     <div className="w-1/2 p-8 flex flex-col justify-center">
                       <h3 
                         className="text-black uppercase mb-4 leading-tight"
@@ -171,16 +175,14 @@ const ServicesSection = () => {
                       </button>
                     </div>
                     
-                    {/* Image side */}
+                    {/* Image side - Right */}
                     <div 
                       className="w-1/2 h-full"
                       style={{
                         backgroundImage: `url(${service.image})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        borderRadius: isImageRight 
-                          ? '0 16px 16px 0' 
-                          : '16px 0 0 16px'
+                        borderRadius: '0 16px 16px 0'
                       }}
                     ></div>
                   </div>
