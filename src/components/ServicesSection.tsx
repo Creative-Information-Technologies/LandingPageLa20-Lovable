@@ -238,12 +238,17 @@ const ServicesSection = () => {
       <div className="w-full py-32 relative" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h2 
-            className="text-5xl md:text-7xl font-black text-white mb-8 uppercase leading-tight font-oswald"
+            className="text-white uppercase leading-tight font-oswald"
             style={{
+              fontWeight: 900,
+              fontSize: "clamp(80px, 12vw, 180px)",
               textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+              lineHeight: "0.95",
             }}
           >
-            TENEMOS EL MEJOR TAPROOM
+            TENEMOS EL MEJOR
+            <br />
+            TAPROOM
             <br />
             DE SAN PEDRO SULA
           </h2>
@@ -251,7 +256,7 @@ const ServicesSection = () => {
 
         {/* Diagonal images */}
         <div 
-          className="absolute top-10 left-10 w-56 h-56 rounded-3xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl"
+          className="absolute top-10 left-10 w-72 h-48 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
             backgroundImage: `url(${taproomImage1})`,
             backgroundSize: "cover",
@@ -259,7 +264,7 @@ const ServicesSection = () => {
           }}
         ></div>
         <div 
-          className="absolute bottom-10 right-10 w-56 h-56 rounded-3xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl"
+          className="absolute bottom-10 right-10 w-72 h-48 rounded-2xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
             backgroundImage: `url(${taproomImage2})`,
             backgroundSize: "cover",
