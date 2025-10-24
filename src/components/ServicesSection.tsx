@@ -170,7 +170,12 @@ const ServicesSection = () => {
                     <div>
                       <h3
                         className="font-oswald font-bold text-black mb-4 uppercase text-center"
-                        style={{ fontSize: index === 2 ? "36px" : "42px", lineHeight: "110%", letterSpacing: "0%" }}
+                        style={{ 
+                          fontSize: index === 2 ? "32px" : "42px", 
+                          lineHeight: index === 2 ? "120%" : "110%", 
+                          letterSpacing: "0%",
+                          wordBreak: index === 2 ? "keep-all" : "normal"
+                        }}
                       >
                         {service.title}
                       </h3>
