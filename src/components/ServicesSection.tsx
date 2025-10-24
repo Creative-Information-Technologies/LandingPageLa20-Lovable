@@ -345,7 +345,7 @@ const ServicesSection = () => {
           <img
             src={characterPurpleExplore}
             alt="LA20 Character"
-            className="absolute -left-80 hidden lg:block"
+            className="absolute -left-80 hidden lg:block z-0"
             style={{
               width: "730px",
               height: "auto",
@@ -357,7 +357,7 @@ const ServicesSection = () => {
           />
 
           <h2
-            className="text-5xl md:text-7xl font-black text-white mb-6 uppercase"
+            className="text-5xl md:text-7xl font-black text-white mb-6 uppercase relative z-10"
             style={{
               textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
             }}
@@ -365,7 +365,7 @@ const ServicesSection = () => {
             ¿CON GANAS DE EXPLORAR?
           </h2>
           <p
-            className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase"
+            className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase relative z-10"
             style={{
               textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
             }}
@@ -373,7 +373,7 @@ const ServicesSection = () => {
             MIRÁ TODAS LAS OPCIONES
           </p>
 
-          <div className="w-full flex justify-center items-end overflow-hidden mt-24">
+          <div className="w-full flex justify-center items-end overflow-hidden mt-24 relative z-10">
             <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[670px] w-auto -mr-[430px]" />
             <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[630px] w-auto -mr-[430px]" />
             <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[700px] w-auto -mr-[430px]" />
