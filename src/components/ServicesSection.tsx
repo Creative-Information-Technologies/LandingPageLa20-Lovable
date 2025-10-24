@@ -3,6 +3,10 @@ import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import beerGlassTall from "@/assets/beer-glass-services-tall.png";
 import beerBottleJefa from "@/assets/beer-bottle-services-jefa.png";
 import beerGlassSnifter from "@/assets/beer-glass-services-snifter.png";
+import servicesExperiencias from "@/assets/services-experiencias.png";
+import servicesEventos from "@/assets/services-eventos.png";
+import servicesReservaciones from "@/assets/services-reservaciones.png";
+import servicesClub from "@/assets/services-club.png";
 
 const ServicesSection = () => {
   const services = [
@@ -11,27 +15,27 @@ const ServicesSection = () => {
       description:
         "Te mostramos lo que no ves cuando servís una pinta. El olor, el proceso, la paciencia y el amor. Todo eso está en tu vaso. Vení a comprobarlo.",
       buttonText: "RESERVÁ",
-      image: "/placeholder.svg",
+      image: servicesExperiencias,
     },
     {
       title: "EVENTOS PRIVADOS",
       description:
         "Ten tus eventos en el mejor sitio de San Pedro Sula. Reserva nuestro Taproom para celebrar los mejores momentos.",
       buttonText: "COTIZÁ",
-      image: "/placeholder.svg",
+      image: servicesEventos,
     },
     {
       title: "RESERVACIONES",
       description:
         "Reservá tu lugar y los de tus aleros en el mejor Taproom de la ciudad. No corras el riesgo de quedarte sin tu lugar.",
       buttonText: "RESERVAR",
-      image: "/placeholder.svg",
+      image: servicesReservaciones,
     },
     {
       title: "CLUB LA20",
       description: "Obtené los mejores beneficios de formar parte del mejor Club de Honduras.",
       buttonText: "UNIRM",
-      image: "/placeholder.svg",
+      image: servicesClub,
     },
   ];
 
@@ -135,12 +139,12 @@ const ServicesSection = () => {
       {/* Services Grid Section */}
       <div className="w-full py-20" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
                 className={`bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-                  index === 0 ? "md:col-span-2" : "md:col-span-1"
+                  index === 0 ? "md:col-span-3" : index === 1 ? "md:col-span-2" : "md:col-span-5"
                 }`}
                 style={{
                   height: index < 2 ? "380px" : "320px",
