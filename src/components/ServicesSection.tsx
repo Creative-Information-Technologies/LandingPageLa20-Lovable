@@ -15,7 +15,6 @@ import beerBottleLaJefaExplore from "@/assets/beer-bottle-la-jefa-explore.png";
 import beerBottleLaFlaka from "@/assets/beer-bottle-la-flaka.png";
 import beerBottleAlerosExplore from "@/assets/beer-bottle-aleros-explore.png";
 import characterPurpleExplore from "@/assets/character-purple-explore.png";
-import wavyPatternBeige from "@/assets/wavy-pattern-beige.png";
 
 const ServicesSection = () => {
   const services = [
@@ -404,9 +403,6 @@ const ServicesSection = () => {
         >
           <defs>
             <path id="finalWaveTextPath" d="M0,125 Q360,65 720,125 T1440,125 T2160,125 T2880,125" fill="none" />
-            <pattern id="wavyPatternBelow" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
-              <image href={wavyPatternBeige} x="0" y="0" width="400" height="400" />
-            </pattern>
           </defs>
 
           {/* Orange/Yellow background covering from top to middle of black band */}
@@ -414,9 +410,6 @@ const ServicesSection = () => {
 
           {/* Black wave band with curves on top and bottom */}
           <path d="M0,85 Q360,25 720,85 T1440,85 L1440,165 Q1080,225 720,165 T0,165 Z" fill="hsl(0, 0%, 0%)" />
-
-          {/* Wavy pattern background below the black band */}
-          <rect x="0" y="165" width="1440" height="85" fill="url(#wavyPatternBelow)" />
 
           {/* White text following the wave curve - repeated multiple times */}
           <text
