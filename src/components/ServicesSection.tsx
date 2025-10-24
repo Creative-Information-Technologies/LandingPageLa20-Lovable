@@ -9,7 +9,6 @@ import servicesReservaciones from "@/assets/services-reservaciones.png";
 import servicesClub from "@/assets/services-club.png";
 import taproomImage1 from "@/assets/taproom-image-1.png";
 import taproomImage2 from "@/assets/taproom-image-2.png";
-import characterPurple from "@/assets/character-purple.png";
 
 const ServicesSection = () => {
   const services = [
@@ -315,25 +314,8 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full py-24 relative overflow-visible" style={{ backgroundColor: "#FF9A01" }}>
-        <div className="max-w-7xl mx-auto px-4 text-center relative overflow-visible">
-          {/* Purple Character - Left side */}
-          <img
-            src={characterPurple}
-            alt="Character"
-            className="absolute hidden lg:block"
-            style={{
-              width: "400px",
-              height: "auto",
-              objectFit: "contain",
-              zIndex: 10,
-              left: "-180px",
-              top: "-120px",
-              transform: "rotate(-8deg)",
-              transformOrigin: "center center"
-            }}
-          />
-          
+      <div className="w-full py-24" style={{ backgroundColor: "#FF9A01" }}>
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
