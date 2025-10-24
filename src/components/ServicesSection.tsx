@@ -312,7 +312,7 @@ const ServicesSection = () => {
             className="text-white text-center font-oswald font-bold uppercase"
             style={{ fontSize: "32px", letterSpacing: "2px" }}
           >
-            De Jueves y Viernes 4:00 PM a 12:00 PM
+            De Jueves y Viernes 4:00 PM a 12:00 PM Sábados 10:00 AM a 12:00 pM
           </p>
         </div>
       </div>
@@ -326,9 +326,9 @@ const ServicesSection = () => {
           className="absolute hidden lg:block"
           style={{
             left: "-200px",
-            top: "50%",
-            transform: "translateY(-50%) rotate(12deg)",
-            width: "550px",
+            top: "45%",
+            transform: "translateY(-50%) rotate(6deg)",
+            width: "650px",
             height: "auto",
             objectFit: "contain",
             zIndex: 5,
