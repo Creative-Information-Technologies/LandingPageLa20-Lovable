@@ -13,7 +13,7 @@ const Services = () => {
         style={{
           backgroundImage: `url(${wavyPatternBrown})`,
           backgroundRepeat: "repeat",
-          backgroundSize: "auto 150px",
+          backgroundSize: "auto 300px",
           backgroundPosition: "center",
         }}
       >
