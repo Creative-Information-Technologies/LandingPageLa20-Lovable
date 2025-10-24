@@ -352,7 +352,7 @@ const ServicesSection = () => {
               transform: "rotate(7deg)",
               filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
               top: "5%",
-              marginTop: "-180px",
+              marginTop: "-170px",
             }}
           />
 
