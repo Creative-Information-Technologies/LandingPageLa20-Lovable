@@ -195,26 +195,26 @@ const ServicesSection = () => {
           preserveAspectRatio="none"
         >
           <defs>
-            {/* Path for text to follow */}
+            {/* Path for text to follow - matches the wave center */}
             <path
               id="waveTextPath"
-              d="M-200,100 Q160,70 520,100 T1240,100 T1960,100"
+              d="M-300,100 Q60,75 420,100 T1140,100 T1860,100 T2580,100"
               fill="none"
             />
           </defs>
           
           {/* Wavy black band */}
           <path
-            d="M0,60 Q360,30 720,60 T1440,60 L1440,140 Q1080,170 720,140 T0,140 Z"
+            d="M0,60 Q360,35 720,60 T1440,60 L1440,140 Q1080,165 720,140 T0,140 Z"
             fill="#000000"
           />
           
           {/* Wavy text */}
           <text 
             fill="white" 
-            fontSize="42" 
+            fontSize="56" 
             fontWeight="900" 
-            letterSpacing="12"
+            letterSpacing="10"
             className="uppercase font-oswald"
           >
             <textPath href="#waveTextPath" startOffset="0%">
