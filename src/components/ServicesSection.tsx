@@ -357,7 +357,7 @@ const ServicesSection = () => {
             MIRÁ TODAS LAS OPCIONES
           </p>
 
-          <div className="w-full flex justify-center items-end overflow-hidden mt-8">
+          <div className="w-full flex justify-center items-end overflow-hidden mt-24">
             <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[670px] w-auto -mr-[430px]" />
             <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[630px] w-auto -mr-[430px]" />
             <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[700px] w-auto -mr-[430px]" />
