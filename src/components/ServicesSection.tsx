@@ -346,7 +346,7 @@ const ServicesSection = () => {
           <div className="w-full flex justify-center items-end overflow-hidden">
             <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[350px] w-auto -mr-[80px]" />
             <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[350px] w-auto -mr-[80px]" />
-            <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[350px] w-auto -mr-[80px]" />
+            <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[390px] w-auto -mr-[80px]" />
             <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[350px] w-auto -mr-[80px]" />
             <img src={beerBottleElChele} alt="LA20 El Chele" className="h-[350px] w-auto" />
           </div>
