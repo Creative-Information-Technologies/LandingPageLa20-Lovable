@@ -343,12 +343,12 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          <div className="w-full flex justify-center items-end -gap-55 px-2 py-2 bg-transparent overflow-hidden">
+          <div className="w-full flex justify-center items-end gap-55 px-0 py-0 bg-transparent overflow-hidden">
             {/* Aleros */}
             <img
               src={beerBottleAlerosExplore}
               alt="LA20 Aleros"
-              className="h-[500px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[700px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
 
@@ -356,7 +356,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleLaFlaka}
               alt="LA20 La Flaka"
-              className="h-[450px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[650px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
 
@@ -364,7 +364,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleLaJefaExplore}
               alt="LA20 La Jefa"
-              className="h-[500px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[700px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
 
@@ -372,14 +372,14 @@ const ServicesSection = () => {
             <img
               src={beerBottleWeiss}
               alt="LA20 Weiss"
-              className="h-[450px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[650px] w-auto transition-transform duration-300 hover:scale-105"
             />
 
             {/* El Chele */}
             <img
               src={beerBottleElChele}
               alt="LA20 El Chele"
-              className="h-[500px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[700px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
           </div>
