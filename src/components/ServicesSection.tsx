@@ -344,12 +344,12 @@ const ServicesSection = () => {
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
           {/* Beer bottles row - Each with individual sizing for visual uniformity */}
-          <div className="flex justify-center items-end px-8 md:px-16 max-w-6xl mx-auto" style={{ gap: "clamp(20px, 3vw, 50px)" }}>
+          <div className="flex justify-center items-end px-4" style={{ gap: "8px" }}>
             {/* El Chele */}
             <img
               src={beerBottleElChele}
               alt="LA20 El Chele Beer Bottle"
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-2xl flex-shrink-0"
               style={{
                 height: "380px",
                 width: "auto",
@@ -361,7 +361,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleWeiss}
               alt="LA20 Weiss Beer Bottle"
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-2xl flex-shrink-0"
               style={{
                 height: "370px",
                 width: "auto",
@@ -373,7 +373,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleLaJefaExplore}
               alt="LA20 La Jefa Beer Bottle"
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-2xl flex-shrink-0"
               style={{
                 height: "360px",
                 width: "auto",
@@ -385,7 +385,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleLaFlaka}
               alt="LA20 La Flaka Beer Bottle"
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-2xl flex-shrink-0"
               style={{
                 height: "375px",
                 width: "auto",
@@ -397,7 +397,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleAlerosExplore}
               alt="LA20 Aleros Beer Bottle"
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-2xl flex-shrink-0"
               style={{
                 height: "365px",
                 width: "auto",
