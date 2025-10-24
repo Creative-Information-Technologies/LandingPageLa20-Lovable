@@ -283,7 +283,7 @@ const ServicesSection = () => {
 
         {/* Diagonal images */}
         <div
-          className="absolute -top-45 -left-20 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+          className="absolute top-45 -left-30 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
             width: "420px",
             height: "310px",
@@ -293,7 +293,7 @@ const ServicesSection = () => {
           }}
         ></div>
         <div
-          className="absolute bottom-65 -right-20 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+          className="absolute bottom-65 -right-25 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
             width: "420px",
             height: "310px",
