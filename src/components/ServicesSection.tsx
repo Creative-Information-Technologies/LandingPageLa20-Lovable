@@ -237,20 +237,39 @@ const ServicesSection = () => {
       {/* Taproom Promotion Section */}
       <div className="w-full py-32 relative" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h2 
-            className="text-white uppercase leading-tight font-oswald"
-            style={{
-              fontWeight: 900,
-              fontSize: "clamp(80px, 12vw, 180px)",
-              textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
-              lineHeight: "0.95",
-            }}
-          >
-            TENEMOS EL MEJOR
-            <br />
-            TAPROOM
-            <br />
-            DE SAN PEDRO SULA
+          <h2 className="text-white uppercase leading-tight font-oswald">
+            <div
+              style={{
+                fontWeight: 900,
+                fontSize: "clamp(60px, 8vw, 120px)",
+                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+                lineHeight: "1",
+              }}
+            >
+              TENEMOS EL MEJOR
+            </div>
+            <div
+              style={{
+                fontWeight: 900,
+                fontSize: "clamp(100px, 15vw, 240px)",
+                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+                lineHeight: "0.95",
+                marginTop: "-10px",
+              }}
+            >
+              TAPROOM
+            </div>
+            <div
+              style={{
+                fontWeight: 900,
+                fontSize: "clamp(60px, 8vw, 120px)",
+                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+                lineHeight: "1",
+                marginTop: "-10px",
+              }}
+            >
+              DE SAN PEDRO SULA
+            </div>
           </h2>
         </div>
 
