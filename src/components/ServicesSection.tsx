@@ -135,11 +135,16 @@ const ServicesSection = () => {
       {/* Services Grid Section */}
       <div className="w-full py-20" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                className={`bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
+                  index === 0 ? "md:col-span-2" : "md:col-span-1"
+                }`}
+                style={{
+                  height: index < 2 ? "380px" : "320px",
+                }}
               >
                 <div className="flex flex-col md:flex-row h-full">
                   {/* Left side - Text content */}
