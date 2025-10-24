@@ -84,7 +84,7 @@ const ServicesSection = () => {
                   filter: "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3))",
                   transform: "rotate(-7deg)",
                   transformOrigin: "bottom center",
-                  zIndex: 2,
+                  zIndex: 3,
                 }}
               />
 
@@ -94,17 +94,17 @@ const ServicesSection = () => {
                 alt="La Jefa Beer Bottle"
                 className="absolute"
                 style={{
-                  right: "140%",
+                  right: "130%",
                   top: "10%",
                   bottom: "0",
-                  width: "70%",
+                  width: "90%",
                   height: "auto",
                   objectFit: "contain",
                   objectPosition: "bottom",
                   filter: "drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25))",
                   transform: "rotate(-7deg) scale(1.25)",
                   transformOrigin: "bottom center",
-                  zIndex: 3,
+                  zIndex: 2,
                 }}
               />
 
