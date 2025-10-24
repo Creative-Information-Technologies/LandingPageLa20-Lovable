@@ -347,12 +347,12 @@ const ServicesSection = () => {
             alt="LA20 Character"
             className="absolute -left-80 hidden lg:block"
             style={{
-              width: "700px",
+              width: "730px",
               height: "auto",
               transform: "rotate(7deg)",
               filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
               top: "5%",
-              marginTop: "-200px",
+              marginTop: "-180px",
             }}
           />
 
