@@ -146,20 +146,34 @@ const ServicesSection = () => {
               <div
                 key={index}
                 className={`bg-white rounded-[30px] shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden ${
-                  index === 0 ? "md:col-span-5" : index === 1 ? "md:col-span-4" : index === 2 ? "md:col-span-4" : "md:col-span-5"
+                  index === 0
+                    ? "md:col-span-5"
+                    : index === 1
+                      ? "md:col-span-4"
+                      : index === 2
+                        ? "md:col-span-4"
+                        : "md:col-span-5"
                 }`}
                 style={{
                   height: index < 2 ? "380px" : "320px",
                 }}
               >
-                <div className={`flex flex-col md:flex-row h-full ${index >= 2 ? 'md:flex-row-reverse' : ''}`}>
+                <div className={`flex flex-col md:flex-row h-full ${index >= 2 ? "md:flex-row-reverse" : ""}`}>
                   {/* Text content */}
                   <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
                     <div>
-                      <h3 className="font-oswald font-bold text-black mb-4 uppercase text-center" style={{ fontSize: "42px", lineHeight: "110%", letterSpacing: "0%" }}>
+                      <h3
+                        className="font-oswald font-bold text-black mb-4 uppercase text-center"
+                        style={{ fontSize: "42px", lineHeight: "110%", letterSpacing: "0%" }}
+                      >
                         {service.title}
                       </h3>
-                      <p className="font-poppins font-normal text-gray-700 text-center" style={{ fontSize: "16px", lineHeight: "100%", letterSpacing: "0%" }}>{service.description}</p>
+                      <p
+                        className="font-poppins font-normal text-gray-700 text-center"
+                        style={{ fontSize: "16px", lineHeight: "100%", letterSpacing: "0%" }}
+                      >
+                        {service.description}
+                      </p>
                     </div>
                     <Button className="mt-6 bg-white text-black hover:bg-gray-100 border-2 border-black rounded-full font-bold uppercase px-8 py-6 text-base w-fit">
                       {service.buttonText}
@@ -185,50 +199,44 @@ const ServicesSection = () => {
       </div>
 
       {/* Wave Divider Section with text */}
-      <section className="relative w-full" style={{ overflow: 'hidden', marginTop: '-2px', zIndex: 1 }}>
-        <svg 
+      <section className="relative w-full" style={{ overflow: "hidden", marginTop: "-2px", zIndex: 1 }}>
+        <svg
           className="block w-full"
-          style={{ 
-            height: '300px',
-            display: 'block'
+          style={{
+            height: "300px",
+            display: "block",
           }}
-          viewBox="0 0 1440 300" 
+          viewBox="0 0 1440 300"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
-            <path
-              id="waveTextPath"
-              d="M0,150 Q360,80 720,150 T1440,150 T2160,150 T2880,150"
-              fill="none"
-            />
+            <path id="waveTextPath" d="M0,150 Q360,80 720,150 T1440,150 T2160,150 T2880,150" fill="none" />
           </defs>
-          
+
           {/* Brown background covering from top to middle of black band */}
           <rect x="0" y="0" width="1440" height="150" fill="#974119" />
-          
+
           {/* Black wave band with curves on top and bottom */}
-          <path 
-            d="M0,100 Q360,30 720,100 T1440,100 L1440,200 Q1080,270 720,200 T0,200 Z" 
-            fill="hsl(0, 0%, 0%)" 
-          />
-          
+          <path d="M0,100 Q360,30 720,100 T1440,100 L1440,200 Q1080,270 720,200 T0,200 Z" fill="hsl(0, 0%, 0%)" />
+
           {/* White text following the wave curve - repeated multiple times */}
           <text
             style={{
-              fontFamily: 'Oswald',
-              fontSize: '76px',
+              fontFamily: "Oswald",
+              fontSize: "76px",
               fontWeight: 900,
-              letterSpacing: '8px',
-              fill: '#FFFFFF',
-              stroke: '#FFFFFF',
-              strokeWidth: '2px',
-              textTransform: 'uppercase',
+              letterSpacing: "8px",
+              fill: "#FFFFFF",
+              stroke: "#FFFFFF",
+              strokeWidth: "2px",
+              textTransform: "uppercase",
             }}
             dy="25"
           >
             <textPath href="#waveTextPath" startOffset="0">
-              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE
+              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE ·
+              COMPARTI · DISFRUTA · RELAJATE
             </textPath>
           </text>
         </svg>
@@ -274,21 +282,21 @@ const ServicesSection = () => {
         </div>
 
         {/* Diagonal images */}
-        <div 
-          className="absolute top-10 left-10 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+        <div
+          className="absolute top-20 left-25 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
-            width: "576px",
-            height: "384px",
+            width: "420px",
+            height: "310px",
             backgroundImage: `url(${taproomImage1})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         ></div>
-        <div 
-          className="absolute bottom-10 right-10 rounded-2xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+        <div
+          className="absolute bottom-15 right-20 rounded-2xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
-            width: "576px",
-            height: "384px",
+            width: "420px",
+            height: "310px",
             backgroundImage: `url(${taproomImage2})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
