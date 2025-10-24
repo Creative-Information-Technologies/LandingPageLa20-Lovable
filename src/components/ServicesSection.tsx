@@ -311,7 +311,86 @@ const ServicesSection = () => {
       </div>
 
       {/* Hours Band */}
-      <section className="relative w-full" style={{ overflow: "hidden", marginTop: "-2px", zIndex: 1 }}>
+      <div className="w-full py-8 bg-black">
+        <div className="max-w-7xl mx-auto px-4">
+          <p
+            className="text-white text-center font-oswald font-bold uppercase"
+            style={{ fontSize: "32px", letterSpacing: "2px" }}
+          >
+            De Jueves y Viernes 4:00 PM a 12:00 PM
+          </p>
+          <p
+            className="text-white text-center font-oswald font-bold uppercase mt-2"
+            style={{ fontSize: "32px", letterSpacing: "2px" }}
+          >
+            Sábados 10:00 AM a 12:00 PM
+          </p>
+        </div>
+      </div>
+
+      {/* Beer Exploration Section */}
+      <div className="w-full relative pb-0" style={{ minHeight: "600px", overflow: "hidden" }}>
+        {/* SVG Background with Wave - Behind content */}
+        <svg
+          className="absolute inset-0 w-full h-full"
+          style={{ zIndex: 0 }}
+          viewBox="0 0 1440 600"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          {/* Dark Brown Background - Same as page background */}
+          <rect x="0" y="0" width="1440" height="300" fill="#974119" />
+
+          {/* Wavy Division Line with more pronounced curves */}
+          <path d="M0,300 Q360,260 720,300 T1440,300 L1440,600 L0,600 Z" fill="#FFA500" />
+        </svg>
+
+        {/* Content */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-24">
+          {/* Character on the left */}
+          <img
+            src={characterPurpleExplore}
+            alt="LA20 Character"
+            className="absolute -left-80 hidden lg:block z-0"
+            style={{
+              width: "750px",
+              height: "auto",
+              transform: "rotate(10deg)",
+              filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))",
+              top: "5%",
+              marginTop: "-170px",
+            }}
+          />
+
+          <h2
+            className="text-5xl md:text-7xl font-black text-white mb-6 uppercase relative z-10"
+            style={{
+              textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+            }}
+          >
+            ¿CON GANAS DE EXPLORAR?
+          </h2>
+          <p
+            className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase relative z-10"
+            style={{
+              textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+            }}
+          >
+            MIRÁ TODAS LAS OPCIONES
+          </p>
+
+          <div className="w-full flex justify-center items-end overflow-hidden mt-24 relative z-10">
+            <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[670px] w-auto -mr-[430px]" />
+            <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[630px] w-auto -mr-[430px]" />
+            <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[700px] w-auto -mr-[430px]" />
+            <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[650px] w-auto -mr-[430px]" />
+            <img src={beerBottleElChele} alt="LA20 El Chele" className="h-[690px] w-auto" />
+          </div>
+        </div>
+      </div>
+
+      {/* Final Wave Banner */}
+      <section className="relative w-full" style={{ overflow: "hidden", marginTop: "-80px", zIndex: 1 }}>
         <svg
           className="block w-full"
           style={{
@@ -326,8 +405,8 @@ const ServicesSection = () => {
             <path id="finalWaveTextPath" d="M0,125 Q360,65 720,125 T1440,125 T2160,125 T2880,125" fill="none" />
           </defs>
 
-          {/* Brown background covering from top to middle of black band */}
-          <rect x="0" y="0" width="1440" height="125" fill="#974119" />
+          {/* Orange/Yellow background covering from top to middle of black band */}
+          <rect x="0" y="0" width="1440" height="125" fill="#FFA500" />
 
           {/* Black wave band with curves on top and bottom */}
           <path d="M0,85 Q360,25 720,85 T1440,85 L1440,165 Q1080,225 720,165 T0,165 Z" fill="hsl(0, 0%, 0%)" />
@@ -353,6 +432,21 @@ const ServicesSection = () => {
           </text>
         </svg>
       </section>
+
+      <style>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
