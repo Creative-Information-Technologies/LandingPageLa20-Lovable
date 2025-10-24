@@ -249,7 +249,7 @@ const ServicesSection = () => {
       </section>
 
       {/* Taproom Promotion Section */}
-      <div className="w-full py-48 relative" style={{ backgroundColor: "#974119" }}>
+      <div className="w-full py-64 relative" style={{ backgroundColor: "#974119" }}>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-white uppercase leading-tight font-oswald">
             <div
@@ -318,6 +318,12 @@ const ServicesSection = () => {
             style={{ fontSize: "32px", letterSpacing: "2px" }}
           >
             De Jueves y Viernes 4:00 PM a 12:00 PM
+          </p>
+          <p
+            className="text-white text-center font-oswald font-bold uppercase mt-2"
+            style={{ fontSize: "32px", letterSpacing: "2px" }}
+          >
+            Sábados 10:00 AM a 12:00 PM
           </p>
         </div>
       </div>
