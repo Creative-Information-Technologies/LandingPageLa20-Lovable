@@ -242,7 +242,7 @@ const ServicesSection = () => {
               style={{
                 fontWeight: 900,
                 fontSize: "clamp(60px, 8vw, 120px)",
-                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+                textShadow: "12px 12px 0px #3d1505, 18px 18px 30px rgba(0,0,0,0.7)",
                 lineHeight: "1",
               }}
             >
@@ -252,7 +252,7 @@ const ServicesSection = () => {
               style={{
                 fontWeight: 900,
                 fontSize: "clamp(100px, 15vw, 240px)",
-                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+                textShadow: "12px 12px 0px #3d1505, 18px 18px 30px rgba(0,0,0,0.7)",
                 lineHeight: "0.95",
                 marginTop: "-10px",
               }}
@@ -263,7 +263,7 @@ const ServicesSection = () => {
               style={{
                 fontWeight: 900,
                 fontSize: "clamp(60px, 8vw, 120px)",
-                textShadow: "8px 8px 0px #3d1505, 12px 12px 20px rgba(0,0,0,0.5)",
+                textShadow: "12px 12px 0px #3d1505, 18px 18px 30px rgba(0,0,0,0.7)",
                 lineHeight: "1",
                 marginTop: "-10px",
               }}
@@ -275,16 +275,20 @@ const ServicesSection = () => {
 
         {/* Diagonal images */}
         <div 
-          className="absolute top-10 left-10 w-72 h-48 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+          className="absolute top-10 left-10 rounded-2xl transform -rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
+            width: "576px",
+            height: "384px",
             backgroundImage: `url(${taproomImage1})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         ></div>
         <div 
-          className="absolute bottom-10 right-10 w-72 h-48 rounded-2xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
+          className="absolute bottom-10 right-10 rounded-2xl transform rotate-12 hidden lg:block overflow-hidden shadow-2xl border-4 border-white"
           style={{
+            width: "576px",
+            height: "384px",
             backgroundImage: `url(${taproomImage2})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
