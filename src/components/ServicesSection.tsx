@@ -348,7 +348,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleAlerosExplore}
               alt="LA20 Aleros"
-              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[500px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
 
@@ -356,7 +356,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleLaFlaka}
               alt="LA20 La Flaka"
-              className="h-[400px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[450px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
 
@@ -372,7 +372,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleWeiss}
               alt="LA20 Weiss"
-              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[450px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
 
@@ -380,7 +380,7 @@ const ServicesSection = () => {
             <img
               src={beerBottleElChele}
               alt="LA20 El Chele"
-              className="h-[300px] w-auto transition-transform duration-300 hover:scale-105"
+              className="h-[500px] w-auto transition-transform duration-300 hover:scale-105"
               style={{ objectFit: "contain" }}
             />
           </div>
