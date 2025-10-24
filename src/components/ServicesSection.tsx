@@ -343,12 +343,12 @@ const ServicesSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6 uppercase">¿CON GANAS DE EXPLORAR?</h2>
           <p className="text-3xl md:text-4xl text-white font-bold mb-16 uppercase">MIRÁ TODAS LAS OPCIONES</p>
 
-          <div className="w-full flex justify-center items-end bg-transparent overflow-hidden">
-            <img src={beerBottleAlerosExplore} className="h-[700px] w-auto -mr-[12px]" />
-            <img src={beerBottleLaFlaka} className="h-[700px] w-auto -mr-[12px]" />
-            <img src={beerBottleLaJefaExplore} className="h-[700px] w-auto -mr-[12px]" />
-            <img src={beerBottleWeiss} className="h-[700px] w-auto -mr-[12px]" />
-            <img src={beerBottleElChele} className="h-[700px] w-auto" />
+          <div className="w-full flex justify-center items-end gap-4">
+            <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[400px] w-auto" />
+            <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[400px] w-auto" />
+            <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[400px] w-auto" />
+            <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[400px] w-auto" />
+            <img src={beerBottleElChele} alt="LA20 El Chele" className="h-[400px] w-auto" />
           </div>
         </div>
       </div>
