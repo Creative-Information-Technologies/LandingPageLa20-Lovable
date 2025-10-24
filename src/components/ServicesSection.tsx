@@ -347,8 +347,8 @@ const ServicesSection = () => {
             <img src={beerBottleAlerosExplore} alt="LA20 Aleros" className="h-[700px] w-auto -mr-[400px]" />
             <img src={beerBottleLaFlaka} alt="LA20 La Flaka" className="h-[700px] w-auto -mr-[400px]" />
             <img src={beerBottleLaJefaExplore} alt="LA20 La Jefa" className="h-[700px] w-auto -mr-[400px]" />
-            <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[700px] w-auto -mr-[400px]" />
-            <img src={beerBottleElChele} alt="LA20 El Chele" className="h-[400px] w-auto" />
+            <img src={beerBottleWeiss} alt="LA20 Weiss" className="h-[650px] w-auto -mr-[400px]" />
+            <img src={beerBottleElChele} alt="LA20 El Chele" className="h-[900px] w-auto" />
           </div>
         </div>
       </div>
