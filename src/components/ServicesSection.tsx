@@ -323,7 +323,7 @@ const ServicesSection = () => {
       </div>
 
       {/* Beer Exploration Section */}
-      <div className="w-full relative pb-0" style={{ minHeight: "600px", overflow: "hidden" }}>
+      <div className="w-full relative pb-0" style={{ minHeight: "900px", overflow: "hidden" }}>
         {/* SVG Background with Wave - Behind content */}
         <svg
           className="absolute inset-0 w-full h-full"
@@ -340,7 +340,7 @@ const ServicesSection = () => {
         </svg>
 
         {/* Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-24">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center py-40">
           {/* Character on the left */}
           <img
             src={characterPurpleExplore}
