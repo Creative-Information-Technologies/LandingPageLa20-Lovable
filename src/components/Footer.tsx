@@ -1,20 +1,16 @@
 import la20Logo from "@/assets/la20-logo-new.png";
 import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
 import beerGlassClub from "@/assets/beer-glass-club.png";
-import wavyPatternBrown from "@/assets/wavy-pattern-brown.png";
 import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
     <section className="w-full relative overflow-x-hidden overflow-y-visible">
-      {/* Footer Background - Wavy Pattern */}
+      {/* Footer Background - Transparent */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url(${wavyPatternBrown})`,
-          backgroundRepeat: "repeat",
-          backgroundSize: "auto 150px",
-          backgroundPosition: "center",
+          backgroundColor: "transparent",
           zIndex: 0,
         }}
       />
