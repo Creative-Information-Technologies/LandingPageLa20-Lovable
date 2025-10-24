@@ -198,7 +198,7 @@ const ServicesSection = () => {
             {/* Path for text to follow */}
             <path
               id="waveTextPath"
-              d="M0,100 Q360,70 720,100 T1440,100"
+              d="M-200,100 Q160,70 520,100 T1240,100 T1960,100"
               fill="none"
             />
           </defs>
@@ -212,13 +212,13 @@ const ServicesSection = () => {
           {/* Wavy text */}
           <text 
             fill="white" 
-            fontSize="48" 
+            fontSize="42" 
             fontWeight="900" 
-            letterSpacing="8"
+            letterSpacing="12"
             className="uppercase font-oswald"
           >
-            <textPath href="#waveTextPath" startOffset="50%" textAnchor="middle">
-              COMPARTÍ · DISFRUTÁ · RELAJATE
+            <textPath href="#waveTextPath" startOffset="0%">
+              COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE · COMPARTI · DISFRUTA · RELAJATE
             </textPath>
           </text>
         </svg>
