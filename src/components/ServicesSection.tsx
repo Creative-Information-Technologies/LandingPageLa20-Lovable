@@ -352,13 +352,12 @@ const ServicesSection = () => {
               beerBottleLaFlaka,
               beerBottleAlerosExplore,
             ].map((bottle, index) => (
-              <div key={index} className="flex items-end justify-center flex-shrink-0">
-                <img
-                  src={bottle}
-                  alt={`LA20 Beer Bottle ${index + 1}`}
-                  className="h-[350px] w-auto object-contain drop-shadow-2xl"
-                />
-              </div>
+              <img
+                key={index}
+                src={bottle}
+                alt={`LA20 Beer Bottle ${index + 1}`}
+                className="h-[350px] w-auto object-contain drop-shadow-2xl"
+              />
             ))}
           </div>
         </div>
