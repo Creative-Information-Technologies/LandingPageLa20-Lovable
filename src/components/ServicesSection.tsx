@@ -74,7 +74,7 @@ const ServicesSection = () => {
                 alt="LA20 Beer Glass"
                 className="absolute"
                 style={{
-                  right: "160%",
+                  right: "155%",
                   top: "0",
                   bottom: "0",
                   width: "45%",
@@ -95,9 +95,9 @@ const ServicesSection = () => {
                 className="absolute"
                 style={{
                   right: "110%",
-                  top: "2%",
+                  top: "0%",
                   bottom: "0",
-                  width: "100%",
+                  width: "105%",
                   height: "auto",
                   objectFit: "contain",
                   objectPosition: "bottom",
@@ -114,7 +114,7 @@ const ServicesSection = () => {
                 alt="LA20 Tall Beer Glass"
                 className="absolute"
                 style={{
-                  right: "2%",
+                  right: "-2%",
                   top: "-15px",
                   bottom: "-10px",
                   width: "60%",
