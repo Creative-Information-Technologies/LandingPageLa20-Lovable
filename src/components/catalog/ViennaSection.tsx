@@ -43,7 +43,7 @@ const ViennaSection = () => {
             <p
               className="font-outfit font-normal"
               style={{
-                fontSize: "clamp(16px, 2vw, 24px)",
+                fontSize: 24px
                 fontWeight: 400,
                 lineHeight: "100%",
                 letterSpacing: "0%",
