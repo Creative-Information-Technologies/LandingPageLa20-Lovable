@@ -366,7 +366,7 @@ const CatalogSection = () => {
       {/* La Metiche Section */}
       <section
         id="lametiche-section"
-        className={`relative w-full min-h-screen transition-all duration-800 overflow-visible ${
+        className={`relative w-full min-h-screen transition-all duration-800 overflow-hidden ${
           showMeticheSection ? "opacity-100 animate-fade-in" : "opacity-0 hidden"
         }`}
         style={{
@@ -385,31 +385,34 @@ const CatalogSection = () => {
         />
 
         {/* Main Content */}
-        <div className="relative z-10 pt-8 overflow-visible w-full">
+        <div className="relative z-10 pt-8 w-full overflow-hidden">
           {/* Title */}
-          <h2
-            className="uppercase overflow-visible"
-            style={{
-              width: "100%",
-              height: "auto",
-              position: "relative",
-              top: "76px",
-              opacity: 1,
-              fontFamily: "Oswald, sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(120px, 22vw, 500px)",
-              lineHeight: "128%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              textTransform: "uppercase",
-              color: "#FFFFFF",
-              textShadow: "7.23px 7.23px 0px #521C03",
-              whiteSpace: "nowrap",
-              transform: "rotate(-9.29deg)",
-            }}
-          >
-            LA METICHE
-          </h2>
+          <div className="overflow-visible">
+            <h2
+              className="uppercase"
+              style={{
+                width: "100%",
+                height: "auto",
+                position: "relative",
+                top: "76px",
+                left: "-5%",
+                opacity: 1,
+                fontFamily: "Oswald, sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(120px, 22vw, 500px)",
+                lineHeight: "128%",
+                letterSpacing: "0%",
+                textAlign: "center",
+                textTransform: "uppercase",
+                color: "#FFFFFF",
+                textShadow: "7.23px 7.23px 0px #521C03",
+                whiteSpace: "nowrap",
+                transform: "rotate(-9.29deg)",
+              }}
+            >
+              LA METICHE
+            </h2>
+          </div>
 
           {/* Product Composition */}
           <div className="relative" style={{ maxWidth: "1200px", width: "100%", height: "650px", margin: "0 auto" }}>
