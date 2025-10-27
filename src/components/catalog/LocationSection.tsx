@@ -24,7 +24,7 @@ const LocationSection = () => {
           <img src={interiorImage} alt="Interior de LA20" className="w-full h-full object-cover rounded-lg" />
         </div>
 
-        <div className="absolute -bottom-56 left-0 w-[420px] h-80 -rotate-12 rounded-lg shadow-2xl z-10 pointer-events-none hidden lg:block overflow-hidden">
+        <div className="absolute -bottom-56 left-0 w-[420px] h-80 -rotate-12 rounded-lg shadow-2xl z-0 pointer-events-none hidden lg:block overflow-hidden">
           <img src={signImage} alt="Letrero LA20" className="w-full h-full object-cover rounded-lg" />
         </div>
 
