@@ -14,9 +14,9 @@ const Navigation = () => {
           <Link to="/blog" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Blog
           </Link>
-          <a href="#catalogo" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
+          <Link to="/catalogo" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Catálogo
-          </a>
+          </Link>
           <Link to="/services" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Servicios
           </Link>
