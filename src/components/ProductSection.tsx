@@ -194,7 +194,7 @@ const ProductSection = () => {
                   <img
                     src={product.glass}
                     alt={`Vaso Cerveza ${product.name}`}
-                    className={`absolute left-[5%] md:left-[15%] lg:left-[40%] top-[-10%] md:top-[5%] overflow-visible w-[180px] md:w-[320px] h-auto transition-all duration-1000 z-20 ${
+                    className={`absolute left-[5%] md:left-[15%] lg:left-[40%] top-[2%] md:top-[8%] w-[160px] md:w-[280px] h-auto max-h-[75vh] object-contain transition-all duration-1000 z-20 ${
                       isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
                     }`}
                     style={{
