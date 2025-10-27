@@ -171,7 +171,7 @@ const ProductSection = () => {
           key={products[currentIndex].id}
           src={products[currentIndex].character}
           alt={products[currentIndex].name}
-          className={`hidden lg:block absolute left-[-10%] top-[5%] w-[900px] h-auto max-h-[85vh] object-contain transition-all duration-700 ease-out z-0 animate-fade-in ${
+          className={`hidden lg:block absolute left-[-10%] top-[-5%] w-[900px] h-auto transition-all duration-700 ease-out z-0 animate-fade-in ${
             isVisible ? "translate-x-0 opacity-100 scale-100" : "-translate-x-20 opacity-0 scale-95"
           }`}
           style={{
