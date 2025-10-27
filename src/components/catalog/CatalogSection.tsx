@@ -366,7 +366,7 @@ const CatalogSection = () => {
       {/* La Metiche Section */}
       <section
         id="lametiche-section"
-        className={`relative w-full min-h-screen transition-all duration-800 overflow-hidden ${
+        className={`relative w-full min-h-screen transition-all duration-800 overflow-visible ${
           showMeticheSection ? "opacity-100 animate-fade-in" : "opacity-0 hidden"
         }`}
         style={{
@@ -385,13 +385,13 @@ const CatalogSection = () => {
         />
 
         {/* Main Content */}
-        <div className="container mx-auto max-w-[1200px] px-8 md:px-16 relative z-10 pt-8">
+        <div className="container mx-auto max-w-[1200px] px-8 md:px-16 relative z-10 pt-8 overflow-visible">
           {/* Title */}
           <h2
-            className="uppercase text-center"
+            className="uppercase text-center overflow-visible"
             style={{
               width: "100%",
-              maxWidth: "1600px",
+              maxWidth: "2000px",
               height: "auto",
               position: "relative",
               top: "76px",
@@ -400,7 +400,7 @@ const CatalogSection = () => {
               opacity: 1,
               fontFamily: "Oswald, sans-serif",
               fontWeight: 700,
-              fontSize: "clamp(80px, 18vw, 300px)",
+              fontSize: "clamp(120px, 22vw, 500px)",
               lineHeight: "128%",
               letterSpacing: "0%",
               textAlign: "center",
