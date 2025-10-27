@@ -8,6 +8,7 @@ import beerGlassLeft from "@/assets/beer-glass-left.png";
 import beerGlassRight from "@/assets/beer-glass-right.png";
 import beerBottleLaJefa from "@/assets/beer-bottle-la-jefa.png";
 import beerBottleAlerosNew from "@/assets/beer-bottle-aleros-new.png";
+import hechoEnHonduras from "@/assets/hecho-en-honduras-icon.png";
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -42,13 +43,12 @@ const HeroSection = () => {
       <img
         src={beerGlassLeft}
         alt="Vaso de Cerveza La 20"
-        className="absolute left-[-22%] top-[8%] w-[480px] h-auto animate-fade-in z-0 pointer-events-none"
+        className="hidden lg:block absolute left-[-12%] top-[8%] w-[480px] h-auto animate-fade-in z-0 pointer-events-none"
         style={{
           filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.3))",
           transform: "rotate(7deg)",
           transformOrigin: "center center",
           objectFit: "contain",
-          display: "block",
         }}
       />
 
@@ -56,13 +56,12 @@ const HeroSection = () => {
       <img
         src={beerGlassRight}
         alt="Vaso de Cerveza La 20"
-        className="absolute right-[-16%] top-[5%] w-[500px] h-auto animate-fade-in z-0 pointer-events-none"
+        className="hidden lg:block absolute right-[-8%] top-[5%] w-[500px] h-auto animate-fade-in z-0 pointer-events-none"
         style={{
           filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.3))",
           transform: "rotate(-6deg)",
           transformOrigin: "center center",
           objectFit: "contain",
-          display: "block",
         }}
       />
 
@@ -70,11 +69,10 @@ const HeroSection = () => {
       <img
         src={beerBottleFloating}
         alt="Cerveza La 20 Aleros"
-        className="absolute left-[2%] bottom-[-12%] w-[380px] h-auto animate-slide-in-left z-5 pointer-events-none"
+        className="hidden lg:block absolute left-[2%] bottom-[-2%] w-[380px] h-auto animate-slide-in-left z-5 pointer-events-none"
         style={{
           filter: "drop-shadow(0 25px 50px rgba(0,0,0,0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.4))",
           objectFit: "contain",
-          display: "block",
         }}
       />
 
@@ -82,11 +80,10 @@ const HeroSection = () => {
       <img
         src={beerBottleLaJefa}
         alt="Cerveza La 20 La Jefa"
-        className="absolute right-[-28%] bottom-[-20%] w-[800px] h-auto animate-fade-in z-5 pointer-events-none"
+        className="hidden lg:block absolute right-[-14%] bottom-[-7%] w-[800px] h-auto animate-fade-in z-5 pointer-events-none"
         style={{
           filter: "drop-shadow(0 25px 50px rgba(0,0,0,0.6)) drop-shadow(0 10px 20px rgba(0,0,0,0.4))",
           objectFit: "contain",
-          display: "block",
         }}
       />
 
@@ -94,18 +91,18 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center min-h-screen text-center">
         {/* Hero Text */}
         <h1
-          className="text-5xl md:text-7xl lg:text-7xl font-black text-primary mb-6 animate-fade-in leading-tight"
+          className="font-black text-primary mb-6 animate-fade-in leading-tight"
           style={{ animationDelay: "0.2s" }}
         >
           <span
-            className="font-deacon block"
-            style={{ fontWeight: 900, fontSize: "80px", lineHeight: "100%", letterSpacing: "0%" }}
+            className="font-deacon block text-4xl md:text-6xl lg:text-[80px]"
+            style={{ fontWeight: 900, lineHeight: "100%", letterSpacing: "0%" }}
           >
             DATE UN RELAX y
           </span>
           <span
-            className="font-deacon block text-primary"
-            style={{ fontWeight: 900, fontSize: "70px", lineHeight: "100%", letterSpacing: "0%" }}
+            className="font-deacon block text-primary text-3xl md:text-5xl lg:text-[70px]"
+            style={{ fontWeight: 900, lineHeight: "100%", letterSpacing: "0%" }}
           >
             DESTAPÁ LO ARTESANAL
           </span>
@@ -122,6 +119,17 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Hecho en Honduras Badge - Bottom Right */}
+      <img
+        src={hechoEnHonduras}
+        alt="Hecho en Honduras"
+        className="absolute right-4 bottom-[20rem] md:right-12 md:bottom-[24rem] lg:right-[18rem] lg:bottom-[28rem] w-32 md:w-40 lg:w-52 h-auto animate-fade-in z-20 pointer-events-none"
+        style={{
+          filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
+          objectFit: "contain",
+        }}
+      />
+
       {/* Black Wave Transition with Curved Text */}
       <div
         className="absolute bottom-0 left-0 right-0 w-full h-80 z-30 transition-transform duration-100 ease-out"
@@ -137,17 +145,17 @@ const HeroSection = () => {
           preserveAspectRatio="none"
         >
           <defs>
-            <path id="wavePath" d="M0,125 Q180,60 360,125 T720,125 T1080,125 T1440,125" />
+            <path id="wavePath" d="M0,125 Q180,90 360,125 T720,125 T1080,125 T1440,125" />
           </defs>
 
           {/* Black wave band shape - matches text curve exactly */}
-          <path d="M0,125 Q180,60 360,125 T720,125 T1080,125 T1440,125 L1440,320 L0,320 Z" fill="hsl(0, 0%, 0%)" />
+          <path d="M0,125 Q180,90 360,125 T720,125 T1080,125 T1440,125 L1440,320 L0,320 Z" fill="hsl(0, 0%, 0%)" />
 
           <text
-            dy="50"
-            className="font-black tracking-wider"
+            dy="70"
+            className="font-black tracking-wider pt-12"
             style={{
-              fontSize: "52px",
+              fontSize: "38px",
               fill: "hsl(0, 0%, 100%)",
               opacity: 1,
               fontFamily: "Deacon Condensed Test, sans-serif",
