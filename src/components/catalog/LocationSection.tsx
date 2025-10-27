@@ -14,17 +14,17 @@ const LocationSection = () => {
 
   return (
     <section className="relative bg-white pb-32 overflow-visible" style={{ paddingTop: "0px" }}>
-      <div className="container mx-auto px-4 overflow-visible relative z-10">
+      <div className="container mx-auto px-4 overflow-visible relative">
         {/* Decorative Images */}
-        <div className="absolute -top-20 -left-24 w-96 h-72 -rotate-12 rounded-lg shadow-2xl z-50 pointer-events-none hidden lg:block overflow-hidden">
+        <div className="absolute -top-20 -left-24 w-96 h-72 -rotate-12 rounded-lg shadow-2xl z-10 pointer-events-none hidden lg:block overflow-hidden">
           <img src={foosballImage} alt="Futbolito en LA20" className="w-full h-full object-cover rounded-lg" />
         </div>
 
-        <div className="absolute -top-12 -right-16 w-96 h-72 rotate-12 rounded-lg shadow-2xl z-50 pointer-events-none hidden lg:block overflow-hidden">
+        <div className="absolute -top-12 -right-16 w-96 h-72 rotate-12 rounded-lg shadow-2xl z-10 pointer-events-none hidden lg:block overflow-hidden">
           <img src={interiorImage} alt="Interior de LA20" className="w-full h-full object-cover rounded-lg" />
         </div>
 
-        <div className="absolute -bottom-56 left-0 w-[420px] h-80 -rotate-12 rounded-lg shadow-2xl z-0 pointer-events-none hidden lg:block overflow-hidden">
+        <div className="absolute -bottom-56 left-0 w-[420px] h-80 -rotate-12 rounded-lg shadow-2xl z-[1] pointer-events-none hidden lg:block overflow-hidden">
           <img src={signImage} alt="Letrero LA20" className="w-full h-full object-cover rounded-lg" />
         </div>
 

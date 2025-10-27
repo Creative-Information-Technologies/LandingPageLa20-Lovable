@@ -27,7 +27,7 @@ const Footer = ({ brownBackground = false, whiteBackground = false }: FooterProp
       />
 
       {/* Footer Content - Relative, above background */}
-      <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 5 }}>
+      <footer className="relative py-12 px-6 lg:px-12" style={{ zIndex: 10 }}>
         <div className="max-w-[1400px] h-[25rem] mx-auto flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Block - Logo and Contact */}
           <div
