@@ -11,7 +11,7 @@ const Catalog = () => {
       <ViennaSection />
       <CatalogSection />
       <LocationSection />
-      <Footer />
+      <Footer whiteBackground={true} />
     </div>
   );
 };

@@ -5,16 +5,23 @@ import { Facebook, Instagram } from "lucide-react";
 
 interface FooterProps {
   brownBackground?: boolean;
+  whiteBackground?: boolean;
 }
 
-const Footer = ({ brownBackground = false }: FooterProps) => {
+const Footer = ({ brownBackground = false, whiteBackground = false }: FooterProps) => {
+  const getBackgroundColor = () => {
+    if (whiteBackground) return "#FFFFFF";
+    if (brownBackground) return "#8B3A14";
+    return "transparent";
+  };
+
   return (
     <section className="w-full relative overflow-x-hidden overflow-y-visible">
       {/* Footer Background */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: brownBackground ? "#8B3A14" : "transparent",
+          backgroundColor: getBackgroundColor(),
           zIndex: 0,
         }}
       />
