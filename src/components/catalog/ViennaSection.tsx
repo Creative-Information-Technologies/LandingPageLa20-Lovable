@@ -45,7 +45,7 @@ const ViennaSection = () => {
               style={{
                 fontSize: "clamp(16px, 2vw, 24px)",
                 fontWeight: 400,
-                lineHeight: "150%",
+                lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#974119",
               }}
