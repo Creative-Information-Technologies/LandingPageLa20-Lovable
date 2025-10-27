@@ -1,22 +1,17 @@
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ProductSection from "@/components/ProductSection";
 import OrangeSection from "@/components/OrangeSection";
 import Footer from "@/components/Footer";
-import ContactModal from "@/components/ContactModal";
 
 const Index = () => {
-  const [contactModalOpen, setContactModalOpen] = useState(false);
-
   return (
     <div className="min-h-screen w-full">
-      <Navigation onContactClick={() => setContactModalOpen(true)} />
+      <Navigation />
       <HeroSection />
       <ProductSection />
       <OrangeSection />
       <Footer />
-      <ContactModal open={contactModalOpen} onOpenChange={setContactModalOpen} />
     </div>
   );
 };
