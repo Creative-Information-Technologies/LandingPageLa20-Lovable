@@ -150,7 +150,7 @@ const ProductSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[150vh] overflow-visible w-full bg-black pt-32 pb-40 transition-transform duration-100 ease-out"
+      className="relative min-h-[150vh] overflow-clip w-full bg-black pt-32 transition-transform duration-100 ease-out"
       style={{
         transform: `translateY(${-Math.min(scrollY * 0.5, 200)}px)`,
       }}
@@ -171,7 +171,7 @@ const ProductSection = () => {
           key={products[currentIndex].id}
           src={products[currentIndex].character}
           alt={products[currentIndex].name}
-          className={`hidden lg:block absolute left-[-10%] top-[-5%] w-[750px] h-auto max-h-[90vh] object-contain transition-all duration-700 ease-out z-0 animate-fade-in ${
+          className={`hidden lg:block absolute left-[-10%] top-[-5%] w-[900px] h-auto transition-all duration-700 ease-out z-0 animate-fade-in ${
             isVisible ? "translate-x-0 opacity-100 scale-100" : "-translate-x-20 opacity-0 scale-95"
           }`}
           style={{
@@ -187,10 +187,10 @@ const ProductSection = () => {
           }}
           setApi={setCarouselApi}
         >
-          <CarouselContent className="-ml-2 md:-ml-4" viewportClassName="overflow-visible">
+          <CarouselContent className="-ml-2 md:-ml-4">
             {products.map((product) => (
-              <CarouselItem key={product.id} className="pl-2 md:pl-4 basis-full overflow-visible">
-                <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-0 w-full relative px-4 md:px-0 overflow-visible">
+              <CarouselItem key={product.id} className="pl-2 md:pl-4 basis-full">
+                <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-0 w-full relative px-4 md:px-0">
                   <img
                     src={product.glass}
                     alt={`Vaso Cerveza ${product.name}`}
