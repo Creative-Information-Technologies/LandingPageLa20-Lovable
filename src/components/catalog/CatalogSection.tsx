@@ -385,18 +385,15 @@ const CatalogSection = () => {
         />
 
         {/* Main Content */}
-        <div className="container mx-auto max-w-[1200px] px-8 md:px-16 relative z-10 pt-8 overflow-visible">
+        <div className="relative z-10 pt-8 overflow-visible w-full">
           {/* Title */}
           <h2
-            className="uppercase text-center overflow-visible"
+            className="uppercase overflow-visible"
             style={{
               width: "100%",
-              maxWidth: "2000px",
               height: "auto",
               position: "relative",
               top: "76px",
-              left: "50%",
-              transform: "translateX(-50%) rotate(-9.29deg)",
               opacity: 1,
               fontFamily: "Oswald, sans-serif",
               fontWeight: 700,
@@ -408,6 +405,7 @@ const CatalogSection = () => {
               color: "#FFFFFF",
               textShadow: "7.23px 7.23px 0px #521C03",
               whiteSpace: "nowrap",
+              transform: "rotate(-9.29deg)",
             }}
           >
             LA METICHE
