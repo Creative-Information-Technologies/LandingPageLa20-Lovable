@@ -17,16 +17,16 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
         <div className="container mx-auto px-6 py-6 flex items-center justify-between">
           {/* Navigation Links - Left */}
           <div className={`flex items-center gap-6 rounded-full px-8 py-3 ${transparent ? 'bg-transparent' : 'bg-white/95 shadow-lg'}`}>
-            <Link to="/" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
+            <Link to="/" className={`transition-colors font-medium ${transparent ? 'text-white hover:text-white/70' : 'text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))]'}`}>
               Inicio
             </Link>
-            <Link to="/blog" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
+            <Link to="/blog" className={`transition-colors font-medium ${transparent ? 'text-white hover:text-white/70' : 'text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))]'}`}>
               Blog
             </Link>
-            <Link to="/catalogo" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
+            <Link to="/catalogo" className={`transition-colors font-medium ${transparent ? 'text-white hover:text-white/70' : 'text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))]'}`}>
               Catálogo
             </Link>
-            <Link to="/services" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
+            <Link to="/services" className={`transition-colors font-medium ${transparent ? 'text-white hover:text-white/70' : 'text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))]'}`}>
               Servicios
             </Link>
           </div>
@@ -39,7 +39,7 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
           {/* Contact Button - Right */}
           <Button 
             onClick={() => setIsContactModalOpen(true)}
-            className={`font-bold rounded-full px-10 py-6 border-0 transition-all ${transparent ? 'bg-transparent hover:bg-white/10 text-white shadow-none' : 'bg-black hover:bg-black/80 text-white shadow-xl'}`}
+            className={`font-bold rounded-full px-10 py-6 transition-all ${transparent ? 'bg-white/10 hover:bg-white/20 text-white border border-white/30 shadow-lg' : 'bg-black hover:bg-black/80 text-white border-0 shadow-xl'}`}
           >
             CONTÁCTANOS
           </Button>
