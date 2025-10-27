@@ -43,7 +43,7 @@ const HeroSection = () => {
       <img
         src={beerGlassLeft}
         alt="Vaso de Cerveza La 20"
-        className="hidden lg:block absolute left-[-5%] top-[5%] w-[480px] h-auto animate-fade-in z-0 pointer-events-none"
+        className="hidden lg:block absolute left-[-12%] top-[8%] w-[480px] h-auto animate-fade-in z-0 pointer-events-none"
         style={{
           filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.3))",
           transform: "rotate(7deg)",
@@ -56,7 +56,7 @@ const HeroSection = () => {
       <img
         src={beerGlassRight}
         alt="Vaso de Cerveza La 20"
-        className="hidden lg:block absolute right-[-3%] top-[3%] w-[500px] h-auto animate-fade-in z-0 pointer-events-none"
+        className="hidden lg:block absolute right-[-8%] top-[5%] w-[500px] h-auto animate-fade-in z-0 pointer-events-none"
         style={{
           filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.5)) drop-shadow(0 10px 20px rgba(0,0,0,0.3))",
           transform: "rotate(-6deg)",
