@@ -83,7 +83,7 @@ const ContactModal = ({ open, onOpenChange }: ContactModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl p-0 gap-0 overflow-hidden rounded-[32px] bg-[#F5F1E8]">
+      <DialogContent className="max-w-4xl p-0 gap-0 overflow-hidden rounded-[40px] bg-[#F5F1E8]">
         <DialogTitle className="sr-only">Formulario de Contacto</DialogTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
           {/* Left Column - Form */}
