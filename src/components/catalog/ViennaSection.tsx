@@ -50,8 +50,7 @@ const ViennaSection = () => {
                 color: "#FFFFFF",
               }}
             >
-              Una cerveza de estilo Vienna Lager, con 5% ABV y 18 IBU. Su color ámbar brillante y sabor equilibrado la
-              hacen perfecta para cualquier ocasión.
+              Nuestra nueva Vienna Lager, te está esperando para celebrar el Oktobeer Fest ¿Te animas?
             </p>
           </div>
         </div>
