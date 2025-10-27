@@ -18,23 +18,9 @@ const Navigation = ({ onContactClick }: NavigationProps) => {
           <Link to="/blog" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Blog
           </Link>
-          <button 
-            onClick={() => {
-              const catalogSection = document.getElementById('catalogo');
-              if (catalogSection) {
-                const offset = 100;
-                const elementPosition = catalogSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: 'smooth'
-                });
-              }
-            }}
-            className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium"
-          >
+          <Link to="/catalog" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Catálogo
-          </button>
+          </Link>
           <Link to="/services" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
             Servicios
           </Link>
