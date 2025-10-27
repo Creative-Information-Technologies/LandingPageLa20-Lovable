@@ -19,7 +19,7 @@ const Index = () => {
       <OriginsSection />
       <VideoSection />
       <JoinSection />
-      <Footer />
+      <Footer brownBackground={true} />
     </div>
   );
 };

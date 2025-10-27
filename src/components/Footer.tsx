@@ -3,14 +3,18 @@ import beerBottleMetiche from "@/assets/beer-bottle-la-metiche.png";
 import beerGlassClub from "@/assets/beer-glass-club.png";
 import { Facebook, Instagram } from "lucide-react";
 
-const Footer = () => {
+interface FooterProps {
+  brownBackground?: boolean;
+}
+
+const Footer = ({ brownBackground = false }: FooterProps) => {
   return (
     <section className="w-full relative overflow-x-hidden overflow-y-visible">
-      {/* Footer Background - Transparent */}
+      {/* Footer Background */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: "transparent",
+          backgroundColor: brownBackground ? "#8B3A14" : "transparent",
           zIndex: 0,
         }}
       />
