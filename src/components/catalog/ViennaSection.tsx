@@ -47,7 +47,7 @@ const ViennaSection = () => {
                 fontWeight: 400,
                 lineHeight: "150%",
                 letterSpacing: "0%",
-                color: "#FFFFFF",
+                color: "#974119",
               }}
             >
               Nuestra nueva Vienna Lager, te está esperando para celebrar el Oktobeer Fest ¿Te animas?
