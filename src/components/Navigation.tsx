@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import la20Logo from "@/assets/la20-logo-new.png";
 
-const Navigation = () => {
+interface NavigationProps {
+  onContactClick?: () => void;
+}
+
+const Navigation = ({ onContactClick }: NavigationProps) => {
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-transparent">
       <div className="container mx-auto px-6 py-6 flex items-center justify-between">
@@ -28,7 +32,10 @@ const Navigation = () => {
         </div>
 
         {/* Contact Button - Right */}
-        <Button className="bg-black hover:bg-black/80 text-white font-bold rounded-full px-10 py-6 border-0 shadow-xl transition-all">
+        <Button 
+          onClick={onContactClick}
+          className="bg-black hover:bg-black/80 text-white font-bold rounded-full px-10 py-6 border-0 shadow-xl transition-all"
+        >
           CONTÁCTANOS
         </Button>
       </div>
