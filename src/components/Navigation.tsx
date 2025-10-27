@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import la20Logo from "@/assets/la20-logo-new.png";
 import ContactModal from "@/components/ContactModal";
 
-const Navigation = () => {
+interface NavigationProps {
+  transparent?: boolean;
+}
+
+const Navigation = ({ transparent = false }: NavigationProps) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
@@ -12,7 +16,7 @@ const Navigation = () => {
       <nav className="w-full fixed top-0 left-0 z-50 bg-transparent">
         <div className="container mx-auto px-6 py-6 flex items-center justify-between">
           {/* Navigation Links - Left */}
-          <div className="flex items-center gap-6 bg-white/95 rounded-full px-8 py-3 shadow-lg">
+          <div className={`flex items-center gap-6 rounded-full px-8 py-3 ${transparent ? 'bg-transparent' : 'bg-white/95 shadow-lg'}`}>
             <Link to="/" className="text-[hsl(var(--blog-brown))] hover:text-[hsl(var(--blog-orange))] transition-colors font-medium">
               Inicio
             </Link>
@@ -35,7 +39,7 @@ const Navigation = () => {
           {/* Contact Button - Right */}
           <Button 
             onClick={() => setIsContactModalOpen(true)}
-            className="bg-black hover:bg-black/80 text-white font-bold rounded-full px-10 py-6 border-0 shadow-xl transition-all"
+            className={`font-bold rounded-full px-10 py-6 border-0 transition-all ${transparent ? 'bg-transparent hover:bg-white/10 text-white shadow-none' : 'bg-black hover:bg-black/80 text-white shadow-xl'}`}
           >
             CONTÁCTANOS
           </Button>
