@@ -150,7 +150,7 @@ const ProductSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[150vh] overflow-visible w-full bg-black pt-32 transition-transform duration-100 ease-out"
+      className="relative min-h-[150vh] overflow-clip w-full bg-black pt-32 transition-transform duration-100 ease-out"
       style={{
         transform: `translateY(${-Math.min(scrollY * 0.5, 200)}px)`,
       }}
@@ -167,6 +167,17 @@ const ProductSection = () => {
       />
 
       <div className="relative z-10 container mx-auto px-4 flex items-center justify-center min-h-screen">
+        <img
+          key={products[currentIndex].id}
+          src={products[currentIndex].character}
+          alt={products[currentIndex].name}
+          className={`hidden lg:block absolute left-[-10%] top-[-5%] w-[900px] h-auto transition-all duration-700 ease-out z-0 animate-fade-in ${
+            isVisible ? "translate-x-0 opacity-100 scale-100" : "-translate-x-20 opacity-0 scale-95"
+          }`}
+          style={{
+            filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.5))",
+          }}
+        />
 
         <Carousel
           className="w-full overflow-visible"
@@ -183,7 +194,7 @@ const ProductSection = () => {
                   <img
                     src={product.glass}
                     alt={`Vaso Cerveza ${product.name}`}
-                    className={`absolute left-[5%] md:left-[15%] lg:left-[40%] top-[2%] md:top-[6%] w-[180px] md:w-[320px] max-h-[80vh] h-auto object-contain transition-all duration-1000 z-20 ${
+                    className={`absolute left-[5%] md:left-[15%] lg:left-[40%] top-[-10%] md:top-[5%] overflow-visible w-[180px] md:w-[320px] h-auto transition-all duration-1000 z-20 ${
                       isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
                     }`}
                     style={{
