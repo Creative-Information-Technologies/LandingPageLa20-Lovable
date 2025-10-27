@@ -36,9 +36,7 @@ const ViennaSection = () => {
                 textShadow: "6px 6px 0px rgba(0, 0, 0, 0.8)",
               }}
             >
-              CONOCÉ LA BEBIDA OFICIAL
-              <br />
-              DEL OKTOBEER FEST
+              NUESTRA NUEVA VIENNA LAGER, TE ESTÁ ESPERANDO PARA CELEBRAR EL OKTOBEER FEST ¿TE ANIMAS?
             </h2>
             <p
               className="font-outfit font-normal"
