@@ -150,7 +150,7 @@ const ProductSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[150vh] overflow-visible w-full bg-black pt-32 pb-20 transition-transform duration-100 ease-out"
+      className="relative min-h-[150vh] overflow-visible w-full bg-black pt-32 pb-40 transition-transform duration-100 ease-out"
       style={{
         transform: `translateY(${-Math.min(scrollY * 0.5, 200)}px)`,
       }}
@@ -187,7 +187,7 @@ const ProductSection = () => {
           }}
           setApi={setCarouselApi}
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-2 md:-ml-4" viewportClassName="overflow-visible">
             {products.map((product) => (
               <CarouselItem key={product.id} className="pl-2 md:pl-4 basis-full overflow-visible">
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-end gap-0 w-full relative px-4 md:px-0 overflow-visible">
