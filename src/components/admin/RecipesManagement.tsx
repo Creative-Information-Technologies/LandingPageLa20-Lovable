@@ -35,6 +35,7 @@ const RecipesManagement = () => {
     name: "",
     ingredients: "",
     steps: "",
+    image: "",
   });
 
   const handleSaveRecipe = () => {
@@ -56,6 +57,7 @@ const RecipesManagement = () => {
               name: newRecipe.name,
               ingredients: newRecipe.ingredients.split('\n').filter(i => i.trim()),
               steps: newRecipe.steps.split('\n').filter(s => s.trim()),
+              image: newRecipe.image || recipe.image,
             }
           : recipe
       );
@@ -69,7 +71,7 @@ const RecipesManagement = () => {
       const recipe: Recipe = {
         id: recipes.length + 1,
         name: newRecipe.name,
-        image: recipeImage,
+        image: newRecipe.image || recipeImage,
         ingredients: newRecipe.ingredients.split('\n').filter(i => i.trim()),
         steps: newRecipe.steps.split('\n').filter(s => s.trim()),
       };
@@ -82,7 +84,7 @@ const RecipesManagement = () => {
 
     setIsDialogOpen(false);
     setEditingRecipe(null);
-    setNewRecipe({ name: "", ingredients: "", steps: "" });
+    setNewRecipe({ name: "", ingredients: "", steps: "", image: "" });
   };
 
   const handleDeleteRecipe = (id: number, name: string) => {
@@ -100,8 +102,20 @@ const RecipesManagement = () => {
       name: recipe.name,
       ingredients: recipe.ingredients.join('\n'),
       steps: recipe.steps.join('\n'),
+      image: recipe.image,
     });
     setIsDialogOpen(true);
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setNewRecipe({ ...newRecipe, image: reader.result as string });
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
@@ -114,7 +128,7 @@ const RecipesManagement = () => {
           setIsDialogOpen(open);
           if (!open) {
             setEditingRecipe(null);
-            setNewRecipe({ name: "", ingredients: "", steps: "" });
+            setNewRecipe({ name: "", ingredients: "", steps: "", image: "" });
           }
         }}>
           <DialogTrigger asChild>
@@ -125,7 +139,7 @@ const RecipesManagement = () => {
               Nueva Receta
             </Button>
           </DialogTrigger>
-          <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
+          <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="font-oswald text-2xl text-[#FFD740]">
                 {editingRecipe ? "Editar Receta" : "Agregar Nueva Receta"}
@@ -140,6 +154,25 @@ const RecipesManagement = () => {
                   onChange={(e) => setNewRecipe({ ...newRecipe, name: e.target.value })}
                   className="bg-[#2d1810] border-white/20 text-white" 
                 />
+              </div>
+              <div>
+                <Label htmlFor="recipeImage" className="text-white">Imagen</Label>
+                <Input 
+                  id="recipeImage" 
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="bg-[#2d1810] border-white/20 text-white file:bg-[#FFD740] file:text-[#3d1e12] file:border-0 file:rounded-md file:px-3 file:py-1 file:mr-3 file:font-semibold hover:file:bg-[#FFA000]" 
+                />
+                {newRecipe.image && (
+                  <div className="mt-2">
+                    <img 
+                      src={newRecipe.image} 
+                      alt="Vista previa" 
+                      className="w-full h-40 object-cover rounded-lg border border-white/20"
+                    />
+                  </div>
+                )}
               </div>
               <div>
                 <Label htmlFor="ingredients" className="text-white">Ingredientes (uno por línea)</Label>
