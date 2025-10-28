@@ -1,5 +1,6 @@
 import { Home, Beer, FileText, Utensils, Mail, Tag, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import la20Logo from "@/assets/la20-logo-new.png";
 
 interface AdminSidebarProps {
   activeSection: string;
@@ -42,10 +43,12 @@ const AdminSidebar = ({ activeSection, setActiveSection }: AdminSidebarProps) =>
       {/* Menu content */}
       <nav className="relative z-10 flex flex-col h-full py-8 px-4">
         <div className="mb-12 text-center">
-          <h1 className="font-oswald text-[#FFD740] text-3xl font-bold tracking-wider">
-            LA 20
-          </h1>
-          <p className="text-white/70 text-sm mt-1">Panel Admin</p>
+          <img 
+            src={la20Logo} 
+            alt="La 20 Cervecería" 
+            className="h-20 w-auto mx-auto mb-2 drop-shadow-2xl"
+          />
+          <p className="text-[#FFD740]/80 text-sm uppercase tracking-widest font-oswald">Panel Admin</p>
         </div>
 
         <div className="flex-1 space-y-2">
