@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Plus, Edit, Trash2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
@@ -57,6 +58,7 @@ const BeersManagement = () => {
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingBeer, setEditingBeer] = useState<Beer | null>(null);
+  const [deletingBeer, setDeletingBeer] = useState<Beer | null>(null);
   const [newBeer, setNewBeer] = useState({
     name: "",
     type: "",
@@ -143,6 +145,7 @@ const BeersManagement = () => {
 
   const handleDeleteBeer = (id: number, name: string) => {
     setBeers(beers.filter(beer => beer.id !== id));
+    setDeletingBeer(null);
     toast({
       title: "Cerveza eliminada",
       description: `${name} ha sido eliminada`,
@@ -304,7 +307,7 @@ const BeersManagement = () => {
                 </Button>
                 <Button
                   size="sm"
-                  onClick={() => handleDeleteBeer(beer.id, beer.name)}
+                  onClick={() => setDeletingBeer(beer)}
                   className="flex-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/50 h-[44px]"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -314,6 +317,30 @@ const BeersManagement = () => {
           </div>
         ))}
       </div>
+
+      <AlertDialog open={!!deletingBeer} onOpenChange={() => setDeletingBeer(null)}>
+        <AlertDialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="font-oswald text-2xl text-[#FFD740]">
+              ¿Eliminar cerveza?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-white/80">
+              ¿Estás seguro de que deseas eliminar "{deletingBeer?.name}"? Esta acción no se puede deshacer.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-[#2d1810] border-white/20 text-white hover:bg-[#2d1810]/80">
+              Cancelar
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={() => deletingBeer && handleDeleteBeer(deletingBeer.id, deletingBeer.name)}
+              className="bg-red-500 hover:bg-red-600 text-white"
+            >
+              Eliminar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

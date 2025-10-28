@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Plus, Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
@@ -29,6 +30,7 @@ const RecipesManagement = () => {
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingRecipe, setEditingRecipe] = useState<Recipe | null>(null);
+  const [deletingRecipe, setDeletingRecipe] = useState<Recipe | null>(null);
   const [newRecipe, setNewRecipe] = useState({
     name: "",
     ingredients: "",
@@ -85,6 +87,7 @@ const RecipesManagement = () => {
 
   const handleDeleteRecipe = (id: number, name: string) => {
     setRecipes(recipes.filter(recipe => recipe.id !== id));
+    setDeletingRecipe(null);
     toast({
       title: "Receta eliminada",
       description: `${name} ha sido eliminada`,
@@ -200,7 +203,7 @@ const RecipesManagement = () => {
                 </Button>
                 <Button
                   size="sm"
-                  onClick={() => handleDeleteRecipe(recipe.id, recipe.name)}
+                  onClick={() => setDeletingRecipe(recipe)}
                   className="flex-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/50 h-[44px]"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -210,6 +213,30 @@ const RecipesManagement = () => {
           </div>
         ))}
       </div>
+
+      <AlertDialog open={!!deletingRecipe} onOpenChange={() => setDeletingRecipe(null)}>
+        <AlertDialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="font-oswald text-2xl text-[#FFD740]">
+              ¿Eliminar receta?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-white/80">
+              ¿Estás seguro de que deseas eliminar "{deletingRecipe?.name}"? Esta acción no se puede deshacer.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-[#2d1810] border-white/20 text-white hover:bg-[#2d1810]/80">
+              Cancelar
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={() => deletingRecipe && handleDeleteRecipe(deletingRecipe.id, deletingRecipe.name)}
+              className="bg-red-500 hover:bg-red-600 text-white"
+            >
+              Eliminar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

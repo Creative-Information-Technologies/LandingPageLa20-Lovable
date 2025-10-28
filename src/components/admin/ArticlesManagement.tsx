@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Plus, Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
@@ -37,6 +38,7 @@ const ArticlesManagement = () => {
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingArticle, setEditingArticle] = useState<Article | null>(null);
+  const [deletingArticle, setDeletingArticle] = useState<Article | null>(null);
   const [newArticle, setNewArticle] = useState({
     title: "",
     content: "",
@@ -93,6 +95,7 @@ const ArticlesManagement = () => {
 
   const handleDeleteArticle = (id: number, title: string) => {
     setArticles(articles.filter(article => article.id !== id));
+    setDeletingArticle(null);
     toast({
       title: "Artículo eliminado",
       description: `${title} ha sido eliminado`,
@@ -206,7 +209,7 @@ const ArticlesManagement = () => {
                 </Button>
                 <Button
                   size="sm"
-                  onClick={() => handleDeleteArticle(article.id, article.title)}
+                  onClick={() => setDeletingArticle(article)}
                   className="flex-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/50 h-[44px]"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -216,6 +219,30 @@ const ArticlesManagement = () => {
           </div>
         ))}
       </div>
+
+      <AlertDialog open={!!deletingArticle} onOpenChange={() => setDeletingArticle(null)}>
+        <AlertDialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="font-oswald text-2xl text-[#FFD740]">
+              ¿Eliminar artículo?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-white/80">
+              ¿Estás seguro de que deseas eliminar "{deletingArticle?.title}"? Esta acción no se puede deshacer.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-[#2d1810] border-white/20 text-white hover:bg-[#2d1810]/80">
+              Cancelar
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={() => deletingArticle && handleDeleteArticle(deletingArticle.id, deletingArticle.title)}
+              className="bg-red-500 hover:bg-red-600 text-white"
+            >
+              Eliminar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };

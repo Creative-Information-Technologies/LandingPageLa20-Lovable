@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Plus, Edit, Trash2, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
@@ -45,6 +46,7 @@ const PromotionsManagement = () => {
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [editingPromotion, setEditingPromotion] = useState<Promotion | null>(null);
+  const [deletingPromotion, setDeletingPromotion] = useState<Promotion | null>(null);
   const [newPromotion, setNewPromotion] = useState({
     title: "",
     description: "",
@@ -110,6 +112,7 @@ const PromotionsManagement = () => {
 
   const handleDeletePromotion = (id: number, title: string) => {
     setPromotions(promotions.filter(promo => promo.id !== id));
+    setDeletingPromotion(null);
     toast({
       title: "Promoción eliminada",
       description: `${title} ha sido eliminada`,
@@ -304,7 +307,7 @@ const PromotionsManagement = () => {
               </Button>
               <Button
                 size="sm"
-                onClick={() => handleDeletePromotion(promo.id, promo.title)}
+                onClick={() => setDeletingPromotion(promo)}
                 className="flex-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/50 h-[44px]"
               >
                 <Trash2 className="w-4 h-4" />
@@ -313,6 +316,30 @@ const PromotionsManagement = () => {
           </div>
         ))}
       </div>
+
+      <AlertDialog open={!!deletingPromotion} onOpenChange={() => setDeletingPromotion(null)}>
+        <AlertDialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="font-oswald text-2xl text-[#FFD740]">
+              ¿Eliminar promoción?
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-white/80">
+              ¿Estás seguro de que deseas eliminar "{deletingPromotion?.title}"? Esta acción no se puede deshacer.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="bg-[#2d1810] border-white/20 text-white hover:bg-[#2d1810]/80">
+              Cancelar
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={() => deletingPromotion && handleDeletePromotion(deletingPromotion.id, deletingPromotion.title)}
+              className="bg-red-500 hover:bg-red-600 text-white"
+            >
+              Eliminar
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };
