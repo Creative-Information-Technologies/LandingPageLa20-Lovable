@@ -1,4 +1,4 @@
-import { Home, Beer, FileText, Utensils, Mail, LogOut } from "lucide-react";
+import { Home, Beer, FileText, Utensils, Mail, Tag, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface AdminSidebarProps {
@@ -12,6 +12,7 @@ const AdminSidebar = ({ activeSection, setActiveSection }: AdminSidebarProps) =>
     { id: "beers", icon: Beer, label: "Cervezas" },
     { id: "articles", icon: FileText, label: "Artículos" },
     { id: "recipes", icon: Utensils, label: "Recetas" },
+    { id: "promotions", icon: Tag, label: "Promociones" },
     { id: "contact", icon: Mail, label: "Contacto" },
   ];
 

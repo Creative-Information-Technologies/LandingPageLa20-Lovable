@@ -4,6 +4,7 @@ import AdminHeader from "@/components/admin/AdminHeader";
 import BeersManagement from "@/components/admin/BeersManagement";
 import ArticlesManagement from "@/components/admin/ArticlesManagement";
 import RecipesManagement from "@/components/admin/RecipesManagement";
+import PromotionsManagement from "@/components/admin/PromotionsManagement";
 import ContactManagement from "@/components/admin/ContactManagement";
 import AdminDashboard from "@/components/admin/AdminDashboard";
 
@@ -20,6 +21,8 @@ const Admin = () => {
         return <ArticlesManagement />;
       case "recipes":
         return <RecipesManagement />;
+      case "promotions":
+        return <PromotionsManagement />;
       case "contact":
         return <ContactManagement />;
       default:
