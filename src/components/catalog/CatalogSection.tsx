@@ -23,6 +23,7 @@ import elCheleCarousel from "@/assets/catalog/beer-bottle-el-chele-carousel.png"
 import laFlakaCarousel from "@/assets/catalog/beer-bottle-la-flaka-carousel.png";
 import laJefaCarousel from "@/assets/catalog/beer-bottle-la-jefa-carousel.png";
 import weissbierCarousel from "@/assets/catalog/beer-bottle-weissbier-carousel.png";
+import hopIcon from "@/assets/hop-icon.png";
 
 interface Beer {
   id: string;
@@ -122,9 +123,12 @@ const CatalogSection = () => {
     return Array(maxIcons)
       .fill(0)
       .map((_, i) => (
-        <span key={i} className={i < filledIcons ? "opacity-100" : "opacity-30"}>
-          🌾
-        </span>
+        <img 
+          key={i} 
+          src={hopIcon} 
+          alt="Hop icon"
+          className={`inline-block w-5 h-5 ${i < filledIcons ? "opacity-100" : "opacity-30"}`}
+        />
       ));
   };
 
