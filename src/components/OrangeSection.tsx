@@ -50,7 +50,7 @@ const OrangeSection = () => {
             }}
           />
           {/* Beer bottles distributed around logo with animations */}
-          <img src={beerLaMetiche} alt="La Metiche Beer" className={`absolute w-24 md:w-[30rem] h-auto z-[999] transition-all duration-1000 delay-100 ${isVisible ? "opacity-90 scale-100" : "opacity-0 scale-75"}`} style={{ top: "-400px", left: "-300px", transform: "rotate(-31deg)" }} />
+          <img src={beerLaMetiche} alt="La Metiche Beer" className={`absolute w-12 md:w-[30rem] h-auto z-[999] transition-all duration-1000 delay-100 ${isVisible ? "opacity-90 scale-100" : "opacity-0 scale-75"}`} style={{ top: "-400px", left: "-300px", transform: "rotate(-31deg)" }} />
           <img src={beerAleros} alt="Aleros Beer" className={`absolute w-24 md:w-80 h-auto z-10 transition-all duration-1000 delay-200 ${isVisible ? "opacity-90 scale-100" : "opacity-0 scale-75"}`} style={{ top: "-200px", left: "-400px", transform: "rotate(-20deg)" }} />
           <img src={beerLaJefa} alt="La Jefa Beer" className={`absolute w-24 md:w-[30rem] h-auto z-10 transition-all duration-1000 delay-300 ${isVisible ? "opacity-90 scale-100" : "opacity-0 scale-75"}`} style={{ top: "200px", left: "-600px", transform: "rotate(-31deg)" }} />
           <img src={beerLaJefa} alt="La Jefa Beer" className={`absolute w-32 md:w-[30rem] h-auto z-10 transition-all duration-1000 delay-[400ms] ${isVisible ? "opacity-90 scale-100" : "opacity-0 scale-75"}`} style={{ top: "-450px", left: "100px", transform: "rotate(-31deg)" }} />
