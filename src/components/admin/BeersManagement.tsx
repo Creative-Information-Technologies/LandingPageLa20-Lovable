@@ -117,6 +117,21 @@ const BeersManagement = () => {
     });
   };
 
+  const handleDeleteBeer = (id: number, name: string) => {
+    setBeers(beers.filter(beer => beer.id !== id));
+    toast({
+      title: "Cerveza eliminada",
+      description: `${name} ha sido eliminada`,
+    });
+  };
+
+  const handleEditBeer = (beer: Beer) => {
+    toast({
+      title: "Editar cerveza",
+      description: `Funcionalidad de edición para ${beer.name} próximamente`,
+    });
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-8">
@@ -244,12 +259,14 @@ const BeersManagement = () => {
               <div className="flex gap-2">
                 <Button
                   size="sm"
+                  onClick={() => handleEditBeer(beer)}
                   className="flex-1 bg-[#FFD740]/20 hover:bg-[#FFD740]/30 text-[#FFD740] border border-[#FFD740]/50 h-[44px]"
                 >
                   <Edit className="w-4 h-4" />
                 </Button>
                 <Button
                   size="sm"
+                  onClick={() => handleDeleteBeer(beer.id, beer.name)}
                   className="flex-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/50 h-[44px]"
                 >
                   <Trash2 className="w-4 h-4" />

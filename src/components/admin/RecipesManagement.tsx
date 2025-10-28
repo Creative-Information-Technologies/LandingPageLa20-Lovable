@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 import recipeImage from "@/assets/currywurst-recipe-main.png";
 
 interface Recipe {
@@ -15,7 +16,8 @@ interface Recipe {
 }
 
 const RecipesManagement = () => {
-  const [recipes] = useState<Recipe[]>([
+  const { toast } = useToast();
+  const [recipes, setRecipes] = useState<Recipe[]>([
     {
       id: 1,
       name: "Currywurst Clásica",
@@ -25,13 +27,63 @@ const RecipesManagement = () => {
     },
   ]);
 
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [newRecipe, setNewRecipe] = useState({
+    name: "",
+    ingredients: "",
+    steps: "",
+  });
+
+  const handleSaveRecipe = () => {
+    if (!newRecipe.name || !newRecipe.ingredients) {
+      toast({
+        title: "Error",
+        description: "Por favor completa el nombre y los ingredientes",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const recipe: Recipe = {
+      id: recipes.length + 1,
+      name: newRecipe.name,
+      image: recipeImage,
+      ingredients: newRecipe.ingredients.split('\n').filter(i => i.trim()),
+      steps: newRecipe.steps.split('\n').filter(s => s.trim()),
+    };
+
+    setRecipes([...recipes, recipe]);
+    setIsDialogOpen(false);
+    setNewRecipe({ name: "", ingredients: "", steps: "" });
+    
+    toast({
+      title: "Receta creada",
+      description: `${recipe.name} ha sido agregada exitosamente`,
+    });
+  };
+
+  const handleDeleteRecipe = (id: number, name: string) => {
+    setRecipes(recipes.filter(recipe => recipe.id !== id));
+    toast({
+      title: "Receta eliminada",
+      description: `${name} ha sido eliminada`,
+    });
+  };
+
+  const handleEditRecipe = (recipe: Recipe) => {
+    toast({
+      title: "Editar receta",
+      description: `Funcionalidad de edición para ${recipe.name} próximamente`,
+    });
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-8">
         <h1 className="font-oswald text-4xl font-bold text-white">
           Gestión de Recetas
         </h1>
-        <Dialog>
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button 
               className="bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold rounded-xl px-6 h-[44px] gap-2 shadow-lg hover:shadow-[#FFD740]/50 transition-all duration-300"
@@ -49,13 +101,20 @@ const RecipesManagement = () => {
             <div className="space-y-4 mt-4">
               <div>
                 <Label htmlFor="recipeName" className="text-white">Nombre de la Receta</Label>
-                <Input id="recipeName" className="bg-[#2d1810] border-white/20 text-white" />
+                <Input 
+                  id="recipeName" 
+                  value={newRecipe.name}
+                  onChange={(e) => setNewRecipe({ ...newRecipe, name: e.target.value })}
+                  className="bg-[#2d1810] border-white/20 text-white" 
+                />
               </div>
               <div>
                 <Label htmlFor="ingredients" className="text-white">Ingredientes (uno por línea)</Label>
                 <textarea 
                   id="ingredients" 
                   rows={4}
+                  value={newRecipe.ingredients}
+                  onChange={(e) => setNewRecipe({ ...newRecipe, ingredients: e.target.value })}
                   className="w-full bg-[#2d1810] border border-white/20 text-white rounded-md p-2"
                 />
               </div>
@@ -64,10 +123,15 @@ const RecipesManagement = () => {
                 <textarea 
                   id="steps" 
                   rows={4}
+                  value={newRecipe.steps}
+                  onChange={(e) => setNewRecipe({ ...newRecipe, steps: e.target.value })}
                   className="w-full bg-[#2d1810] border border-white/20 text-white rounded-md p-2"
                 />
               </div>
-              <Button className="w-full bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold h-[44px]">
+              <Button 
+                onClick={handleSaveRecipe}
+                className="w-full bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold h-[44px]"
+              >
                 Guardar Receta
               </Button>
             </div>
@@ -99,12 +163,14 @@ const RecipesManagement = () => {
               <div className="flex gap-2">
                 <Button
                   size="sm"
+                  onClick={() => handleEditRecipe(recipe)}
                   className="flex-1 bg-[#FFD740]/20 hover:bg-[#FFD740]/30 text-[#FFD740] border border-[#FFD740]/50 h-[44px]"
                 >
                   <Edit className="w-4 h-4" />
                 </Button>
                 <Button
                   size="sm"
+                  onClick={() => handleDeleteRecipe(recipe.id, recipe.name)}
                   className="flex-1 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/50 h-[44px]"
                 >
                   <Trash2 className="w-4 h-4" />
