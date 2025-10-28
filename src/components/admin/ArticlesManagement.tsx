@@ -43,6 +43,7 @@ const ArticlesManagement = () => {
     title: "",
     content: "",
     date: "",
+    image: "",
   });
 
   const handleSaveArticle = () => {
@@ -64,6 +65,7 @@ const ArticlesManagement = () => {
               title: newArticle.title,
               date: newArticle.date,
               excerpt: newArticle.content.substring(0, 100),
+              image: newArticle.image || article.image,
             }
           : article
       );
@@ -77,7 +79,7 @@ const ArticlesManagement = () => {
       const article: Article = {
         id: articles.length + 1,
         title: newArticle.title,
-        image: blogImage1,
+        image: newArticle.image || blogImage1,
         date: newArticle.date,
         excerpt: newArticle.content.substring(0, 100),
       };
@@ -90,7 +92,7 @@ const ArticlesManagement = () => {
 
     setIsDialogOpen(false);
     setEditingArticle(null);
-    setNewArticle({ title: "", content: "", date: "" });
+    setNewArticle({ title: "", content: "", date: "", image: "" });
   };
 
   const handleDeleteArticle = (id: number, title: string) => {
@@ -108,8 +110,20 @@ const ArticlesManagement = () => {
       title: article.title,
       content: article.excerpt,
       date: article.date,
+      image: article.image,
     });
     setIsDialogOpen(true);
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setNewArticle({ ...newArticle, image: reader.result as string });
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
@@ -122,7 +136,7 @@ const ArticlesManagement = () => {
           setIsDialogOpen(open);
           if (!open) {
             setEditingArticle(null);
-            setNewArticle({ title: "", content: "", date: "" });
+            setNewArticle({ title: "", content: "", date: "", image: "" });
           }
         }}>
           <DialogTrigger asChild>
@@ -133,7 +147,7 @@ const ArticlesManagement = () => {
               Nuevo Artículo
             </Button>
           </DialogTrigger>
-          <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
+          <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="font-oswald text-2xl text-[#FFD740]">
                 {editingArticle ? "Editar Artículo" : "Crear Nuevo Artículo"}
@@ -148,6 +162,25 @@ const ArticlesManagement = () => {
                   onChange={(e) => setNewArticle({ ...newArticle, title: e.target.value })}
                   className="bg-[#2d1810] border-white/20 text-white" 
                 />
+              </div>
+              <div>
+                <Label htmlFor="image" className="text-white">Imagen</Label>
+                <Input 
+                  id="image" 
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="bg-[#2d1810] border-white/20 text-white file:bg-[#FFD740] file:text-[#3d1e12] file:border-0 file:rounded-md file:px-3 file:py-1 file:mr-3 file:font-semibold hover:file:bg-[#FFA000]" 
+                />
+                {newArticle.image && (
+                  <div className="mt-2">
+                    <img 
+                      src={newArticle.image} 
+                      alt="Vista previa" 
+                      className="w-full h-40 object-cover rounded-lg border border-white/20"
+                    />
+                  </div>
+                )}
               </div>
               <div>
                 <Label htmlFor="content" className="text-white">Contenido</Label>
