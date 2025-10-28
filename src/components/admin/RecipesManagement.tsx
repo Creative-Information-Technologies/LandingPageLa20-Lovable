@@ -28,6 +28,7 @@ const RecipesManagement = () => {
   ]);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [editingRecipe, setEditingRecipe] = useState<Recipe | null>(null);
   const [newRecipe, setNewRecipe] = useState({
     name: "",
     ingredients: "",
@@ -44,22 +45,42 @@ const RecipesManagement = () => {
       return;
     }
 
-    const recipe: Recipe = {
-      id: recipes.length + 1,
-      name: newRecipe.name,
-      image: recipeImage,
-      ingredients: newRecipe.ingredients.split('\n').filter(i => i.trim()),
-      steps: newRecipe.steps.split('\n').filter(s => s.trim()),
-    };
+    if (editingRecipe) {
+      // Editar receta existente
+      const updatedRecipes = recipes.map(recipe =>
+        recipe.id === editingRecipe.id
+          ? {
+              ...recipe,
+              name: newRecipe.name,
+              ingredients: newRecipe.ingredients.split('\n').filter(i => i.trim()),
+              steps: newRecipe.steps.split('\n').filter(s => s.trim()),
+            }
+          : recipe
+      );
+      setRecipes(updatedRecipes);
+      toast({
+        title: "Receta actualizada",
+        description: `${newRecipe.name} ha sido actualizada exitosamente`,
+      });
+    } else {
+      // Crear nueva receta
+      const recipe: Recipe = {
+        id: recipes.length + 1,
+        name: newRecipe.name,
+        image: recipeImage,
+        ingredients: newRecipe.ingredients.split('\n').filter(i => i.trim()),
+        steps: newRecipe.steps.split('\n').filter(s => s.trim()),
+      };
+      setRecipes([...recipes, recipe]);
+      toast({
+        title: "Receta creada",
+        description: `${recipe.name} ha sido agregada exitosamente`,
+      });
+    }
 
-    setRecipes([...recipes, recipe]);
     setIsDialogOpen(false);
+    setEditingRecipe(null);
     setNewRecipe({ name: "", ingredients: "", steps: "" });
-    
-    toast({
-      title: "Receta creada",
-      description: `${recipe.name} ha sido agregada exitosamente`,
-    });
   };
 
   const handleDeleteRecipe = (id: number, name: string) => {
@@ -71,10 +92,13 @@ const RecipesManagement = () => {
   };
 
   const handleEditRecipe = (recipe: Recipe) => {
-    toast({
-      title: "Editar receta",
-      description: `Funcionalidad de edición para ${recipe.name} próximamente`,
+    setEditingRecipe(recipe);
+    setNewRecipe({
+      name: recipe.name,
+      ingredients: recipe.ingredients.join('\n'),
+      steps: recipe.steps.join('\n'),
     });
+    setIsDialogOpen(true);
   };
 
   return (
@@ -83,7 +107,13 @@ const RecipesManagement = () => {
         <h1 className="font-oswald text-4xl font-bold text-white">
           Gestión de Recetas
         </h1>
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <Dialog open={isDialogOpen} onOpenChange={(open) => {
+          setIsDialogOpen(open);
+          if (!open) {
+            setEditingRecipe(null);
+            setNewRecipe({ name: "", ingredients: "", steps: "" });
+          }
+        }}>
           <DialogTrigger asChild>
             <Button 
               className="bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold rounded-xl px-6 h-[44px] gap-2 shadow-lg hover:shadow-[#FFD740]/50 transition-all duration-300"
@@ -95,7 +125,7 @@ const RecipesManagement = () => {
           <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
             <DialogHeader>
               <DialogTitle className="font-oswald text-2xl text-[#FFD740]">
-                Agregar Nueva Receta
+                {editingRecipe ? "Editar Receta" : "Agregar Nueva Receta"}
               </DialogTitle>
             </DialogHeader>
             <div className="space-y-4 mt-4">
@@ -132,7 +162,7 @@ const RecipesManagement = () => {
                 onClick={handleSaveRecipe}
                 className="w-full bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold h-[44px]"
               >
-                Guardar Receta
+                {editingRecipe ? "Actualizar Receta" : "Guardar Receta"}
               </Button>
             </div>
           </DialogContent>

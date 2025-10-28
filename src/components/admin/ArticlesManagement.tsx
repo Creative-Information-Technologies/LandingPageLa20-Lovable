@@ -36,6 +36,7 @@ const ArticlesManagement = () => {
   ]);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [editingArticle, setEditingArticle] = useState<Article | null>(null);
   const [newArticle, setNewArticle] = useState({
     title: "",
     content: "",
@@ -52,22 +53,42 @@ const ArticlesManagement = () => {
       return;
     }
 
-    const article: Article = {
-      id: articles.length + 1,
-      title: newArticle.title,
-      image: blogImage1,
-      date: newArticle.date,
-      excerpt: newArticle.content.substring(0, 100),
-    };
+    if (editingArticle) {
+      // Editar artículo existente
+      const updatedArticles = articles.map(article =>
+        article.id === editingArticle.id
+          ? {
+              ...article,
+              title: newArticle.title,
+              date: newArticle.date,
+              excerpt: newArticle.content.substring(0, 100),
+            }
+          : article
+      );
+      setArticles(updatedArticles);
+      toast({
+        title: "Artículo actualizado",
+        description: `${newArticle.title} ha sido actualizado exitosamente`,
+      });
+    } else {
+      // Crear nuevo artículo
+      const article: Article = {
+        id: articles.length + 1,
+        title: newArticle.title,
+        image: blogImage1,
+        date: newArticle.date,
+        excerpt: newArticle.content.substring(0, 100),
+      };
+      setArticles([...articles, article]);
+      toast({
+        title: "Artículo creado",
+        description: `${article.title} ha sido publicado exitosamente`,
+      });
+    }
 
-    setArticles([...articles, article]);
     setIsDialogOpen(false);
+    setEditingArticle(null);
     setNewArticle({ title: "", content: "", date: "" });
-    
-    toast({
-      title: "Artículo creado",
-      description: `${article.title} ha sido publicado exitosamente`,
-    });
   };
 
   const handleDeleteArticle = (id: number, title: string) => {
@@ -79,10 +100,13 @@ const ArticlesManagement = () => {
   };
 
   const handleEditArticle = (article: Article) => {
-    toast({
-      title: "Editar artículo",
-      description: `Funcionalidad de edición para ${article.title} próximamente`,
+    setEditingArticle(article);
+    setNewArticle({
+      title: article.title,
+      content: article.excerpt,
+      date: article.date,
     });
+    setIsDialogOpen(true);
   };
 
   return (
@@ -91,7 +115,13 @@ const ArticlesManagement = () => {
         <h1 className="font-oswald text-4xl font-bold text-white">
           Gestión de Artículos
         </h1>
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <Dialog open={isDialogOpen} onOpenChange={(open) => {
+          setIsDialogOpen(open);
+          if (!open) {
+            setEditingArticle(null);
+            setNewArticle({ title: "", content: "", date: "" });
+          }
+        }}>
           <DialogTrigger asChild>
             <Button 
               className="bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold rounded-xl px-6 h-[44px] gap-2 shadow-lg hover:shadow-[#FFD740]/50 transition-all duration-300"
@@ -103,7 +133,7 @@ const ArticlesManagement = () => {
           <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white">
             <DialogHeader>
               <DialogTitle className="font-oswald text-2xl text-[#FFD740]">
-                Crear Nuevo Artículo
+                {editingArticle ? "Editar Artículo" : "Crear Nuevo Artículo"}
               </DialogTitle>
             </DialogHeader>
             <div className="space-y-4 mt-4">
@@ -140,7 +170,7 @@ const ArticlesManagement = () => {
                 onClick={handleSaveArticle}
                 className="w-full bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold h-[44px]"
               >
-                Publicar Artículo
+                {editingArticle ? "Actualizar Artículo" : "Publicar Artículo"}
               </Button>
             </div>
           </DialogContent>

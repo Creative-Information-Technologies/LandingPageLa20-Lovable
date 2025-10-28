@@ -56,6 +56,7 @@ const BeersManagement = () => {
   ]);
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [editingBeer, setEditingBeer] = useState<Beer | null>(null);
   const [newBeer, setNewBeer] = useState({
     name: "",
     type: "",
@@ -95,26 +96,49 @@ const BeersManagement = () => {
       return;
     }
 
-    const beer: Beer = {
-      id: beers.length + 1,
-      name: newBeer.name,
-      type: newBeer.type,
-      description: newBeer.description,
-      image: newBeer.image,
-      ibu: newBeer.ibu,
-      size: newBeer.size,
-      available: true,
-    };
+    if (editingBeer) {
+      // Editar cerveza existente
+      const updatedBeers = beers.map(beer =>
+        beer.id === editingBeer.id
+          ? {
+              ...beer,
+              name: newBeer.name,
+              type: newBeer.type,
+              description: newBeer.description,
+              image: newBeer.image,
+              ibu: newBeer.ibu,
+              size: newBeer.size,
+            }
+          : beer
+      );
+      setBeers(updatedBeers);
+      toast({
+        title: "Cerveza actualizada",
+        description: `${newBeer.name} ha sido actualizada exitosamente`,
+      });
+    } else {
+      // Crear nueva cerveza
+      const beer: Beer = {
+        id: beers.length + 1,
+        name: newBeer.name,
+        type: newBeer.type,
+        description: newBeer.description,
+        image: newBeer.image,
+        ibu: newBeer.ibu,
+        size: newBeer.size,
+        available: true,
+      };
+      setBeers([...beers, beer]);
+      toast({
+        title: "Cerveza agregada",
+        description: `${beer.name} ha sido agregada exitosamente`,
+      });
+    }
 
-    setBeers([...beers, beer]);
     setIsDialogOpen(false);
+    setEditingBeer(null);
     setNewBeer({ name: "", type: "", description: "", ibu: 0, size: "", image: "" });
     setImagePreview("");
-    
-    toast({
-      title: "Cerveza agregada",
-      description: `${beer.name} ha sido agregada exitosamente`,
-    });
   };
 
   const handleDeleteBeer = (id: number, name: string) => {
@@ -126,10 +150,17 @@ const BeersManagement = () => {
   };
 
   const handleEditBeer = (beer: Beer) => {
-    toast({
-      title: "Editar cerveza",
-      description: `Funcionalidad de edición para ${beer.name} próximamente`,
+    setEditingBeer(beer);
+    setNewBeer({
+      name: beer.name,
+      type: beer.type,
+      description: beer.description,
+      ibu: beer.ibu,
+      size: beer.size,
+      image: beer.image,
     });
+    setImagePreview(beer.image);
+    setIsDialogOpen(true);
   };
 
   return (
@@ -138,7 +169,14 @@ const BeersManagement = () => {
         <h1 className="font-oswald text-4xl font-bold text-white">
           Gestión de Cervezas
         </h1>
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <Dialog open={isDialogOpen} onOpenChange={(open) => {
+          setIsDialogOpen(open);
+          if (!open) {
+            setEditingBeer(null);
+            setNewBeer({ name: "", type: "", description: "", ibu: 0, size: "", image: "" });
+            setImagePreview("");
+          }
+        }}>
           <DialogTrigger asChild>
             <Button 
               className="bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold rounded-xl px-6 h-[44px] gap-2 shadow-lg hover:shadow-[#FFD740]/50 transition-all duration-300"
@@ -150,7 +188,7 @@ const BeersManagement = () => {
           <DialogContent className="bg-[#3d1e12] border-[#FFD740] text-white max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="font-oswald text-2xl text-[#FFD740]">
-                Agregar Nueva Cerveza
+                {editingBeer ? "Editar Cerveza" : "Agregar Nueva Cerveza"}
               </DialogTitle>
             </DialogHeader>
             <div className="space-y-4 mt-4">
@@ -230,7 +268,7 @@ const BeersManagement = () => {
                 onClick={handleSaveBeer}
                 className="w-full bg-[#FFD740] hover:bg-[#FFA000] text-[#3d1e12] font-bold h-[44px]"
               >
-                Guardar Cerveza
+                {editingBeer ? "Actualizar Cerveza" : "Guardar Cerveza"}
               </Button>
             </div>
           </DialogContent>
