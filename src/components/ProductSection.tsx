@@ -13,6 +13,7 @@ import laMeticheGlass from "@/assets/beer-glass-la-metiche.png";
 import alerosDarkGlass from "@/assets/beer-glass-aleros-dark.png";
 import weissBierGlass from "@/assets/beer-glass-weis-bier.png";
 import viennaLagerGlass from "@/assets/beer-glass-vienna-lager.png";
+import hopIcon from "@/assets/hop-icon.png";
 
 interface Product {
   id: string;
@@ -262,11 +263,17 @@ const ProductSection = () => {
                             <div className="flex items-center gap-3">
                               <span className="text-base font-semibold text-black">{product.ibu}</span>
                               <div className="flex gap-1">
-                                {[...Array(5)].map((_, i) => (
-                                  <span key={i} className="text-2xl">
-                                    🌾
-                                  </span>
-                                ))}
+                                {[...Array(5)].map((_, i) => {
+                                  const filledIcons = Math.min(Math.round((product.ibu / 60) * 5), 5);
+                                  return (
+                                    <img 
+                                      key={i} 
+                                      src={hopIcon} 
+                                      alt="Hop icon"
+                                      className={`inline-block w-6 h-6 ${i < filledIcons ? "opacity-100" : "opacity-30"}`}
+                                    />
+                                  );
+                                })}
                               </div>
                             </div>
                           </div>
